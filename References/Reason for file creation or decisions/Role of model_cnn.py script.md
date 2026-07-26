@@ -1,0 +1,7 @@
+- **What it did:** It defined the complete structure of the `TinyECG_CNN` neural network using PyTorch. The script built a highly compressed architecture consisting of two 1D-Convolutional layers and a tiny fully connected decision layer to classify the 90-point heartbeat windows. It also wrapped these layers in `QuantStub` and `DeQuantStub` modules and included a utility function (`count_parameters`) to automatically calculate the active parameter count and estimate the memory footprint in kilobytes.
+    
+
+- **Why your hardware demanded it:**
+    **The 15 KB Memory Ceiling:** The chosen edge hardware, the Lattice iCE40UP5K FPGA, possesses extremely limited local Block RAM (BRAM). Restricting the network architecture to fewer than 15,000 total parameters ensures the entire trained model fits directly on the chip without relying on power-hungry external memory fetches.
+    
+    **INT8 Quantization Prep:** Standard neural networks rely on large 32-bit floating-point numbers (FP32) that the FPGA cannot compute efficiently. The inclusion of the `QuantStub` and `DeQuantStub` wrappers explicitly prepares the network layers for Post-Training Quantization (PTQ) using PyTorch's fbgemm backend. This guarantees the floating-point math can be successfully compressed into 8-bit integers, allowing the inference math to run natively across the FPGA's 8 physical DSP hardware multiplier blocks.

@@ -1,0 +1,3 @@
+The weights inside the `.pth` file are still 32-bit floating-point numbers (FP32). Because your FPGA has no operating system and limited resources, it cannot perform 32-bit math efficiently.
+
+To fix this, we need to apply **Post-Training Quantization (PTQ)**. We will write a new script that loads your saved model, feeds a small batch of your training data through it to calibrate the mathematical ranges, and permanently locks the weights into 8-bit integers (INT8: -128 to +127).

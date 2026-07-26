@@ -4,3 +4,7 @@
 4. Ran get_data,py file and downloaded dataset of 48 patients(Size:89.7 MB, No. of files: 144)
 5. Created a filter_ecg.py to filter out respiration (0.5 Hz Butterworth High-Pass Filter) and electrical buzz (The 60 Hz IIR Notch Filter).
 6. Created a segment_ecg.py to export the filtered data to annotations to locate sharp peak.
+7. Created model_cnn.py to explain the model about the architecture
+8. Created train_model.py to train the model
+9. Created quantize_model.py for Post Training Quantization
+-----------------------------------------------Phase-1 Ends here------------------------------------------

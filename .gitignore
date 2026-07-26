@@ -21,3 +21,6 @@
 **/synthesis/
 **/*.bit
 **/*.bin
+
+# Obsidian Settings
+**/.obsidian/

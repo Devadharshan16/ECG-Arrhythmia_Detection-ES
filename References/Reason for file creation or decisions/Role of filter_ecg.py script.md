@@ -1,0 +1,5 @@
+Raw ECG signals recorded in hospitals are contaminated with two major sources of interference: low-frequency baseline drift caused by the patient breathing ($0.5\text{ Hz}$) and high-frequency electrical hum radiating from wall outlets ($60\text{ Hz}$).
+
+- **What it did:** It loaded 10 seconds of raw patient data, ran it through a 2nd-order Butterworth high-pass filter and an IIR notch filter, and plotted the before-and-after waveforms on your screen.
+    
+- **Why your hardware demanded it:** On a cloud server, engineers often feed noisy data into massive neural networks and let extra layers learn to ignore the noise. On your **Lattice iCE40UP5K FPGA**, you only have **5,280 LUTs** and **8 physical DSP multiplier blocks**. You cannot waste a single logic gate or memory byte teaching a network how to ignore AC wall hum. Cleaning the signal in software ensures that 100% of your FPGA's calculation power is dedicated to recognizing anatomical cardiac anomalies.

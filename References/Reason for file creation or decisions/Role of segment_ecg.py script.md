@@ -1,0 +1,5 @@
+- **What it did:** It took the clean, filtered signal from all 48 patient records and used expert cardiologist annotations to locate the sharp peak of every single heartbeat (the R-peak). It then sliced exactly 45 samples before and 45 samples after each peak to create **90-point time-series windows** ($250\text{ ms}$ of duration at $360\text{ Hz}$). Finally, it min-max normalized every window to scale strictly between `-1.0` and `+1.0` and saved them as `X_data.npy` and `y_data.npy`.
+    
+- **Why your hardware demanded it:** * **The 15 KB Memory Ceiling:** Slicing the heartbeat into exactly 90 points guarantees that the input tensor and the resulting `TinyECG_CNN` weight matrices will be small enough to fit completely inside the FPGA's local Block RAM (BRAM).
+    
+    - **INT8 Quantization Protection:** When PyTorch converts your floating-point numbers into 8-bit integers (`-128` to `+127`) during Quantization-Aware Training, unnormalized spikes would cause numeric clipping and destroy model accuracy. Normalizing every window to `[-1.0, 1.0]` ensures smooth, even distribution across the 8-bit integer step bins.

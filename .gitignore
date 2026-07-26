@@ -1,0 +1,23 @@
+# Python Environments & Caches
+**/venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/.ipynb_checkpoints/
+
+# Heavy Clinical Datasets & Tensors
+**/mitdb_data/
+**/processed_tensors/
+
+# IDE & Editor Settings
+**/.vscode/
+**/.idea/
+**/*.swp
+
+# FPGA / Synthesis Build Artifacts
+**/*.log
+**/*.jou
+**/impl_1/
+**/synthesis/
+**/*.bit
+**/*.bin

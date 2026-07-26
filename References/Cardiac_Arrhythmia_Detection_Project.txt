@@ -1,0 +1,28 @@
+Project Title: Wearable Edge-AI Accelerator for Real-Time Cardiac Arrhythmia Detection
+
+========================================
+1. THE CONCEPT IN LAYMAN'S TERMS
+========================================
+The Real-World Problem:
+Heart disease is the leading cause of death worldwide. While wearable heart monitors exist (like smartwatches), they usually have to send your heart data over the internet to a powerful computer to analyze it. This drains the device's battery incredibly fast. Even worse, if you are in an area with bad cell service or no Wi-Fi, the device can't send the data, meaning it can't warn you if a heart attack is starting.
+
+The Solution:
+Instead of relying on the internet, we are going to make the wearable device itself incredibly smart. We will design a custom microchip that acts as an "offline doctor." It will constantly monitor your heartbeat directly on your wrist or chest. Because the chip is custom-built just for this one specific task, it uses almost no battery. It stays completely quiet until it detects a dangerous heartbeat pattern, and only then does it wake up your phone to call for help.
+
+========================================
+2. THE CONCEPT IN TECHNICAL TERMS
+========================================
+The Engineering Bottleneck:
+Continuous remote monitoring of Electrocardiogram (ECG) signals via IoT wearables faces a severe power-communication tradeoff. Transmitting raw time-series ECG data to cloud servers via Bluetooth/Wi-Fi consumes excessive energy from the RF transceiver. Conversely, executing machine learning models on standard embedded microcontrollers (e.g., general-purpose ARM Cortex-M) for local inference is too computationally expensive and power-hungry for always-on battery operation.
+
+The Architectural Solution:
+This project proposes a hardware-software co-designed Edge AI accelerator specifically optimized for 1D time-series data. 
+
+* Software Phase: We will design and train a lightweight 1D-Convolutional Neural Network (1D-CNN) using the MIT-BIH Arrhythmia Database. The model will be heavily quantized (e.g., INT8 weights and activations) to reduce the memory footprint and computational requirements without significant accuracy degradation.
+
+* Hardware Phase: Using C/C++ and High-Level Synthesis (HLS), we will translate this quantized neural network into a custom hardware architecture (Register-Transfer Level or RTL). This custom processing pipeline will be deployed on an edge FPGA. By creating a custom datapath that maximizes data reuse and minimizes external memory fetches, the accelerator will perform real-time ECG classification at a fraction of the power required by a general-purpose processor. The communication module is kept in a deep sleep state, triggered via a hardware interrupt only when a cardiac anomaly (like an irregular QRS complex) is classified by the hardware engine.
+
+========================================
+3. ALIGNMENT WITH IEEE JOURNALS (TCAD / ESL)
+========================================
+This project heavily emphasizes hardware-software co-design, area-power-latency tradeoffs, and ultra-low-power custom architecture for embedded systems. Demonstrating an energy-efficient hardware implementation of an AI model for edge medical devices directly aligns with the publication criteria for IEEE Embedded Systems Letters (ESL) and IEEE Transactions on Computer-Aided Design (TCAD).

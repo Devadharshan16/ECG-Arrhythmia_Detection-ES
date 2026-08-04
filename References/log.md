@@ -5,6 +5,13 @@
 5. Created a filter_ecg.py to filter out respiration (0.5 Hz Butterworth High-Pass Filter) and electrical buzz (The 60 Hz IIR Notch Filter).
 6. Created a segment_ecg.py to export the filtered data to annotations to locate sharp peak.
 7. Created model_cnn.py to explain the model about the architecture
-8. Created train_model.py to train the model
-9. Created quantize_model.py for Post Training Quantization
------------------------------------------------Phase-1 Ends here------------------------------------------
+8. Created train_model_ptq.py to train the model
+9. Created quantize_model_ptq.py for Post Training Quantization
+10. Then evaluated the model using evaluate_model_ptq.py
+11. Found a mistake trained in ptq method instead of qta.
+12. Created train_model_qta.py to train in qta method.
+13. Evaluated using evaluate_model_qta.py
+14. Ran visualize_dataset.py to generate simple 3 plots of same patients normal vs anomaly
+15. Ran plot_dataset.py to generate plots of heartbeats.
+16. Ran generate_csv_of_dataset.py to generate csv files of whole dataset
+----------------------------------------------Phase-1 Ends here------------------------------------------

@@ -4,7 +4,7 @@
 > Any AI agent working on this project should read this file FIRST before exploring any folders.
 > It eliminates the need to scan directories one-by-one, saving tokens and time.
 
-> **Last Updated**: 2026-08-20
+> **Last Updated**: 2026-08-26
 
 ---
 
@@ -19,8 +19,8 @@
 | **Target Hardware** | Lattice iCE40 FPGA (≤15 KB BRAM, 8 DSP multipliers) |
 | **Dataset** | MIT-BIH Arrhythmia Database (48 patients, 360 Hz, 2-channel ECG, ~30 min each) |
 | **Classification** | Binary — Class 0 (Normal) vs Class 1 (Arrhythmia/Anomaly) |
-| **Model** | `TinyECG_CNN` — 2-layer 1D-CNN with QuantStub/DeQuantStub |
-| **Quantization Methods** | PTQ (Post-Training Quantization) and QAT (Quantization-Aware Training) |
+| **Model** | `TinyECG_CNN` v2 — 3-layer 1D-CNN with BatchNorm1d, Dropout, QuantStub/DeQuantStub (~2,900 params, ~2.9 KB INT8) |
+| **Quantization Methods** | QAT (Quantization-Aware Training) |
 | **Target Publication** | IEEE Embedded Systems Letters (ESL) / IEEE TCAD |
 
 ---
@@ -31,7 +31,7 @@
 d:\ECG- Embedded System\
 │
 ├── .git/                          # Git version control
-├── .gitignore                     # Ignores: venv, __pycache__, mitdb_data, processed_tensors, .obsidian, FPGA artifacts
+├── .gitignore                     # Ignores: venv, __pycache__, mitdb_data, .obsidian, FPGA artifacts
 ├── References/                    # Documentation, logs, decision notes, and THIS map file
 └── Wearable_ECG_EdgeAI/           # ★ ALL source code, data, models, and outputs live here
 ```
@@ -72,6 +72,7 @@ d:\ECG- Embedded System\
 | `What are the files in dataset.md` | 504 B | Explains the `.dat`, `.hea`, `.atr` file triplet per patient. |
 | `What is Post Training Quantization.md` | 482 B | Brief explanation of PTQ methodology. |
 | `filter_comparison.png` | 🖼️ Image (380 KB) | Raw vs filtered ECG signal comparison plot (Patient 100). |
+| `Accuracy Improvement Plan v2.md` | 2.3 KB | Root cause analysis of ~90% accuracy + 3-axis improvement plan (architecture, augmentation, hyperparameters). |
 
 ---
 
@@ -92,16 +93,13 @@ The scripts form a **sequential pipeline**. They must be understood (and run) in
 |---|---|---|---|---|
 | 1 | `get_data.py` | 898 B | **Data Acquisition** | Downloads all 48 MIT-BIH patient records from PhysioNet into `mitdb_data/` using `wfdb.dl_database()`. |
 | 2 | `filter_ecg.py` | 2.5 KB | **Signal Preprocessing** | Applies 0.5 Hz Butterworth high-pass filter (removes respiration drift) + 60 Hz IIR notch filter (removes AC hum). Uses `scipy.signal.filtfilt` for zero-phase filtering. Outputs a comparison plot. |
-| 3 | `segment_ecg.py` | 3.7 KB | **Feature Extraction** | Reads all 48 patient records, applies filtering, extracts 90-point windows centered on R-peaks, normalizes to [-1, 1], labels as binary (Normal=0, Anomaly=1). Saves `X_data.npy` and `y_data.npy` to `processed_tensors/`. |
-| 4 | `model_cnn.py` | 2.2 KB | **Architecture Definition** | Defines `TinyECG_CNN` class: 2× Conv1d layers (1→4→8 channels, kernel=5, stride=2) + FC layer (184→2). Includes `QuantStub`/`DeQuantStub` for INT8 quantization. Total ≈ 558 parameters, < 15 KB INT8. |
-| 5 | `train_model_ptq.py` | 4.8 KB | **Training (PTQ Path)** | Loads tensors, 80/20 split (seed=42), trains TinyECG_CNN with CrossEntropyLoss + Adam for 5 epochs, applies 20% L1 unstructured pruning, saves `tiny_ecg_pruned.pth`. |
-| 6 | `quantize_model_ptq.py` | 3.9 KB | **Quantization (PTQ Path)** | Loads pruned FP32 model, calibrates with HistogramObserver on training data, converts to INT8, evaluates on test set, exports TorchScript traced model as `tiny_ecg_ptq_int8.pth`. |
-| 7 | `evaluate_model_ptq.py` | 3.5 KB | **Evaluation (PTQ Path)** | Loads the TorchScript INT8 model, evaluates on 20% holdout test set sample-by-sample, prints accuracy. |
-| 8 | `train_model_qta.py` | 5.7 KB | **Training + Quantization (QAT Path)** | QAT training with Focal Loss (α=0.75, γ=2.0), Cosine Annealing LR scheduler, 10 epochs, `qnnpack` backend. Applies 20% L1 pruning THEN converts to INT8. Saves `tiny_ecg_qat.pth`. |
-| 9 | `evaluate_model_qta.py` | 4.5 KB | **Evaluation (QAT Path)** | Loads QAT INT8 model, evaluates with full clinical confusion matrix: True Normals, True Anomalies, False Alarms, Missed Anomalies. |
-| 10 | `visualize_dataset.py` | 5.0 KB | **Visualization** | Scans database for 3 patients with both Normal ('N') and PVC ('V') beats, generates a 2×3 grid plot comparing Normal vs Anomaly morphology using 90-point normalized tensors. |
-| 11 | `plot_dataset.py` | 6.2 KB | **Full Dataset Plotting** | Batch-processes ALL 48 patients. Creates per-patient folders, splits 30-min records into 5-minute chunks, generates highlighted ECG strip images (green=Normal, red=Anomaly). Outputs to `Dataset_Plots/`. |
-| 12 | `generate_csv_of_dataset.py` | 3.6 KB | **CSV Export** | Converts ALL 48 patient records into strict binary-labeled CSVs (every sample row tagged Class 0 or Class 1). Outputs to `Dataset_CSV/`. |
+| 3 | `ecg_dataset.py` | 2.2 KB | **Data Loader** | PyTorch Dataset class that dynamically loads patient `.dat` files into memory, applies filters, and segments beats on the fly based on strict DS1 (Train) and DS2 (Test) patient-level splits to prevent Data Leakage. |
+| 4 | `model_cnn.py` | 2.8 KB | **Architecture Definition** | Defines `TinyECG_CNN` v2: 3× Conv1d layers (1→8→16→16) + BatchNorm1d + Dropout + FC layer (192→2). Includes `QuantStub`/`DeQuantStub` for INT8 quantization. Total ≈ 2,900 parameters, ~2.9 KB INT8. |
+| 5 | `train_model_qat.py` | 6.5 KB | **Training (QAT v2)** | Loads DS1 split dynamically. QAT training with data augmentation (time shift, noise, amplitude scaling), Focal Loss (dynamic α), AdamW + CosineAnnealingWarmRestarts, 30 epochs, `qnnpack` backend. Applies 10% L1 pruning THEN converts to INT8. Saves `tiny_ecg_qat.pth`. |
+| 6 | `evaluate_model_qat.py` | 4.8 KB | **Evaluation (QAT v2)** | Loads QAT INT8 model. Evaluates on unseen DS2 patient split dynamically with full clinical confusion matrix + Sensitivity, Specificity, Precision, F1-Score. |
+| 7 | `visualize_dataset.py` | 5.0 KB | **Visualization** | Scans database for 3 patients with both Normal ('N') and PVC ('V') beats, generates a 2×3 grid plot comparing Normal vs Anomaly morphology using 90-point normalized tensors. |
+| 8 | `plot_dataset.py` | 6.2 KB | **Full Dataset Plotting** | Batch-processes ALL 48 patients. Creates per-patient folders, splits 30-min records into 5-minute chunks, generates highlighted ECG strip images (green=Normal, red=Anomaly). Outputs to `Dataset_Plots/`. |
+| 9 | `generate_csv_of_dataset.py` | 3.6 KB | **CSV Export** | Converts ALL 48 patient records into strict binary-labeled CSVs (every sample row tagged Class 0 or Class 1). Outputs to `Dataset_CSV/`. |
 
 ---
 
@@ -126,18 +124,6 @@ Each patient has exactly **3 files**:
 **Patient Record IDs** (48 total):
 `100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 111, 112, 113, 114, 115, 116, 117, 118, 119, 121, 122, 123, 124, 200, 201, 202, 203, 205, 207, 208, 209, 210, 212, 213, 214, 215, 217, 219, 220, 221, 222, 223, 228, 230, 231, 232, 233, 234`
 
-##### 2.2.2 `processed_tensors/` — ML-Ready NumPy Arrays
-
-> **Path**: `d:\ECG- Embedded System\Wearable_ECG_EdgeAI\processed_tensors\`
-> **Git Status**: ⛔ GITIGNORED
-> **Created By**: `segment_ecg.py`
-
-| File | Size | Shape | Description |
-|---|---|---|---|
-| `X_data.npy` | 38.7 MB | `(N, 1, 90)` float32 | N heartbeat windows, each 90 data points, 1 channel. Ready for PyTorch Conv1d input. |
-| `y_data.npy` | 879 KB | `(N,)` int64 | Binary labels: 0 = Normal, 1 = Anomaly. |
-
-> **N ≈ 112,600** total extracted heartbeats across all 48 patients.
 
 ##### 2.2.3 `Dataset_CSV/` — Full Binary-Labeled CSV Export
 
@@ -186,11 +172,7 @@ Each patient folder contains **6–7 PNG images** (5-minute chunks of their 30-m
 
 | File | Size | Created By | Description |
 |---|---|---|---|
-| `tiny_ecg_pruned.pth` | 5.2 KB | `train_model_ptq.py` | FP32 model weights after training + 20% L1 pruning (PTQ path). |
-| `tiny_ecg_ptq_int8.pth` | 21.7 KB | `quantize_model_ptq.py` | TorchScript-traced INT8 quantized model (PTQ path). Deployable. |
-| `tiny_ecg_ptq_pruned.pth` | 5.3 KB | `train_model_ptq.py` | Alternate pruned checkpoint (PTQ path). |
-| `tiny_ecg_ptq_quantized.pth` | 7.7 KB | `quantize_model_ptq.py` | INT8 quantized state dict (PTQ path, non-traced). |
-| `tiny_ecg_qat.pth` | 5.8 KB | `train_model_qta.py` | INT8 quantized state dict (QAT path with Focal Loss). |
+| `tiny_ecg_qat.pth` | 5.8 KB | `train_model_qat.py` | INT8 quantized state dict (QAT path with Focal Loss). |
 
 ---
 
@@ -210,37 +192,23 @@ Each patient folder contains **6–7 PNG images** (5-minute chunks of their 30-m
 │                        PHASE 1: SOFTWARE (COMPLETE)                     │
 │                                                                         │
 │  ┌──────────┐    ┌──────────────┐    ┌──────────────┐    ┌───────────┐ │
-│  │ get_data  │───▶│  filter_ecg   │───▶│  segment_ecg  │───▶│ model_cnn │ │
-│  │   .py     │    │     .py       │    │     .py       │    │    .py    │ │
+│  │ get_data  │───▶│ ecg_dataset  │───▶│ train_model  │───▶│ model_cnn │ │
+│  │   .py     │    │     .py       │    │  _qat.py     │    │    .py    │ │
 │  └──────────┘    └──────────────┘    └──────────────┘    └───────────┘ │
-│       │                                      │                   │      │
-│       ▼                                      ▼                   ▼      │
-│  mitdb_data/                          processed_tensors/     (arch def) │
-│  (48×3 files)                         X_data.npy                        │
-│                                       y_data.npy                        │
-│                                              │                          │
-│                          ┌───────────────────┼───────────────────┐      │
-│                          ▼                                       ▼      │
-│                ┌──────────────────┐                   ┌────────────────┐│
-│                │ train_model_ptq  │                   │ train_model_qta││
-│                │      .py         │                   │      .py       ││
-│                └──────────────────┘                   └────────────────┘│
-│                          │                                       │      │
-│                          ▼                                       ▼      │
-│                ┌──────────────────┐                   ┌────────────────┐│
-│                │quantize_model_ptq│                   │ (QAT converts  ││
-│                │      .py         │                   │  during train) ││
-│                └──────────────────┘                   └────────────────┘│
-│                          │                                       │      │
-│                          ▼                                       ▼      │
-│                ┌──────────────────┐                   ┌────────────────┐│
-│                │evaluate_model_ptq│                   │evaluate_model  ││
-│                │      .py         │                   │   _qta.py      ││
-│                └──────────────────┘                   └────────────────┘│
-│                          │                                       │      │
-│                          ▼                                       ▼      │
-│                  saved_models/                           saved_models/  │
-│            tiny_ecg_ptq_int8.pth                     tiny_ecg_qat.pth  │
+│       │                 │                    │                   │      │
+│       ▼                 ▼                    ▼                   ▼      │
+│  mitdb_data/      (Dynamic Memory)   saved_models/        (arch def) │
+│  (48×3 files)     DS1/DS2 Split      tiny_ecg_qat.pth                  │
+│                                                                         │
+│                          ┌───────────────────┘                          │
+│                          ▼                                              │
+│                ┌──────────────────┐                                     │
+│                │  evaluate_model  │                                     │
+│                │     _qat.py      │                                     │
+│                └──────────────────┘                                     │
+│                          │                                              │
+│                          ▼                                              │
+│                 (Clinical DS2 Test)                                     │
 │                                                                         │
 │  ┌──────────────────┐  ┌──────────────┐  ┌─────────────────────────┐   │
 │  │ visualize_dataset │  │ plot_dataset  │  │ generate_csv_of_dataset │   │
@@ -264,37 +232,41 @@ Each patient folder contains **6–7 PNG images** (5-minute chunks of their 30-m
 
 ---
 
-## 🧮 MODEL ARCHITECTURE QUICK-REFERENCE
+## 🧮 MODEL ARCHITECTURE QUICK-REFERENCE (v2)
 
 ```
 Input: (Batch, 1, 90)  — 1 channel, 90 time-steps
 
-Layer 1:  Conv1d(1 → 4, kernel=5, stride=2, pad=2)  → (Batch, 4, 45)
+Layer 1:  Conv1d(1 → 8, kernel=5, stride=2, pad=2)  → (Batch, 8, 45)
+          BatchNorm1d(8)
           ReLU
-Layer 2:  Conv1d(4 → 8, kernel=5, stride=2, pad=2)  → (Batch, 8, 23)
+Layer 2:  Conv1d(8 → 16, kernel=5, stride=2, pad=2) → (Batch, 16, 23)
+          BatchNorm1d(16)
           ReLU
-Flatten:  (Batch, 184)
-FC:       Linear(184 → 2)  — Binary classification output
+Layer 3:  Conv1d(16 → 16, kernel=3, stride=2, pad=1) → (Batch, 16, 12)
+          BatchNorm1d(16)
+          ReLU
+Dropout:  p=0.3
+Flatten:  (Batch, 192)
+FC:       Linear(192 → 2)  — Binary classification output
 
-Total Parameters: ~558
-INT8 Footprint:   ~0.55 KB (well under 15 KB BRAM limit)
+Total Parameters: ~2,900
+INT8 Footprint:   ~2.9 KB (19.3% of 15 KB BRAM limit)
 
 Quantization Stubs: QuantStub() at input, DeQuantStub() at output
 ```
 
 ---
 
-## 📊 PERFORMANCE RESULTS (Phase 1)
+## 📊 PERFORMANCE RESULTS (Phase 1 v2)
 
-| Metric | PTQ Model | QAT Model (Focal Loss) |
-|---|---|---|
-| Overall Accuracy | **95.73%** | 95.16% |
-| True Anomalies Caught | 3,667 | 3,573 |
-| Missed Anomalies (Fatal) | 741 | 835 |
-| True Normals | 17,894 | 17,858 |
-| False Alarms | 220 | 256 |
+| Metric | QAT v2 Model (Focal Loss + Augmentation) |
+|---|---|
+| **Status** | Evaluated exclusively on the DS2 clinical split (no data leakage) |
+| **Metrics** | Accuracy, Sensitivity (Recall), Specificity, Precision, F1-Score |
+| **Note** | Results will be populated after running `train_model_qat.py` then `evaluate_model_qat.py` |
 
-> **Current Best**: PTQ model has higher accuracy and fewer missed anomalies.
+> **Current Architecture**: QAT v2 pipeline is the primary and only path for hardware synthesis.
 
 ---
 
@@ -308,14 +280,13 @@ Quantization Stubs: QuantStub() at input, DeQuantStub() at output
 | Normalization | Min-Max to [-1.0, 1.0] |
 | Normal Beat Symbols | `N`, `L`, `R`, `e`, `j` |
 | Anomaly Beat Symbols | Everything else (`V`, `A`, `a`, `J`, `S`, `F`, `[`, `!`, `]`, `E`, `/`, `f`, `x`, `Q`) |
-| Train/Test Split | 80% / 20% (seed=42 for reproducibility) |
-| Pruning | 20% L1 Unstructured on Conv1d + Linear layers |
-| PTQ Calibration | HistogramObserver (full training set) |
+| Train/Test Split | DS1 (Train) / DS2 (Test) patient split (AAMI standard) to prevent data leakage |
+| Pruning | 10% L1 Unstructured on Conv1d + Linear layers |
 | QAT Backend | `qnnpack` |
-| QAT Loss Function | Focal Loss (α=0.75, γ=2.0) |
-| QAT LR Schedule | Cosine Annealing (η_min=1e-6) |
-| PTQ Training | 5 epochs, batch=64, lr=0.001, Adam |
-| QAT Training | 10 epochs, batch=64, lr=0.001, Adam |
+| QAT Loss Function | Focal Loss (α=dynamic from class ratio, γ=2.0) |
+| QAT LR Schedule | CosineAnnealingWarmRestarts (T_0=10, η_min=1e-6) |
+| QAT Training | 30 epochs, batch=64, lr=0.001, AdamW (weight_decay=1e-4) |
+| Data Augmentation | Time shift ±5, Gaussian noise σ=0.01, Amplitude scale 0.9–1.1 |
 
 ---
 
@@ -325,18 +296,16 @@ Quantization Stubs: QuantStub() at input, DeQuantStub() at output
 |---|---|
 | Raw ECG data for any patient | `Wearable_ECG_EdgeAI/mitdb_data/{ID}.dat` |
 | Cardiologist annotations for any patient | `Wearable_ECG_EdgeAI/mitdb_data/{ID}.atr` |
-| ML-ready tensors (train/test data) | `Wearable_ECG_EdgeAI/processed_tensors/X_data.npy` & `y_data.npy` |
 | Full patient CSV with binary labels | `Wearable_ECG_EdgeAI/Dataset_CSV/Patient_{ID}_Binary.csv` |
 | ECG strip images for any patient | `Wearable_ECG_EdgeAI/Dataset_Plots/Patient_{ID}/` |
 | The CNN model definition | `Wearable_ECG_EdgeAI/model_cnn.py` |
-| Best trained model (PTQ INT8) | `Wearable_ECG_EdgeAI/saved_models/tiny_ecg_ptq_int8.pth` |
 | QAT trained model | `Wearable_ECG_EdgeAI/saved_models/tiny_ecg_qat.pth` |
+| Dynamic Dataset Loader | `Wearable_ECG_EdgeAI/ecg_dataset.py` |
 | Project description / proposal | `References/Cardiac_Arrhythmia_Detection_Project.txt` |
 | Step-by-step build log | `References/log.md` |
 | Why a specific script exists | `References/Reason for file creation or decisions/Role of {script}.md` |
 | Technical decision explanations | `References/Reason for file creation or decisions/` |
 | Filter design rationale | `References/Reason for file creation or decisions/What are the 2 filters used...md` |
-| PTQ vs QAT accuracy comparison | `References/Reason for file creation or decisions/Comparison between PTQ and QTA Models.md` |
 | Dependencies and their purpose | `References/Reason for file creation or decisions/Installed Dependencies and Uses.md` |
 | This map itself | `References/REPOSITORY_MAP.md` |
 
@@ -345,9 +314,8 @@ Quantization Stubs: QuantStub() at input, DeQuantStub() at output
 ## ⚠️ IMPORTANT NOTES FOR AI AGENTS
 
 1. **Do NOT explore `venv/`, `__pycache__/`, or `.git/`** — They contain no project-relevant code.
-2. **`mitdb_data/` and `processed_tensors/` are GITIGNORED** — They must be regenerated by running `get_data.py` then `segment_ecg.py` if missing.
-3. **The 80/20 split uses seed=42** — All scripts share this seed for reproducibility. Do NOT change it.
+2. **`mitdb_data/` is GITIGNORED** — It must be downloaded by running `get_data.py` if missing.
+3. **Data Splitting** — Training explicitly uses the clinical AAMI standard DS1 patient split, and testing uses DS2. This eliminates data leakage that was present in the old random 80/20 split.
 4. **Channel 0 is MLII** — All signal processing uses `record.p_signal[:, 0]`. Channel 1 is only included in CSVs.
 5. **The scripts in `Wearable_ECG_EdgeAI/` are meant to be run from that directory** — Relative paths assume `Wearable_ECG_EdgeAI/` as the CWD.
 6. **Phase 2 (Hardware) has NOT started** — There are no FPGA/Verilog/HLS files yet.
-7. **The QAT script is named `train_model_qta.py` and `evaluate_model_qta.py`** (note: the "a" and "t" are swapped in the filename, but the code inside correctly implements QAT).

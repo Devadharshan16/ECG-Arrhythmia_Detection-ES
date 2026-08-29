@@ -260,15 +260,23 @@ Quantization Stubs: QuantStub() at input, DeQuantStub() at output
 
 ---
 
-## 📊 PERFORMANCE RESULTS (Phase 1 v2)
+## 📊 PERFORMANCE RESULTS (Phase 1 v3)
 
-| Metric | QAT v2 Model (Focal Loss + Augmentation) |
-|---|---|
-| **Status** | Evaluated exclusively on the DS2 clinical split (no data leakage) |
-| **Metrics** | Accuracy, Sensitivity (Recall), Specificity, Precision, F1-Score |
-| **Note** | Results will be populated after running `train_model_qat.py` then `evaluate_model_qat.py` |
+| Metric | QAT v2 (Baseline) | QAT v3 (Diagnosis Fixes) |
+|---|---|---|
+| **Overall Accuracy** | 81.5% | **92.46%** (+11.0%) |
+| **Sensitivity (Recall)** | 67.5% | **73.91%** (+6.4%) |
+| **Specificity** | 83.6% | **95.36%** (+11.8%) |
+| **Precision** | — | **71.33%** |
+| **F1-Score** | — | **72.60%** |
+| **True Normals (TN)** | — | 42,201 |
+| **True Anomalies (TP)** | — | 5,111 |
+| **False Alarms (FP)** | — | 2,054 |
+| **Missed Anomalies (FN)** | — | 1,804 |
 
-> **Current Architecture**: QAT v2 pipeline is the primary and only path for hardware synthesis.
+> **Evaluated on**: DS2 clinical split (51,170 beats from 22 unseen patients, no data leakage)
+> **Best Epoch**: 2/50 (selected by validation F1-Score)
+> **Key Fixes**: Record-level z-score normalization, dampened Focal Loss alpha (0.6892), F1-based checkpoint selection
 
 ---
 

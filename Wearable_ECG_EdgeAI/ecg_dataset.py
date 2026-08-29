@@ -45,6 +45,13 @@ class MITBIH_Dataset(Dataset):
             raw_sig = record.p_signal[:, 0] # MLII Lead
             clean_sig = apply_digital_filters(raw_sig, fs=record.fs)
             
+            # Record-level z-score normalization (Fix for Problem 1):
+            # Compute mean/std ONCE per patient record, then apply to all windows.
+            # This preserves genuine inter-beat amplitude differences (e.g., PVCs
+            # are taller/wider than normal beats) while normalizing across patients.
+            sig_mean = clean_sig.mean()
+            sig_std = clean_sig.std()
+            
             peaks = annotation.sample
             symbols = annotation.symbol
             
@@ -54,12 +61,12 @@ class MITBIH_Dataset(Dataset):
                 
                 window = clean_sig[peak - self.half_win : peak + self.half_win]
                 
-                w_min, w_max = np.min(window), np.max(window)
-                if w_max - w_min == 0:
+                # Skip flat-line windows (no signal variation at all)
+                if sig_std == 0:
                     continue
                 
-                # Min-Max Normalization to [-1.0, 1.0]
-                norm_win = 2.0 * ((window - w_min) / (w_max - w_min)) - 1.0
+                # Z-score normalization using record-level statistics
+                norm_win = (window - sig_mean) / (sig_std + 1e-8)
                 
                 X_data_list.append(np.expand_dims(norm_win, axis=0)) # (1, 90)
                 label = 0 if sym in self.normal_symbols else 1

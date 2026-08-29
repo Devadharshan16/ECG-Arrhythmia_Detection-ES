@@ -4,7 +4,7 @@
 > Any AI agent working on this project should read this file FIRST before exploring any folders.
 > It eliminates the need to scan directories one-by-one, saving tokens and time.
 
-> **Last Updated**: 2026-08-26
+> **Last Updated**: 2026-08-29
 
 ---
 
@@ -49,7 +49,8 @@ d:\ECG- Embedded System\
 |---|---|---|
 | `REPOSITORY_MAP.md` | 📄 File | **THIS FILE** — The master index for the entire repo. |
 | `Cardiac_Arrhythmia_Detection_Project.txt` | 📄 File (3.3 KB) | Full project proposal — layman's terms, technical description, and IEEE alignment. |
-| `log.md` | 📄 File (1.5 KB) | Chronological step-by-step log of every action taken in Phase 1 (16 steps). |
+| `log.md` | 📄 File (1.5 KB) | Chronological step-by-step log of every action taken in Phase 1 (36 steps). |
+| `ECG_Model_Diagnosis.md` | 📄 File (4.8 KB) | Diagnosis of 4 model problems (normalization, validation, focal alpha, augmentation) with fixes. |
 | `Show Difference between Normal Beat and Anomaly Beat.png` | 🖼️ Image (545 KB) | Visual comparison image of normal vs anomaly ECG waveforms. |
 | `Sent Items - VISHAL M.D-[...].pdf` | 📄 PDF (322 KB) | Email correspondence / submission reference. |
 | `Reason for file creation or decisions/` | 📁 Folder | Contains 10 markdown docs + 1 image explaining WHY each script/decision was made. |
@@ -93,9 +94,9 @@ The scripts form a **sequential pipeline**. They must be understood (and run) in
 |---|---|---|---|---|
 | 1 | `get_data.py` | 898 B | **Data Acquisition** | Downloads all 48 MIT-BIH patient records from PhysioNet into `mitdb_data/` using `wfdb.dl_database()`. |
 | 2 | `filter_ecg.py` | 2.5 KB | **Signal Preprocessing** | Applies 0.5 Hz Butterworth high-pass filter (removes respiration drift) + 60 Hz IIR notch filter (removes AC hum). Uses `scipy.signal.filtfilt` for zero-phase filtering. Outputs a comparison plot. |
-| 3 | `ecg_dataset.py` | 2.2 KB | **Data Loader** | PyTorch Dataset class that dynamically loads patient `.dat` files into memory, applies filters, and segments beats on the fly based on strict DS1 (Train) and DS2 (Test) patient-level splits to prevent Data Leakage. |
+| 3 | `ecg_dataset.py` | 2.2 KB | **Data Loader** | PyTorch Dataset class that dynamically loads patient `.dat` files into memory, applies filters, and segments beats on the fly based on strict DS1 (Train) and DS2 (Test) patient-level splits to prevent Data Leakage. Uses record-level z-score normalization (v3) to preserve inter-beat amplitude differences. |
 | 4 | `model_cnn.py` | 2.8 KB | **Architecture Definition** | Defines `TinyECG_CNN` v2: 3× Conv1d layers (1→8→16→16) + BatchNorm1d + Dropout + FC layer (192→2). Includes `QuantStub`/`DeQuantStub` for INT8 quantization. Total ≈ 2,900 parameters, ~2.9 KB INT8. |
-| 5 | `train_model_qat.py` | 6.5 KB | **Training (QAT v2)** | Loads DS1 split dynamically. QAT training with data augmentation (time shift, noise, amplitude scaling), Focal Loss (dynamic α), AdamW + CosineAnnealingWarmRestarts, 30 epochs, `qnnpack` backend. Applies 10% L1 pruning THEN converts to INT8. Saves `tiny_ecg_qat.pth`. |
+| 5 | `train_model_qat.py` | 7.2 KB | **Training (QAT v3)** | Loads DS1 split dynamically with patient-independent validation (5 patients held out). QAT training with data augmentation (noise, amplitude scaling), Focal Loss (α auto-computed from DS1 class counts), AdamW + CosineAnnealingWarmRestarts, 50 epochs. Tracks val sensitivity/F1 every epoch, saves best checkpoint by val sensitivity, then converts to INT8. Saves `tiny_ecg_qat.pth`. |
 | 6 | `evaluate_model_qat.py` | 4.8 KB | **Evaluation (QAT v2)** | Loads QAT INT8 model. Evaluates on unseen DS2 patient split dynamically with full clinical confusion matrix + Sensitivity, Specificity, Precision, F1-Score. |
 | 7 | `visualize_dataset.py` | 5.0 KB | **Visualization** | Scans database for 3 patients with both Normal ('N') and PVC ('V') beats, generates a 2×3 grid plot comparing Normal vs Anomaly morphology using 90-point normalized tensors. |
 | 8 | `plot_dataset.py` | 6.2 KB | **Full Dataset Plotting** | Batch-processes ALL 48 patients. Creates per-patient folders, splits 30-min records into 5-minute chunks, generates highlighted ECG strip images (green=Normal, red=Anomaly). Outputs to `Dataset_Plots/`. |
@@ -172,7 +173,8 @@ Each patient folder contains **6–7 PNG images** (5-minute chunks of their 30-m
 
 | File | Size | Created By | Description |
 |---|---|---|---|
-| `tiny_ecg_qat.pth` | 5.8 KB | `train_model_qat.py` | INT8 quantized state dict (QAT path with Focal Loss). |
+| `tiny_ecg_qat.pth` | 5.8 KB | `train_model_qat.py` | INT8 quantized state dict (QAT path, converted from best val sensitivity checkpoint). **Must be regenerated with v3 training script.** |
+| `tiny_ecg_qat_best.pth` | ~12 KB | `train_model_qat.py` | QAT model state dict (before INT8 conversion) from the epoch with best validation sensitivity. Intermediate checkpoint. |
 
 ---
 
@@ -277,16 +279,18 @@ Quantization Stubs: QuantStub() at input, DeQuantStub() at output
 | Sampling Frequency | 360 Hz |
 | ECG Lead Used | Modified Limb Lead II (MLII) — Channel 0 |
 | Window Size | 90 data points (~250 ms of cardiac activity) |
-| Normalization | Min-Max to [-1.0, 1.0] |
+| Normalization | Record-level z-score (per-patient mean/std) — preserves inter-beat amplitude differences |
 | Normal Beat Symbols | `N`, `L`, `R`, `e`, `j` |
 | Anomaly Beat Symbols | Everything else (`V`, `A`, `a`, `J`, `S`, `F`, `[`, `!`, `]`, `E`, `/`, `f`, `x`, `Q`) |
 | Train/Test Split | DS1 (Train) / DS2 (Test) patient split (AAMI standard) to prevent data leakage |
-| Pruning | 10% L1 Unstructured on Conv1d + Linear layers |
-| QAT Backend | `qnnpack` |
-| QAT Loss Function | Focal Loss (α=dynamic from class ratio, γ=2.0) |
-| QAT LR Schedule | CosineAnnealingWarmRestarts (T_0=10, η_min=1e-6) |
-| QAT Training | 30 epochs, batch=64, lr=0.001, AdamW (weight_decay=1e-4) |
-| Data Augmentation | Time shift ±5, Gaussian noise σ=0.01, Amplitude scale 0.9–1.1 |
+| Validation Split | 5 patients held out from DS1 (109, 114, 207, 220, 223) — patient-independent, never in DS2 |
+| Best Checkpoint | Saved by validation sensitivity (not train accuracy) |
+| Pruning | None (removed — 2,900 params fits well within 15 KB without pruning) |
+| QAT Backend | Auto-detected (`onednn` on Windows, `qnnpack` on Linux/Mac) |
+| QAT Loss Function | Focal Loss (α=auto-computed from DS1 training class counts, γ=2.0) |
+| QAT LR Schedule | CosineAnnealingWarmRestarts (T_0=20, η_min=1e-6) |
+| QAT Training | 50 epochs, batch=64, lr=0.001, AdamW (weight_decay=1e-4) |
+| Data Augmentation | Gaussian noise σ=0.01, Amplitude scale 0.9–1.1 (no clamp — z-score data is unbounded) |
 
 ---
 

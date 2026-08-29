@@ -9,6 +9,14 @@ v2 Training Changes (2026-08-26):
   - Switched from CosineAnnealing to CosineAnnealingWarmRestarts (T_0=10)
   - Focal Loss alpha now computed dynamically from DS1 class ratio
   - Reduced pruning from 20% to 10% to preserve capacity in small model
+
+v3 Diagnosis Fixes (2026-08-29):
+  - Problem 2 Fix: Added patient-independent validation split from DS1 (~5 patients).
+    Now tracks val accuracy, sensitivity, specificity, F1 every epoch.
+    Saves best checkpoint by val sensitivity (not train accuracy).
+  - Problem 3 Fix: Focal Loss alpha computed from actual DS1 training class counts.
+  - Problem 4 Fix: Removed clamp to [-1,1] since data is now z-score normalized.
+    Amplitude scaling augmentation is now truly effective.
 """
 
 print("\n[SYSTEM DIAGNOSTIC] Python interpreter has successfully read train_model_qat.py...")
@@ -25,6 +33,15 @@ from model_cnn import TinyECG_CNN, count_parameters
 from ecg_dataset import MITBIH_Dataset, DS1_TRAIN
 
 # ==========================================
+# DS1 VALIDATION SPLIT (Problem 2 Fix)
+# ==========================================
+# Hold out ~5 patients from DS1 as a patient-independent validation set.
+# These patients are NEVER in the training set and NEVER in DS2.
+# Selected to include a mix of normal-heavy and anomaly-heavy records.
+DS1_VAL_PATIENTS = ['109', '114', '207', '220', '223']
+DS1_TRAIN_PATIENTS = [p for p in DS1_TRAIN if p not in DS1_VAL_PATIENTS]
+
+# ==========================================
 # ECG DATA AUGMENTATION
 # ==========================================
 def augment_ecg_batch(batch_inputs):
@@ -33,6 +50,9 @@ def augment_ecg_batch(batch_inputs):
     1. Gaussian Noise (std=0.01): Simulates electrode/sensor noise
     2. Random Amplitude Scaling (0.9-1.1): Simulates inter-patient gain variation
     (Time shift removed because circular roll creates false anomalies)
+    
+    Note (v3): Clamp to [-1,1] removed. Data is now z-score normalized (not bounded),
+    so clamping would destroy the amplitude information that Problem 1 fix preserved.
     """
     augmented = batch_inputs.clone()
     batch_size = augmented.size(0)
@@ -45,8 +65,9 @@ def augment_ecg_batch(batch_inputs):
     scales = 0.9 + 0.2 * torch.rand(batch_size, 1, 1)
     augmented = augmented * scales
     
-    # Clamp back to [-1, 1] range to maintain normalization integrity
-    augmented = torch.clamp(augmented, -1.0, 1.0)
+    # v3: No clamp — z-score normalized data is not bounded to [-1, 1].
+    # Clamping would destroy the genuine amplitude differences preserved by
+    # record-level normalization (Problem 1 fix).
     
     return augmented
 
@@ -76,23 +97,78 @@ class FocalLoss(nn.Module):
             return focal_loss
 
 # ==========================================
+# VALIDATION EVALUATION (Problem 2 Fix)
+# ==========================================
+def evaluate_on_validation(model, val_loader):
+    """
+    Evaluates the model on the validation set and returns clinical metrics.
+    Runs in eval mode with no_grad for efficiency.
+    """
+    model.eval()
+    
+    true_normal = 0     # TN
+    true_anomaly = 0    # TP
+    false_alarm = 0     # FP
+    missed_anomaly = 0  # FN
+    
+    with torch.no_grad():
+        for batch_inputs, batch_labels in val_loader:
+            outputs = model(batch_inputs)
+            preds = torch.max(outputs, 1)[1]
+            
+            for pred, label in zip(preds, batch_labels):
+                p, l = pred.item(), label.item()
+                if l == 0 and p == 0:
+                    true_normal += 1
+                elif l == 1 and p == 1:
+                    true_anomaly += 1
+                elif l == 0 and p == 1:
+                    false_alarm += 1
+                elif l == 1 and p == 0:
+                    missed_anomaly += 1
+    
+    total = true_normal + true_anomaly + false_alarm + missed_anomaly
+    accuracy = (true_normal + true_anomaly) / total * 100 if total > 0 else 0
+    sensitivity = true_anomaly / (true_anomaly + missed_anomaly) * 100 if (true_anomaly + missed_anomaly) > 0 else 0
+    specificity = true_normal / (true_normal + false_alarm) * 100 if (true_normal + false_alarm) > 0 else 0
+    precision = true_anomaly / (true_anomaly + false_alarm) * 100 if (true_anomaly + false_alarm) > 0 else 0
+    f1 = 2 * precision * sensitivity / (precision + sensitivity) if (precision + sensitivity) > 0 else 0
+    
+    model.train()
+    return accuracy, sensitivity, specificity, f1
+
+# ==========================================
 # MAIN TRAINING FUNCTION
 # ==========================================
 def train_qat_ecg_model(epochs=50, batch_size=64, learning_rate=0.001):
     print("======================================================")
-    print("--- PHASE 1 v2: QAT LOOP (DS1 PATIENT SPLIT) ---")
+    print("--- PHASE 1 v3: QAT LOOP (DS1 PATIENT SPLIT) ---")
+    print("---    With Validation Tracking & Dynamic Alpha    ---")
     print("======================================================")
 
-    # 1. Load DS1 (Train) Dynamically to prevent Data Leakage
-    train_dataset = MITBIH_Dataset(data_dir="mitdb_data", patient_ids=DS1_TRAIN)
+    # 1. Load DS1 Training Split (excluding validation patients)
+    print(f"\n[Data Split]")
+    print(f" -> Training patients ({len(DS1_TRAIN_PATIENTS)}): {DS1_TRAIN_PATIENTS}")
+    print(f" -> Validation patients ({len(DS1_VAL_PATIENTS)}): {DS1_VAL_PATIENTS}")
+    
+    train_dataset = MITBIH_Dataset(data_dir="mitdb_data", patient_ids=DS1_TRAIN_PATIENTS)
+    val_dataset = MITBIH_Dataset(data_dir="mitdb_data", patient_ids=DS1_VAL_PATIENTS)
+    
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, drop_last=True)
-    print(f"Data Loaders Ready -> Train Batches: {len(train_loader)}")
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+    
+    print(f"\nData Loaders Ready -> Train Batches: {len(train_loader)}, Val Batches: {len(val_loader)}")
 
-    # 2. Stable Focal Loss Alpha
-    # Using 0.50 to perfectly balance true normals vs anomalies and heavily penalize false alarms.
-    dynamic_alpha = 0.50
-    print(f"\n[Focal Loss Status]")
-    print(f" -> Focal Alpha set to: {dynamic_alpha:.4f}")
+    # 2. Dynamic Focal Loss Alpha from DS1 Training Class Counts (Problem 3 Fix)
+    n_normal = (train_dataset.y_data == 0).sum().item()
+    n_anomaly = (train_dataset.y_data == 1).sum().item()
+    dynamic_alpha = n_normal / (n_normal + n_anomaly)  # Weight anomaly class higher
+    
+    print(f"\n[Focal Loss Status — Computed from DS1 Training Data]")
+    print(f" -> Normal beats (Class 0): {n_normal}")
+    print(f" -> Anomaly beats (Class 1): {n_anomaly}")
+    print(f" -> Focal Alpha (auto-computed): {dynamic_alpha:.4f}")
+    print(f"    (Higher alpha = more penalty for missing anomalies)")
 
     # 3. Initialize Model & QAT Preparation
     model = TinyECG_CNN()
@@ -111,17 +187,27 @@ def train_qat_ecg_model(epochs=50, batch_size=64, learning_rate=0.001):
     print(f" -> TinyECG_CNN v2: {params} params, {mem:.2f} KB INT8 footprint")
     print(f" -> QAT Observers Injected.")
     print(f" -> Loss Function: Focal Loss (Alpha={dynamic_alpha:.4f}, Gamma=2.0)")
-    print(f" -> Data Augmentation: Noise std=0.01, Amp Scale 0.9-1.1")
+    print(f" -> Data Augmentation: Noise std=0.01, Amp Scale 0.9-1.1 (no clamp)")
 
     # 4. AdamW Optimizer with Weight Decay + Warm Restarts Scheduler
     criterion = FocalLoss(alpha=dynamic_alpha, gamma=2.0)
     optimizer = optim.AdamW(model.parameters(), lr=learning_rate, weight_decay=1e-4)
     scheduler = optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0=20, T_mult=1, eta_min=1e-6)
 
-    # 5. Training Loop with Data Augmentation
-    print(f"\nStarting QAT Training Loop over {epochs} Epochs (with augmentation)...")
+    # 5. Training Loop with Validation Tracking (Problem 2 Fix)
+    print(f"\nStarting QAT Training Loop over {epochs} Epochs (with validation tracking)...")
+    print(f"{'='*90}")
+    print(f" {'Epoch':>5} | {'Train Loss':>10} | {'Train Acc':>9} | {'Val Acc':>7} | {'Val Sens':>8} | {'Val Spec':>8} | {'Val F1':>7} | {'LR':>10}")
+    print(f"{'-'*90}")
     
-    best_acc = 0.0
+    best_val_sensitivity = 0.0
+    best_epoch = 0
+    
+    # Ensure output dir exists for saving best checkpoint
+    output_dir = "saved_models"
+    os.makedirs(output_dir, exist_ok=True)
+    best_model_path = os.path.join(output_dir, "tiny_ecg_qat_best.pth")
+    
     for epoch in range(epochs):
         model.train()
         running_loss = 0.0
@@ -150,30 +236,41 @@ def train_qat_ecg_model(epochs=50, batch_size=64, learning_rate=0.001):
         epoch_acc = (100.0 * correct_preds) / total_batch_samples
         current_lr = scheduler.get_last_lr()[0]
         
-        # Track best training accuracy
-        if epoch_acc > best_acc:
-            best_acc = epoch_acc
+        # Validation evaluation every epoch
+        val_acc, val_sens, val_spec, val_f1 = evaluate_on_validation(model, val_loader)
         
-        print(f" Epoch [{epoch+1:02d}/{epochs}] | Loss: {epoch_loss:.4f} | Acc: {epoch_acc:.2f}% | LR: {current_lr:.6f}")
+        # Save best checkpoint by validation sensitivity (not train accuracy)
+        # Sensitivity is the most critical metric for a clinical anomaly detector —
+        # missing a real arrhythmia is far worse than a false alarm.
+        if val_sens > best_val_sensitivity:
+            best_val_sensitivity = val_sens
+            best_epoch = epoch + 1
+            # Save QAT model state (before INT8 conversion) for later loading
+            torch.save(model.state_dict(), best_model_path)
+            marker = " << BEST"
+        else:
+            marker = ""
+        
+        print(f" {epoch+1:02d}/{epochs:02d}  | {epoch_loss:10.4f} | {epoch_acc:8.2f}% | {val_acc:6.2f}% | {val_sens:7.2f}% | {val_spec:7.2f}% | {val_f1:6.2f}% | {current_lr:10.6f}{marker}")
 
-    print(f"\nBest Training Accuracy: {best_acc:.2f}%")
+    print(f"{'='*90}")
+    print(f"\nBest Validation Sensitivity: {best_val_sensitivity:.2f}% at Epoch {best_epoch}")
+    print(f"Best checkpoint saved to: {best_model_path}")
 
-    # 6. Convert to Final INT8
-    # (Pruning was removed here: 1954 params doesn't need pruning to fit in 15KB. Pruning destroyed accuracy.)
-    print("\nConverting model to true 8-bit integers...")
+    # 6. Load best checkpoint and convert to Final INT8
+    print("\nLoading best checkpoint and converting to true 8-bit integers...")
+    model.load_state_dict(torch.load(best_model_path, weights_only=True))
     model.eval()
     torch.ao.quantization.convert(model, inplace=True)
 
     pruned_params, pruned_mem_kb = count_parameters(model)
     print(f" -> Final INT8 Footprint: {pruned_mem_kb:.2f} KB")
 
-    # 8. Save Final Model
-    output_dir = "saved_models"
-    os.makedirs(output_dir, exist_ok=True)
+    # 7. Save Final INT8 Model (overwrites the standard path for evaluate_model_qat.py)
     model_save_path = os.path.join(output_dir, "tiny_ecg_qat.pth")
     torch.save(model.state_dict(), model_save_path)
     
-    print(f"\nSUCCESS: Advanced QAT v2 model saved to '{model_save_path}'")
+    print(f"\nSUCCESS: QAT v3 model (best val sensitivity epoch) saved to '{model_save_path}'")
     print("======================================================")
 
     return model

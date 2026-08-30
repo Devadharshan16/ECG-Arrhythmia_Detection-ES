@@ -1,0 +1,69 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'tiny_ecg_inference_Pipeline_VITIS_LOOP_59_4'" level="0">
+<item name = "Date">Sun Aug 30 00:10:55 2026
+</item>
+<item name = "Version">2026.1 (Build 6493734 on Jun 16 2026)</item>
+<item name = "Project">Cardiac_1D_CNN_HLS</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.167 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">23, 23, 0.230 us, 0.230 us, 0, 0, loop pipeline stp</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="buffer_c2_390_relu_i8_fu_8289">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_368_relu_i8_fu_8294">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_369_relu_i8_fu_8299">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_370_relu_i8_fu_8304">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_371_relu_i8_fu_8309">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_372_relu_i8_fu_8314">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_373_relu_i8_fu_8319">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_374_relu_i8_fu_8324">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_375_relu_i8_fu_8329">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_376_relu_i8_fu_8334">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_377_relu_i8_fu_8339">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_378_relu_i8_fu_8344">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_379_relu_i8_fu_8349">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_380_relu_i8_fu_8354">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_381_relu_i8_fu_8359">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_382_relu_i8_fu_8364">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_383_relu_i8_fu_8369">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_384_relu_i8_fu_8374">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_385_relu_i8_fu_8379">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_386_relu_i8_fu_8384">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_387_relu_i8_fu_8389">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_388_relu_i8_fu_8394">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="buffer_c2_389_relu_i8_fu_8399">relu_i8, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_59_4">21, 21, 7, 1, 1, 16, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

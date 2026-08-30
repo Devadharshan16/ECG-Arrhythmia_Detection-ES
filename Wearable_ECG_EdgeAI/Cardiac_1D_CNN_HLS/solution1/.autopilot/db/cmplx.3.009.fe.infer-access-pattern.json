@@ -1,0 +1,33 @@
+{
+  "0": {
+    "basicblocks": 39,
+    "calls": "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
+    "control_depth": 2,
+    "def_use_depth": 199,
+    "file": "cnn_hls.cpp",
+    "fileloc": 15,
+    "instructions": 9335,
+    "loads": {
+      "G": 289,
+      "L": 682
+    },
+    "memory_accesses": 1034,
+    "name": "tiny_ecg_inference",
+    "stores": {
+      "L": 741
+    },
+    "total_instructions": 9815
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "cnn_hls.cpp",
+    "fileloc": 10,
+    "instructions": 6,
+    "memory_accesses": 0,
+    "name": "relu_i8",
+    "total_instructions": 6
+  }
+}

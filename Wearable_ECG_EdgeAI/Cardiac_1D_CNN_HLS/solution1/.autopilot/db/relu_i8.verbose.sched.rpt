@@ -1,0 +1,121 @@
+
+
+================================================================
+== Vitis HLS Report for 'relu_i8'
+================================================================
+* Date:           Sun Aug 30 00:10:48 2026
+
+* Version:        2026.1 (Build 6493734 on Jun 16 2026)
+* Project:        Cardiac_1D_CNN_HLS
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.805 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.80>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%value_read = read i21 @_ssdm_op_Read.ap_auto.i21, i21 %value_r" [cnn_hls.cpp:10]   --->   Operation 2 'read' 'value_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i21.i32, i21 %value_read, i32 20" [cnn_hls.cpp:11]   --->   Operation 3 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%tmp_11 = partselect i14 @_ssdm_op_PartSelect.i14.i21.i32.i32, i21 %value_read, i32 7, i32 20" [cnn_hls.cpp:5->cnn_hls.cpp:12]   --->   Operation 4 'partselect' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (1.81ns)   --->   "%icmp_ln5 = icmp_sgt  i14 %tmp_11, i14 0" [cnn_hls.cpp:5->cnn_hls.cpp:12]   --->   Operation 5 'icmp' 'icmp_ln5' <Predicate = true> <Delay = 1.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 6 [1/1] (0.00ns) (grouped into LUT with out node select_ln11)   --->   "%trunc_ln7 = trunc i21 %value_read" [cnn_hls.cpp:7->cnn_hls.cpp:12]   --->   Operation 6 'trunc' 'trunc_ln7' <Predicate = (!or_ln11)> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns) (grouped into LUT with out node select_ln11)   --->   "%xor_ln11 = xor i1 %tmp, i1 1" [cnn_hls.cpp:11]   --->   Operation 7 'xor' 'xor_ln11' <Predicate = (or_ln11)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (0.00ns) (grouped into LUT with out node select_ln11)   --->   "%select_ln11_1 = select i1 %xor_ln11, i7 127, i7 0" [cnn_hls.cpp:11]   --->   Operation 8 'select' 'select_ln11_1' <Predicate = (or_ln11)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 9 [1/1] (0.00ns) (grouped into LUT with out node select_ln11)   --->   "%or_ln11 = or i1 %tmp, i1 %icmp_ln5" [cnn_hls.cpp:11]   --->   Operation 9 'or' 'or_ln11' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln11 = select i1 %or_ln11, i7 %select_ln11_1, i7 %trunc_ln7" [cnn_hls.cpp:11]   --->   Operation 10 'select' 'select_ln11' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%ret_ln13 = ret i7 %select_ln11" [cnn_hls.cpp:13]   --->   Operation 11 'ret' 'ret_ln13' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 2.805ns
+The critical path consists of the following:
+	wire read operation ('value', cnn_hls.cpp:10) on port 'value_r' (cnn_hls.cpp:10) [2]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln5', cnn_hls.cpp:5->cnn_hls.cpp:12) [5]  (1.812 ns)
+	'or' operation 1 bit ('or_ln11', cnn_hls.cpp:11) [9]  (0.000 ns)
+	'select' operation 7 bit ('select_ln11', cnn_hls.cpp:11) [10]  (0.993 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

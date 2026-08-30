@@ -1,0 +1,50 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'tiny_ecg_inference'" level="0">
+<item name = "Date">Sun Aug 30 00:11:00 2026
+</item>
+<item name = "Version">2026.1 (Build 6493734 on Jun 16 2026)</item>
+<item name = "Project">Cardiac_1D_CNN_HLS</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">478, 478, 4.780 us, 4.780 us, 479, 479, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_33_1_fu_5101">tiny_ecg_inference_Pipeline_VITIS_LOOP_33_1, 15, 15, 0.150 us, 0.150 us, 0, 0, loop pipeline stp</column>
+<column name="grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_59_4_fu_5568">tiny_ecg_inference_Pipeline_VITIS_LOOP_59_4, 23, 23, 0.230 us, 0.230 us, 0, 0, loop pipeline stp</column>
+<column name="grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_88_8_fu_6342">tiny_ecg_inference_Pipeline_VITIS_LOOP_88_8, 24, 24, 0.240 us, 0.240 us, 0, 0, loop pipeline stp</column>
+<column name="grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_116_12_VITIS_LOOP_117_13_fu_6776">tiny_ecg_inference_Pipeline_VITIS_LOOP_116_12_VITIS_LOOP_117_13, 196, 196, 1.960 us, 1.960 us, 0, 0, loop pipeline stp</column>
+<column name="grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_126_14_fu_6793">tiny_ecg_inference_Pipeline_VITIS_LOOP_126_14, 12, 12, 0.120 us, 0.120 us, 0, 0, loop pipeline stp</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

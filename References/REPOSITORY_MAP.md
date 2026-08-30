@@ -51,6 +51,8 @@ d:\ECG- Embedded System\
 | `Cardiac_Arrhythmia_Detection_Project.txt` | 📄 File (3.3 KB) | Full project proposal — layman's terms, technical description, and IEEE alignment. |
 | `log.md` | 📄 File (1.5 KB) | Chronological step-by-step log of every action taken in Phase 1 (36 steps). |
 | `ECG_Model_Diagnosis.md` | 📄 File (4.8 KB) | Diagnosis of 4 model problems (normalization, validation, focal alpha, augmentation) with fixes. |
+| `HARDWARE_CHANGELOG.md` | 📄 File | Record of Vitis HLS and Vivado synthesis tasks for the FPGA implementation. |
+| `HARDWARE_SYNTHESIS_LOG.md` | 📄 File | Detailed status, timing, and resource utilization report from Vitis HLS synthesis. |
 | `Show Difference between Normal Beat and Anomaly Beat.png` | 🖼️ Image (545 KB) | Visual comparison image of normal vs anomaly ECG waveforms. |
 | `Sent Items - VISHAL M.D-[...].pdf` | 📄 PDF (322 KB) | Email correspondence / submission reference. |
 | `Reason for file creation or decisions/` | 📁 Folder | Contains 10 markdown docs + 1 image explaining WHY each script/decision was made. |

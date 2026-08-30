@@ -158,11 +158,37 @@ def export_weights():
         print(f"  Bias (fp32):  [{', '.join(f'{b:.4f}' for b in bias_fp32)}]")
         print(f"  Bias (int32): [{', '.join(str(b) for b in bias_int32)}]")
 
-        # --- Output activation scale/zero-point ---
+        # --- Output activation scale/zero-point and Requantization ---
+        out_scale = 1.0
+        out_zp = 0
         if hasattr(layer, 'scale'):
             out_scale = layer.scale
             out_zp = layer.zero_point
             print(f"  Output: scale={out_scale:.8f}, zero_point={out_zp}")
+        
+        # Calculate fixed-point multipliers and shifts for HLS
+        # M = (input_scale * weight_scale) / output_scale
+        # We want to represent M as (multiplier / 2^shift) where multiplier is int32
+        multipliers = np.zeros(len(w_scales), dtype=np.int32)
+        shifts = np.zeros(len(w_scales), dtype=np.int32)
+        
+        for c in range(len(w_scales)):
+            M = (inp_scale * w_scales[c]) / out_scale
+            # Find a suitable shift (e.g. between 15 and 31)
+            # We want multiplier to use most of int32 range (but not overflow)
+            # A standard approach is to use frexp to find the exponent
+            if M > 0:
+                frac, exp = np.frexp(M)
+                # frac is [0.5, 1.0). Let's scale it to fit in int32 (e.g. up to 2^30)
+                # M = frac * 2^exp = (frac * 2^30) * 2^(exp - 30)
+                q_mult = int(np.round(frac * (1 << 30)))
+                q_shift = 30 - exp
+                multipliers[c] = q_mult
+                shifts[c] = q_shift
+            else:
+                multipliers[c] = 0
+                shifts[c] = 0
+
         print()
 
         total_weight_bytes += len(int8_weights)
@@ -184,6 +210,9 @@ def export_weights():
             H.append(f"const float {name}_output_scale = {layer.scale:.10f}f;")
             H.append(f"const int8_t {name}_output_zp = {int(layer.zero_point)};")
             H.append("")
+        H.append(f"/* Fixed-point Requantization Multipliers and Shifts */")
+        H.append(format_int_array(f"{name}_multiplier", multipliers, "int32_t", per_line=8))
+        H.append(format_int_array(f"{name}_shift", shifts, "int32_t", per_line=8))
         H.append("")
 
     # --- Input quantization from QuantStub ---

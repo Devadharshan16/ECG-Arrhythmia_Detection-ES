@@ -40,6 +40,13 @@ const float conv1_weight_scale[8] = {
 const float conv1_output_scale = 0.0162009504f;
 const int8_t conv1_output_zp = 0;
 
+/* Fixed-point Requantization Multipliers and Shifts */
+const int32_t conv1_multiplier[8] = {
+    1048240846, 852915201, 781946846, 646244947, 741865884, 572305984, 609156575, 658975934
+};
+const int32_t conv1_shift[8] = {
+      37,   35,   36,   36,   36,   37,   35,   35
+};
 
 /* ---- conv2: Conv1d(8->16, k=5, s=2, p=2) (45->23) ---- */
 /* Weight shape: [16, 8, 5], range: [-128, 127] */
@@ -101,6 +108,15 @@ const float conv2_weight_scale[16] = {
 const float conv2_output_scale = 0.0180181973f;
 const int8_t conv2_output_zp = 0;
 
+/* Fixed-point Requantization Multipliers and Shifts */
+const int32_t conv2_multiplier[16] = {
+    928527129, 750412583, 593121632, 929983138, 590651965, 793370826, 606287112, 587426268,
+    902675867, 724153671, 789028119, 741788284, 708362519, 855613501, 999714631, 537031747
+};
+const int32_t conv2_shift[16] = {
+      37,   37,   36,   38,   37,   38,   37,   37,
+      37,   37,   38,   38,   37,   38,   38,   37
+};
 
 /* ---- conv3: Conv1d(16->16, k=3, s=2, p=1) (23->12) ---- */
 /* Weight shape: [16, 16, 3], range: [-128, 127] */
@@ -170,6 +186,15 @@ const float conv3_weight_scale[16] = {
 const float conv3_output_scale = 0.0182111673f;
 const int8_t conv3_output_zp = 0;
 
+/* Fixed-point Requantization Multipliers and Shifts */
+const int32_t conv3_multiplier[16] = {
+    1040767010, 981475161, 931010441, 927787993, 984778725, 732017252, 969336808, 694246598,
+    610369412, 1033927491, 958115608, 778216234, 833772347, 555352358, 981221178, 714591272
+};
+const int32_t conv3_shift[16] = {
+      38,   37,   38,   37,   37,   37,   38,   37,
+      37,   38,   38,   38,   37,   37,   37,   37
+};
 
 /* ---- fc: Linear(192->2) (192->2) ---- */
 /* Weight shape: [2, 192], range: [-128, 127] */
@@ -213,6 +238,13 @@ const float fc_weight_scale[2] = {
 const float fc_output_scale = 0.0111928526f;
 const int8_t fc_output_zp = 136;
 
+/* Fixed-point Requantization Multipliers and Shifts */
+const int32_t fc_multiplier[2] = {
+    1011030417, 993988979
+};
+const int32_t fc_shift[2] = {
+      39,   39
+};
 
 /* ---- Input Quantization (QuantStub) ---- */
 const float input_scale = 0.0385783575f;

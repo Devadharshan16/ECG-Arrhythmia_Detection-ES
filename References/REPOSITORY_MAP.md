@@ -101,6 +101,10 @@ The scripts form a **sequential pipeline**. They must be understood (and run) in
 | 7 | `visualize_dataset.py` | 5.0 KB | **Visualization** | Scans database for 3 patients with both Normal ('N') and PVC ('V') beats, generates a 2×3 grid plot comparing Normal vs Anomaly morphology using 90-point normalized tensors. |
 | 8 | `plot_dataset.py` | 6.2 KB | **Full Dataset Plotting** | Batch-processes ALL 48 patients. Creates per-patient folders, splits 30-min records into 5-minute chunks, generates highlighted ECG strip images (green=Normal, red=Anomaly). Outputs to `Dataset_Plots/`. |
 | 9 | `generate_csv_of_dataset.py` | 3.6 KB | **CSV Export** | Converts ALL 48 patient records into strict binary-labeled CSVs (every sample row tagged Class 0 or Class 1). Outputs to `Dataset_CSV/`. |
+| 10 | `export_weights_to_cpp.py` | 5.8 KB | **Export** | Extracts INT8 quantized weights/biases and computes fixed-point requantization multipliers/shifts, generating `weights.h`. |
+| 11 | `weights.h` | 16.7 KB | **Static Weights** | C header file containing the 1D-CNN INT8 weights/biases and full quantization parameters. |
+| 12 | `cnn_hls.cpp` | 4.8 KB | **HLS Kernel** | Vitis HLS C++ implementation of the 1D-CNN. Features bit-true PyTorch INT8 requantization and optimized DSP loop pipelining for Zynq-7000. |
+| 13 | `build_hls.tcl` / `build_vivado.tcl` | 1-2 KB | **Scripts** | TCL scripts to automate Vitis HLS and Vivado builds. |
 
 ---
 

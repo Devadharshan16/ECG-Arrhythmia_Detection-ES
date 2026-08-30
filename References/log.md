@@ -39,3 +39,7 @@
 36. Saved model diagnosis document as `References/ECG_Model_Diagnosis.md` listing all 4 identified problems and their fixes.
 37. Fixed `train_model_qat.py` — dampened Focal Loss alpha (raw 0.8783 → dampened 0.6892) by blending with 0.5 to avoid over-predicting anomalies. Changed best checkpoint selection from pure val sensitivity to val F1-Score, which balances catching anomalies vs. false alarms. First v3 run used pure sensitivity selection and undampened alpha, which caused 12,426 false alarms and dropped accuracy to 74.31%.
 38. Retrained and evaluated on DS2 — v3 results: 92.46% Accuracy (+11.0%), 73.91% Sensitivity (+6.4%), 95.36% Specificity (+11.8%), 71.33% Precision, 72.60% F1-Score. Best epoch was 2/50 (early stopping recommended). All metrics improved over v2 baseline (81.5% Acc, 67.5% Sens, 83.6% Spec).
+39. Created export_weights_to_cpp.py and generated weights.h containing INT8 quantized weights and INT32 biases for hardware.
+40. Created cnn_hls.cpp and ran Vitis HLS C-Synthesis. (Status: DSP overutilized at 509%, missing requantization logic). Logged hardware synthesis status in HARDWARE_LOG.md.
+
+41. Fixed cnn_hls.cpp and export_weights_to_cpp.py: Modified Python script to calculate/export fixed-point integer multipliers and shifts. Rewrote HLS C++ kernel to implement mathematically correct PyTorch INT8 requantization (64-bit integer accumulation, zero-point subtraction) and fixed DSP over-utilization by adjusting loop orders and pipeline pragma placement. Verified C++ syntax compilation.

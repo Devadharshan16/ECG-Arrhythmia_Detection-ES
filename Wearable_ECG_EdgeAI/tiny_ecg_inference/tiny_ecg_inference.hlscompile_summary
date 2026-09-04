@@ -1,0 +1,247 @@
+<ENTRY>
+{
+ "thisFile": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\tiny_ecg_inference\\tiny_ecg_inference.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "09/04/26 10:06:21",
+ "timestampMillis": "1788496581353",
+ "buildStep": {
+  "cmdId": "06cf5903-7826-481d-9d4a-0de6c6337272",
+  "name": "v++",
+  "logFile": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\tiny_ecg_inference\\logs\\tiny_ecg_inference.steps.log",
+  "commandLine": "D:/AMD/2026.1/Vitis/bin/unwrapped/win64.o/v++.exe  -c --mode hls --part xc7z020clg400-1 --freqhz 100000000 --config hls_config.cfg ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--part",
+   "xc7z020clg400-1",
+   "--freqhz",
+   "100000000",
+   "--config",
+   "hls_config.cfg"
+  ],
+  "iniFiles": [
+   {
+    "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\hls_config.cfg",
+    "content": "[hls]\nflow_target=vivado\nsyn.top=tiny_ecg_inference\nsyn.file=cnn_hls.cpp\n"
+   }
+  ],
+  "cwd": "D:\\ECG-Embedded_System\\Wearable_ECG_EdgeAI"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "09/04/26 10:06:21",
+ "timestampMillis": "1788496581353",
+ "status": {
+  "cmdId": "06cf5903-7826-481d-9d4a-0de6c6337272",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "09/04/26 10:06:23",
+ "timestampMillis": "1788496583296",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "tiny_ecg_inference",
+     "file": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\tiny_ecg_inference\\tiny_ecg_inference.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\cnn_hls.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2026.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "09/04/26 10:06:23",
+ "timestampMillis": "1788496583296",
+ "buildStep": {
+  "cmdId": "87672922-4d87-4f46-a905-9a53ede1a15e",
+  "name": "",
+  "logFile": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\tiny_ecg_inference\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "D:\\ECG-Embedded_System\\Wearable_ECG_EdgeAI"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "09/04/26 10:06:23",
+ "timestampMillis": "1788496583297",
+ "status": {
+  "cmdId": "87672922-4d87-4f46-a905-9a53ede1a15e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "09/04/26 10:06:23",
+ "timestampMillis": "1788496583297",
+ "report": {
+  "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\tiny_ecg_inference\\hls\\hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "09/04/26 10:06:23",
+ "timestampMillis": "1788496583297",
+ "report": {
+  "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\tiny_ecg_inference\\hls\\syn\\report\\csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "09/04/26 10:06:23",
+ "timestampMillis": "1788496583297",
+ "report": {
+  "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\tiny_ecg_inference\\hls\\syn\\report\\csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "09/04/26 10:07:16",
+ "timestampMillis": "1788496636755",
+ "report": {
+  "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\tiny_ecg_inference\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "09/04/26 10:07:16",
+ "timestampMillis": "1788496636756",
+ "report": {
+  "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\tiny_ecg_inference\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "09/04/26 10:07:16",
+ "timestampMillis": "1788496636756",
+ "report": {
+  "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\tiny_ecg_inference\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "09/04/26 10:07:16",
+ "timestampMillis": "1788496636757",
+ "status": {
+  "cmdId": "87672922-4d87-4f46-a905-9a53ede1a15e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "09/04/26 10:07:45",
+ "timestampMillis": "1788496665243",
+ "status": {
+  "cmdId": "06cf5903-7826-481d-9d4a-0de6c6337272",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "09/04/26 10:07:45",
+ "timestampMillis": "1788496665261",
+ "report": {
+  "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\tiny_ecg_inference\\reports\\v++_compile_tiny_ecg_inference_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "09/04/26 10:07:45",
+ "timestampMillis": "1788496665261",
+ "report": {
+  "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\tiny_ecg_inference\\reports\\.db\\v++_compile_tiny_ecg_inference_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

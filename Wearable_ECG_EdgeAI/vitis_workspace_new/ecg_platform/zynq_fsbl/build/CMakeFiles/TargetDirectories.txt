@@ -1,0 +1,4 @@
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/build/CMakeFiles/print_build_info.dir
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/build/CMakeFiles/edit_cache.dir
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir

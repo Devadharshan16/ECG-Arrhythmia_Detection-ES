@@ -1,0 +1,69 @@
+{
+	"version": "1.0",
+	"modules": {
+		"tiny_ecg_inference": {
+			"proto_instances": {
+				"/AESL_inst_tiny_ecg_inference_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst_n"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_113_8_VITIS_LOOP_114_9_fu_2816/grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_113_8_VITIS_LOOP_114_9_fu_2816_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_138_12_VITIS_LOOP_139_13_fu_2938/grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_138_12_VITIS_LOOP_139_13_fu_2938_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_148_14_fu_2959/grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_148_14_fu_2959_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_61_2_fu_2754/grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_61_2_fu_2754_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				},
+				"grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_85_4_VITIS_LOOP_86_5_fu_2616/grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_85_4_VITIS_LOOP_86_5_fu_2616_activity": {
+					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
+					"ports": {
+						"AP_CLK": { "actual": "ap_clk"},
+						"AP_DONE": { "actual": "ap_done"},
+						"AP_READY": { "actual": "ap_ready"},
+						"AP_RESET": { "actual": "ap_rst"},
+						"AP_START": { "actual": "ap_start"}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+/ {
+	amba_pl: amba_pl {
+		ranges;
+		compatible = "simple-bus";
+		#address-cells = <1>;
+		#size-cells = <1>;
+		firmware-name = "design_1_wrapper.bit.bin";
+		clocking0: clocking0 {
+			compatible = "xlnx,fclk";
+			assigned-clocks = <&clkc 15>;
+			assigned-clock-rates = <50000000>;
+			#clock-cells = <0>;
+			clock-output-names = "fabric_clk";
+			clocks = <&clkc 15>;
+		};
+		afi0: afi0@f8008000 {
+			status = "okay";
+			compatible = "xlnx,afi-fpga";
+			#address-cells = <1>;
+			reg = <0xF8008000 0x1000>;
+			#size-cells = <0>;
+			xlnx,afi-width = <0>;
+		};
+		tiny_ecg_inference_0: tiny_ecg_inference@40000000 {
+			xlnx,ii = <2497>;
+			compatible = "xlnx,tiny-ecg-inference-1.0";
+			xlnx,machine = <64>;
+			xlnx,s-axi-control-addr-width = <6>;
+			xlnx,ip-name = "tiny_ecg_inference";
+			reg = <0x40000000 0x10000 0x40010000 0x10000>;
+			clocks = <&clkc 15>;
+			xlnx,s-axi-ctrl-addr-width = <4>;
+			xlnx,clk-period = <10>;
+			xlnx,s-axi-control-data-width = <32>;
+			xlnx,edk-iptype = "PERIPHERAL";
+			status = "okay";
+			clock-names = "ap_clk";
+			xlnx,latency = <2496>;
+			xlnx,combinational = <0>;
+			xlnx,s-axi-ctrl-data-width = <32>;
+			xlnx,name = "tiny_ecg_inference_0";
+		};
+	};
+};

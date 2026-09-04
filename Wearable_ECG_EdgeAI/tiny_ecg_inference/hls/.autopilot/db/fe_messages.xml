@@ -1,0 +1,449 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-6117" msg_severity="WARNING" msg_loc="./weights.h:239:29" msg_body="implicit conversion from 'int' to 'const int8_t' (aka 'const signed char') changes value from 136 to -120">
+        <args ClangWarningOption="constant-conversion"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="directive:1:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="tiny_ecg_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=tiny_ecg_inference" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="cnn_hls.cpp:42:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="tiny_ecg_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CTRL" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="cnn_hls.cpp:43:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="tiny_ecg_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=input_ecg offset=slave bundle=DATA_IN" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="cnn_hls.cpp:44:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="tiny_ecg_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=output_logits offset=slave bundle=DATA_OUT" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="cnn_hls.cpp:47:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="tiny_ecg_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=buffer_c1 complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="cnn_hls.cpp:50:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="tiny_ecg_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=buffer_c2 complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="cnn_hls.cpp:53:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="tiny_ecg_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=buffer_c3 complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="cnn_hls.cpp:62:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="tiny_ecg_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="cnn_hls.cpp:87:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="tiny_ecg_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="cnn_hls.cpp:115:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="tiny_ecg_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="cnn_hls.cpp:140:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="tiny_ecg_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="cnn_hls.cpp:149:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="tiny_ecg_inference" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cnn_hls.cpp:152:28" msg_body="Loop 'VITIS_LOOP_152_15' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_152_15"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cnn_hls.cpp:118:32" msg_body="Loop 'VITIS_LOOP_118_10' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_118_10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cnn_hls.cpp:119:36" msg_body="Loop 'VITIS_LOOP_119_11' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_119_11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cnn_hls.cpp:90:30" msg_body="Loop 'VITIS_LOOP_90_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_90_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cnn_hls.cpp:91:34" msg_body="Loop 'VITIS_LOOP_91_7' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_91_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cnn_hls.cpp:65:30" msg_body="Loop 'VITIS_LOOP_65_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_65_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cnn_hls.cpp:41:0" msg_body="Unrolling loop 'VITIS_LOOP_152_15' (cnn_hls.cpp:152:28) in function 'tiny_ecg_inference' completely with a factor of 192">
+        <args Factor="192" LoopLoc="cnn_hls.cpp:152:28" LoopName="VITIS_LOOP_152_15"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cnn_hls.cpp:41:0" msg_body="Unrolling loop 'VITIS_LOOP_118_10' (cnn_hls.cpp:118:32) in function 'tiny_ecg_inference' completely with a factor of 3">
+        <args Factor="3" LoopLoc="cnn_hls.cpp:118:32" LoopName="VITIS_LOOP_118_10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cnn_hls.cpp:41:0" msg_body="Unrolling loop 'VITIS_LOOP_119_11' (cnn_hls.cpp:119:36) in function 'tiny_ecg_inference' completely with a factor of 16">
+        <args Factor="16" LoopLoc="cnn_hls.cpp:119:36" LoopName="VITIS_LOOP_119_11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cnn_hls.cpp:41:0" msg_body="Unrolling loop 'VITIS_LOOP_90_6' (cnn_hls.cpp:90:30) in function 'tiny_ecg_inference' completely with a factor of 5">
+        <args Factor="5" LoopLoc="cnn_hls.cpp:90:30" LoopName="VITIS_LOOP_90_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cnn_hls.cpp:41:0" msg_body="Unrolling loop 'VITIS_LOOP_91_7' (cnn_hls.cpp:91:34) in function 'tiny_ecg_inference' completely with a factor of 8">
+        <args Factor="8" LoopLoc="cnn_hls.cpp:91:34" LoopName="VITIS_LOOP_91_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cnn_hls.cpp:41:0" msg_body="Unrolling loop 'VITIS_LOOP_65_3' (cnn_hls.cpp:65:30) in function 'tiny_ecg_inference' completely with a factor of 5">
+        <args Factor="5" LoopLoc="cnn_hls.cpp:65:30" LoopName="VITIS_LOOP_65_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cnn_hls.cpp:41:0" msg_body="Inlining function 'requantize_linear(int, int, int, signed char)' into 'tiny_ecg_inference(signed char*, signed char*)'">
+        <args Callee="requantize_linear(int, int, int, signed char)" Callee-DebugLoc="File cnn_hls.cpp Line 25 Column 0" Caller="tiny_ecg_inference(signed char*, signed char*)" Caller-DebugLoc="File cnn_hls.cpp Line 41 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cnn_hls.cpp:41:0" msg_body="Inlining function 'requantize_and_relu(int, int, int, signed char)' into 'tiny_ecg_inference(signed char*, signed char*)'">
+        <args Callee="requantize_and_relu(int, int, int, signed char)" Callee-DebugLoc="File cnn_hls.cpp Line 4 Column 0" Caller="tiny_ecg_inference(signed char*, signed char*)" Caller-DebugLoc="File cnn_hls.cpp Line 41 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="Applying array_partition to 'buffer_c1': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="buffer_c1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:47:1" msg_body="array_partition dim=1 type=complete variable=buffer_c1 false tiny_ecg_inference cnn_hls.cpp:47:1 buffer_c1 cnn_hls.cpp:46:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="false" PragmaOptions="dim=1 type=complete variable=buffer_c1" PragmaSrcLoc="cnn_hls.cpp:47:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 47 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="buffer_c2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=1 type=complete variable=buffer_c2 false tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="false" PragmaOptions="dim=1 type=complete variable=buffer_c2" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:52:12" msg_body="Applying array_partition to 'buffer_c3': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="buffer_c3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:53:1" msg_body="array_partition dim=1 type=complete variable=buffer_c3 false tiny_ecg_inference cnn_hls.cpp:53:1 buffer_c3 cnn_hls.cpp:52:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="false" PragmaOptions="dim=1 type=complete variable=buffer_c3" PragmaSrcLoc="cnn_hls.cpp:53:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 53 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:52:12" VarName="buffer_c3"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-437" msg_severity="INFO" msg_loc="cnn_hls.cpp:60:22" msg_body="Disabling loop flattening for loop 'VITIS_LOOP_60_1'.">
+        <args LoopName="VITIS_LOOP_60_1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:60:22" msg_body="loop_flatten off  1 tiny_ecg_inference cnn_hls.cpp:62:1VITIS_LOOP_60_1 cnn_hls.cpp:60:22">
+        <args LoopLoc="cnn_hls.cpp:60:22" LoopLoc-DebugLoc="File cnn_hls.cpp Line 60 Column 22" LoopName="VITIS_LOOP_60_1" PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="off" PragmaSrcLoc="cnn_hls.cpp:62:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 62 Column 1" PragmaType="loop_flatten"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./weights.h:229:0" msg_body="array_partition dim=1 type=complete variable=fc_bias 1 tiny_ecg_inference ./weights.h:229:0 config_array_partition -complete_threshold 4fc_bias">
+        <args PragmaFunction="tiny_ecg_inference" PragmaInferReason="config_array_partition -complete_threshold 4" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete variable=fc_bias" PragmaType="array_partition" VarLoc="./weights.h:229:0" VarName="fc_bias"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="./weights.h:229:0" msg_body="Partitioning small array 'fc_bias' due to array size.">
+        <args Value="fc_bias"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./weights.h:242:0" msg_body="array_partition dim=1 type=complete variable=fc_multiplier 1 tiny_ecg_inference ./weights.h:242:0 config_array_partition -complete_threshold 4fc_multiplier">
+        <args PragmaFunction="tiny_ecg_inference" PragmaInferReason="config_array_partition -complete_threshold 4" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete variable=fc_multiplier" PragmaType="array_partition" VarLoc="./weights.h:242:0" VarName="fc_multiplier"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="./weights.h:242:0" msg_body="Partitioning small array 'fc_multiplier' due to array size.">
+        <args Value="fc_multiplier"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./weights.h:245:0" msg_body="array_partition dim=1 type=complete variable=fc_shift 1 tiny_ecg_inference ./weights.h:245:0 config_array_partition -complete_threshold 4fc_shift">
+        <args PragmaFunction="tiny_ecg_inference" PragmaInferReason="config_array_partition -complete_threshold 4" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete variable=fc_shift" PragmaType="array_partition" VarLoc="./weights.h:245:0" VarName="fc_shift"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="./weights.h:245:0" msg_body="Partitioning small array 'fc_shift' due to array size.">
+        <args Value="fc_shift"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./weights.h:53:0" msg_body="array_partition dim=1 type=cyclic factor=20 variable=conv2_weight 1 tiny_ecg_inference ./weights.h:53:0 cnn_hls.cpp:87:1conv2_weight">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=20 variable=conv2_weight" PragmaSrcLoc="cnn_hls.cpp:87:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 87 Column 1" PragmaType="array_partition" VarLoc="./weights.h:53:0" VarName="conv2_weight"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:87:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=20 dim=1' for array 'conv2_weight' due to pipeline pragma">
+        <args Dim="1" Factor="20" Mode="cyclic" Name="conv2_weight" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./weights.h:123:0" msg_body="array_partition dim=1 type=cyclic factor=24 variable=conv3_weight 1 tiny_ecg_inference ./weights.h:123:0 cnn_hls.cpp:115:1conv3_weight">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=24 variable=conv3_weight" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="./weights.h:123:0" VarName="conv3_weight"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=24 dim=1' for array 'conv3_weight' due to pipeline pragma">
+        <args Dim="1" Factor="24" Mode="cyclic" Name="conv3_weight" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./weights.h:201:0" msg_body="array_partition dim=1 type=complete  variable=fc_weight 1 tiny_ecg_inference ./weights.h:201:0 cnn_hls.cpp:149:1fc_weight">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=fc_weight" PragmaSrcLoc="cnn_hls.cpp:149:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 149 Column 1" PragmaType="array_partition" VarLoc="./weights.h:201:0" VarName="fc_weight"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:149:1" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'fc_weight' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="fc_weight" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="array_partition dim=1 type=cyclic factor=5 variable=buffer_c1_0 1 tiny_ecg_inference cnn_hls.cpp:46:12 cnn_hls.cpp:87:1buffer_c1_0">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=5 variable=buffer_c1_0" PragmaSrcLoc="cnn_hls.cpp:87:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 87 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:87:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=5 dim=1' for array 'buffer_c1_0' due to pipeline pragma">
+        <args Dim="1" Factor="5" Mode="cyclic" Name="buffer_c1_0" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="array_partition dim=1 type=cyclic factor=5 variable=buffer_c1_1 1 tiny_ecg_inference cnn_hls.cpp:46:12 cnn_hls.cpp:87:1buffer_c1_1">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=5 variable=buffer_c1_1" PragmaSrcLoc="cnn_hls.cpp:87:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 87 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:87:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=5 dim=1' for array 'buffer_c1_1' due to pipeline pragma">
+        <args Dim="1" Factor="5" Mode="cyclic" Name="buffer_c1_1" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="array_partition dim=1 type=cyclic factor=5 variable=buffer_c1_2 1 tiny_ecg_inference cnn_hls.cpp:46:12 cnn_hls.cpp:87:1buffer_c1_2">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=5 variable=buffer_c1_2" PragmaSrcLoc="cnn_hls.cpp:87:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 87 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_2"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:87:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=5 dim=1' for array 'buffer_c1_2' due to pipeline pragma">
+        <args Dim="1" Factor="5" Mode="cyclic" Name="buffer_c1_2" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="array_partition dim=1 type=cyclic factor=5 variable=buffer_c1_3 1 tiny_ecg_inference cnn_hls.cpp:46:12 cnn_hls.cpp:87:1buffer_c1_3">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=5 variable=buffer_c1_3" PragmaSrcLoc="cnn_hls.cpp:87:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 87 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_3"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:87:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=5 dim=1' for array 'buffer_c1_3' due to pipeline pragma">
+        <args Dim="1" Factor="5" Mode="cyclic" Name="buffer_c1_3" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="array_partition dim=1 type=cyclic factor=5 variable=buffer_c1_4 1 tiny_ecg_inference cnn_hls.cpp:46:12 cnn_hls.cpp:87:1buffer_c1_4">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=5 variable=buffer_c1_4" PragmaSrcLoc="cnn_hls.cpp:87:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 87 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_4"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:87:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=5 dim=1' for array 'buffer_c1_4' due to pipeline pragma">
+        <args Dim="1" Factor="5" Mode="cyclic" Name="buffer_c1_4" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="array_partition dim=1 type=cyclic factor=5 variable=buffer_c1_5 1 tiny_ecg_inference cnn_hls.cpp:46:12 cnn_hls.cpp:87:1buffer_c1_5">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=5 variable=buffer_c1_5" PragmaSrcLoc="cnn_hls.cpp:87:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 87 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_5"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:87:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=5 dim=1' for array 'buffer_c1_5' due to pipeline pragma">
+        <args Dim="1" Factor="5" Mode="cyclic" Name="buffer_c1_5" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="array_partition dim=1 type=cyclic factor=5 variable=buffer_c1_6 1 tiny_ecg_inference cnn_hls.cpp:46:12 cnn_hls.cpp:87:1buffer_c1_6">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=5 variable=buffer_c1_6" PragmaSrcLoc="cnn_hls.cpp:87:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 87 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_6"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:87:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=5 dim=1' for array 'buffer_c1_6' due to pipeline pragma">
+        <args Dim="1" Factor="5" Mode="cyclic" Name="buffer_c1_6" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="array_partition dim=1 type=cyclic factor=5 variable=buffer_c1_7 1 tiny_ecg_inference cnn_hls.cpp:46:12 cnn_hls.cpp:87:1buffer_c1_7">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=5 variable=buffer_c1_7" PragmaSrcLoc="cnn_hls.cpp:87:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 87 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_7"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:87:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=5 dim=1' for array 'buffer_c1_7' due to pipeline pragma">
+        <args Dim="1" Factor="5" Mode="cyclic" Name="buffer_c1_7" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_0 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_0">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_0" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_0' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_0" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_1 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_1">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_1" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_1' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_1" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_10 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_10">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_10" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_10"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_10' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_10" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_11 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_11">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_11" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_11"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_11' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_11" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_12 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_12" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_12"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_12' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_12" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_13 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_13">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_13" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_13"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_13' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_13" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_14 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_14">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_14" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_14"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_14' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_14" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_15 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_15">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_15" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_15"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_15' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_15" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_2 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_2">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_2" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_2"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_2' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_2" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_3 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_3">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_3" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_3"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_3' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_3" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_4 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_4">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_4" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_4"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_4' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_4" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_5 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_5">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_5" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_5"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_5' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_5" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_6 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_6">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_6" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_6"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_6' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_6" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_7 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_7">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_7" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_7"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_7' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_7" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_8 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_8">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_8" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_8"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_8' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_8" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="array_partition dim=1 type=cyclic factor=3 variable=buffer_c2_9 1 tiny_ecg_inference cnn_hls.cpp:49:12 cnn_hls.cpp:115:1buffer_c2_9">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=3 variable=buffer_c2_9" PragmaSrcLoc="cnn_hls.cpp:115:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 115 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_9"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="cnn_hls.cpp:115:1" msg_body="Inferring pragma 'array_partition type=cyclic factor=3 dim=1' for array 'buffer_c2_9' due to pipeline pragma">
+        <args Dim="1" Factor="3" Mode="cyclic" Name="buffer_c2_9" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./weights.h:201:0" msg_body="Applying array_partition to '_ZL9fc_weight': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL9fc_weight"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./weights.h:245:0" msg_body="Applying array_partition to '_ZL8fc_shift': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL8fc_shift"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./weights.h:229:0" msg_body="Applying array_partition to '_ZL7fc_bias': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL7fc_bias"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./weights.h:242:0" msg_body="Applying array_partition to '_ZL13fc_multiplier': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL13fc_multiplier"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./weights.h:123:0" msg_body="Applying array_partition to '_ZL12conv3_weight': Cyclic partitioning with factor 24 on dimension 1.">
+        <args Dim="1" Factor="24" Mode="Cyclic" UOName="_ZL12conv3_weight"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./weights.h:53:0" msg_body="Applying array_partition to '_ZL12conv2_weight': Cyclic partitioning with factor 20 on dimension 1.">
+        <args Dim="1" Factor="20" Mode="Cyclic" UOName="_ZL12conv2_weight"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="Applying array_partition to 'buffer_c1_0': Cyclic partitioning with factor 5 on dimension 1.">
+        <args Dim="1" Factor="5" Mode="Cyclic" UOName="buffer_c1_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:47:1" msg_body="array_partition dim=0 type=cyclic factor=5 variable=buffer_c1_0 true tiny_ecg_inference cnn_hls.cpp:47:1 buffer_c1_0 cnn_hls.cpp:46:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=5 variable=buffer_c1_0" PragmaSrcLoc="cnn_hls.cpp:47:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 47 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="Applying array_partition to 'buffer_c1_1': Cyclic partitioning with factor 5 on dimension 1.">
+        <args Dim="1" Factor="5" Mode="Cyclic" UOName="buffer_c1_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:47:1" msg_body="array_partition dim=0 type=cyclic factor=5 variable=buffer_c1_1 true tiny_ecg_inference cnn_hls.cpp:47:1 buffer_c1_1 cnn_hls.cpp:46:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=5 variable=buffer_c1_1" PragmaSrcLoc="cnn_hls.cpp:47:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 47 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="Applying array_partition to 'buffer_c1_2': Cyclic partitioning with factor 5 on dimension 1.">
+        <args Dim="1" Factor="5" Mode="Cyclic" UOName="buffer_c1_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:47:1" msg_body="array_partition dim=0 type=cyclic factor=5 variable=buffer_c1_2 true tiny_ecg_inference cnn_hls.cpp:47:1 buffer_c1_2 cnn_hls.cpp:46:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=5 variable=buffer_c1_2" PragmaSrcLoc="cnn_hls.cpp:47:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 47 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="Applying array_partition to 'buffer_c1_3': Cyclic partitioning with factor 5 on dimension 1.">
+        <args Dim="1" Factor="5" Mode="Cyclic" UOName="buffer_c1_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:47:1" msg_body="array_partition dim=0 type=cyclic factor=5 variable=buffer_c1_3 true tiny_ecg_inference cnn_hls.cpp:47:1 buffer_c1_3 cnn_hls.cpp:46:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=5 variable=buffer_c1_3" PragmaSrcLoc="cnn_hls.cpp:47:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 47 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="Applying array_partition to 'buffer_c1_4': Cyclic partitioning with factor 5 on dimension 1.">
+        <args Dim="1" Factor="5" Mode="Cyclic" UOName="buffer_c1_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:47:1" msg_body="array_partition dim=0 type=cyclic factor=5 variable=buffer_c1_4 true tiny_ecg_inference cnn_hls.cpp:47:1 buffer_c1_4 cnn_hls.cpp:46:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=5 variable=buffer_c1_4" PragmaSrcLoc="cnn_hls.cpp:47:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 47 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="Applying array_partition to 'buffer_c1_5': Cyclic partitioning with factor 5 on dimension 1.">
+        <args Dim="1" Factor="5" Mode="Cyclic" UOName="buffer_c1_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:47:1" msg_body="array_partition dim=0 type=cyclic factor=5 variable=buffer_c1_5 true tiny_ecg_inference cnn_hls.cpp:47:1 buffer_c1_5 cnn_hls.cpp:46:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=5 variable=buffer_c1_5" PragmaSrcLoc="cnn_hls.cpp:47:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 47 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="Applying array_partition to 'buffer_c1_6': Cyclic partitioning with factor 5 on dimension 1.">
+        <args Dim="1" Factor="5" Mode="Cyclic" UOName="buffer_c1_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:47:1" msg_body="array_partition dim=0 type=cyclic factor=5 variable=buffer_c1_6 true tiny_ecg_inference cnn_hls.cpp:47:1 buffer_c1_6 cnn_hls.cpp:46:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=5 variable=buffer_c1_6" PragmaSrcLoc="cnn_hls.cpp:47:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 47 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:46:12" msg_body="Applying array_partition to 'buffer_c1_7': Cyclic partitioning with factor 5 on dimension 1.">
+        <args Dim="1" Factor="5" Mode="Cyclic" UOName="buffer_c1_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:47:1" msg_body="array_partition dim=0 type=cyclic factor=5 variable=buffer_c1_7 true tiny_ecg_inference cnn_hls.cpp:47:1 buffer_c1_7 cnn_hls.cpp:46:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=5 variable=buffer_c1_7" PragmaSrcLoc="cnn_hls.cpp:47:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 47 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:46:12" VarName="buffer_c1_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_0': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_0 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_0 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_0" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_1': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_1 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_1 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_1" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_2': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_2 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_2 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_2" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_3': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_3 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_3 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_3" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_4': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_4 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_4 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_4" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_5': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_5 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_5 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_5" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_6': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_6 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_6 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_6" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_7': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_7 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_7 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_7" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_8': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_8 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_8 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_8" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_9': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_9 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_9 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_9" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_10': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_10 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_10 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_10" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_11': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_11 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_11 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_11" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_12': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_12 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_12 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_12" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_13': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_13"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_13 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_13 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_13" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_13"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_14': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_14"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_14 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_14 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_14" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_14"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="cnn_hls.cpp:49:12" msg_body="Applying array_partition to 'buffer_c2_15': Cyclic partitioning with factor 3 on dimension 1.">
+        <args Dim="1" Factor="3" Mode="Cyclic" UOName="buffer_c2_15"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_ACK" msg_id="214-487" msg_severity="INFO" msg_loc="cnn_hls.cpp:50:1" msg_body="array_partition dim=0 type=cyclic factor=3 variable=buffer_c2_15 true tiny_ecg_inference cnn_hls.cpp:50:1 buffer_c2_15 cnn_hls.cpp:49:12">
+        <args PragmaFunction="tiny_ecg_inference" PragmaIsAuto="true" PragmaOptions="dim=0 type=cyclic factor=3 variable=buffer_c2_15" PragmaSrcLoc="cnn_hls.cpp:50:1" PragmaSrcLoc-DebugLoc="File cnn_hls.cpp Line 50 Column 1" PragmaType="array_partition" VarLoc="cnn_hls.cpp:49:12" VarName="buffer_c2_15"/>
+    </msg>
+</xilinx:hls_fe_msgs>

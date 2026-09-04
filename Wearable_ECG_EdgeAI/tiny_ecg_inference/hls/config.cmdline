@@ -1,0 +1,7 @@
+part=xc7z020clg400-1
+relativeroot=D:/ECG-Embedded_System/Wearable_ECG_EdgeAI
+original_argv=-c --mode hls --part xc7z020clg400-1 --freqhz 100000000 --config hls_config.cfg 
+
+[hls]
+clock=100000000Hz
+

@@ -1,0 +1,10 @@
+{
+  "name": "hls",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "work_dir": ".",
+    "csyn_args": "--part=xc7z020clg400-1 --freqhz=100000000",
+    "configFiles": ["hls_config.cfg"]
+  }
+}

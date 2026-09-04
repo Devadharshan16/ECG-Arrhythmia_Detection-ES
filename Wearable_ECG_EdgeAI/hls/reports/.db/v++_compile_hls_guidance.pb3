@@ -1,0 +1,3 @@
+
+°
+v++_compile_hls$e2ba6e39-c258-466b-92b1-dcf39194df0c"wD:/AMD/2026.1/Vitis/bin/unwrapped/win64.o/v++.exe  -c --mode hls --part xc7z020clg400-1 --freqhz 100000000 cnn_hls.cpp 

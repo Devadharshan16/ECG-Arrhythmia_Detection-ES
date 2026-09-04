@@ -1,0 +1,16 @@
+# ninja log v5
+3	370	0	CMakeFiles/print_build_info	61ac1e261f758106
+3	370	0	D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/build/CMakeFiles/print_build_info	61ac1e261f758106
+370	746	8102054240992208	CMakeFiles/fsbl.elf.dir/fsbl_handoff.S.obj	acd21ed75ce7370b
+378	853	8102054242227421	CMakeFiles/fsbl.elf.dir/fsbl_hooks.c.obj	be07da2022d98b6f
+411	918	8102054242981055	CMakeFiles/fsbl.elf.dir/md5.c.obj	12438b84b70a36d8
+426	922	8102054242981055	CMakeFiles/fsbl.elf.dir/nand.c.obj	d539b197d5e467eb
+388	936	8102054243098969	CMakeFiles/fsbl.elf.dir/image_mover.c.obj	b6d51ae2c53d7758
+495	946	8102054243198691	CMakeFiles/fsbl.elf.dir/rsa.c.obj	8bf7d7d5b7233a2
+400	947	8102054243218695	CMakeFiles/fsbl.elf.dir/main.c.obj	df2db2baf5ef2709
+477	969	8102054243528321	CMakeFiles/fsbl.elf.dir/qspi.c.obj	6303f1e33fbbb9a8
+443	977	8102054243615454	CMakeFiles/fsbl.elf.dir/nor.c.obj	58cd4e17e030972b
+460	999	8102054243858938	CMakeFiles/fsbl.elf.dir/pcap.c.obj	c508e655645db30e
+514	1020	8102054244113928	CMakeFiles/fsbl.elf.dir/sd.c.obj	4ae3cef420c5c709
+532	1044	8102054244355802	CMakeFiles/fsbl.elf.dir/ps7_init.c.obj	e0b27e7318a834f3
+1044	1729	8102054247390042	fsbl.elf	1e5987a5dc2faa89

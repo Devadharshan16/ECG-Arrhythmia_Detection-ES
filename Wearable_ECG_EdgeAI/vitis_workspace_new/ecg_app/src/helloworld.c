@@ -117,7 +117,7 @@ int main() {
     }
     
     // Now that the FPGA is out of reset, we can initialize the OLED!
-    oled_init();
+    //oled_init();
 
     print_str("[SUCCESS] Hardware Neural Network Initialized.\n");
 

@@ -1,0 +1,7 @@
+{
+    "clangd.fallbackFlags": [
+        "-ID:\\AMD\\2026.1\\Vitis\\include",
+        "-ID:\\AMD\\2026.1\\Vitis\\include\\etc",
+        "-ID:\\AMD\\2026.1\\Vitis\\win64\\tools\\auto_cc\\include"
+    ]
+}

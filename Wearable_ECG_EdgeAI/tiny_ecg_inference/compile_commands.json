@@ -1,0 +1,15 @@
+[
+  {
+    "directory": "D:\\ECG-Embedded_System\\Wearable_ECG_EdgeAI\\tiny_ecg_inference",
+    "arguments": [
+      "D:\\AMD\\2026.1\\Vitis\\win64\\tools\\clang-16\\bin\\clang++.exe",
+      "--sysroot=D:\\AMD\\2026.1\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "-fhls",
+      "-hls-syn-headers-dir=D:\\AMD\\2026.1\\Vitis\\common\\technology\\autopilot",
+      "-fhlstoplevel=tiny_ecg_inference",
+      "-c",
+      "D:\\ECG-Embedded_System\\Wearable_ECG_EdgeAI\\cnn_hls.cpp"
+    ],
+    "file": "D:\\ECG-Embedded_System\\Wearable_ECG_EdgeAI\\cnn_hls.cpp"
+  }
+]

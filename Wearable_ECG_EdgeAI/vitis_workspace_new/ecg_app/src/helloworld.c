@@ -26,6 +26,53 @@ void print_num(int32_t num) {
     }
 }
 
+// --- OLED and Buzzer Driver (AXI GPIO) ---
+#define GPIO_OLED_BASE 0x40020000
+#define GPIO_OLED_DATA *(volatile uint32_t*)(GPIO_OLED_BASE + 0x00)
+#define GPIO_BUZZ_DATA *(volatile uint32_t*)(GPIO_OLED_BASE + 0x08)
+
+#define OLED_DC    0x01
+#define OLED_RES   0x02
+#define OLED_SCLK  0x04
+#define OLED_SDIN  0x08
+#define OLED_VBAT  0x10
+#define OLED_VDD   0x20
+
+void spi_send_byte(uint8_t data) {
+    for(int i=7; i>=0; i--) {
+        GPIO_OLED_DATA &= ~OLED_SCLK;
+        if(data & (1<<i)) GPIO_OLED_DATA |= OLED_SDIN;
+        else              GPIO_OLED_DATA &= ~OLED_SDIN;
+        GPIO_OLED_DATA |= OLED_SCLK;
+    }
+}
+
+void oled_command(uint8_t cmd) {
+    GPIO_OLED_DATA &= ~OLED_DC; // Command mode
+    spi_send_byte(cmd);
+}
+
+void oled_init() {
+    GPIO_OLED_DATA = 0; // All low
+    for(volatile int i=0; i<100000; i++);
+    GPIO_OLED_DATA |= OLED_VDD;
+    for(volatile int i=0; i<10000; i++);
+    GPIO_OLED_DATA |= OLED_RES;
+    for(volatile int i=0; i<10000; i++);
+    GPIO_OLED_DATA |= OLED_VBAT;
+    for(volatile int i=0; i<1000000; i++); // 100ms for power stabilization
+
+    oled_command(0xAE); // Display OFF
+    oled_command(0x8D); // Charge Pump
+    oled_command(0x14); // Enable Charge Pump
+    oled_command(0xAF); // Display ON
+}
+
+void trigger_alarm() {
+    GPIO_BUZZ_DATA = 1; // Turn on the buzzer!
+    oled_command(0xA5); // Flash the OLED screen to solid white!
+}
+
 // Instance of the Neural Network Hardware Driver
 XTiny_ecg_inference Nn_Hardware;
 
@@ -48,25 +95,10 @@ const int8_t sample_anomaly_beat[90] = {
 };
 
 int init_hardware() {
-    int status;
-    XTiny_ecg_inference_Config *cfg_ptr;
-
-    // BRUTE-FORCE FIX: Route UART1 to MIO 48/49 physically
-    *((volatile uint32_t *)0xF8000008) = 0xDF0D; // Unlock SLCR
-    *((volatile uint32_t *)0xF80007C0) = 0x000033E0; // MIO48 (TX) - LVCMOS18, Fast, UART1
-    *((volatile uint32_t *)0xF80007C4) = 0x000013E1; // MIO49 (RX) - LVCMOS18, Fast, UART1, Tri
-    
     // BRUTE-FORCE FIX 2: Release FPGA Reset (FCLK_RESET0_N)
+    *((volatile uint32_t *)0xF8000008) = 0xDF0D; // Unlock SLCR
     *((volatile uint32_t *)0xF8000240) = 0x00000000;
-    
     *((volatile uint32_t *)0xF8000004) = 0x767B; // Lock SLCR
-
-    // 1. Look up the hardware configuration in the Vivado xparameters
-    cfg_ptr = XTiny_ecg_inference_LookupConfig(XPAR_TINY_ECG_INFERENCE_0_BASEADDR);
-    if (!cfg_ptr) {
-        print_str("ERROR: Could not find Neural Network hardware in design!\n");
-        return XST_FAILURE;
-    }
 
     // 2. Initialize the driver MANUALLY to bypass Vitis bugs!
     Nn_Hardware.Control_BaseAddress = 0x40000000;
@@ -83,6 +115,10 @@ int main() {
     if (init_hardware() != XST_SUCCESS) {
         return -1;
     }
+    
+    // Now that the FPGA is out of reset, we can initialize the OLED!
+    oled_init();
+
     print_str("[SUCCESS] Hardware Neural Network Initialized.\n");
 
     for (int i = 0; i < 90; i++) {
@@ -111,7 +147,12 @@ int main() {
     print_str("Logit [Normal]  : "); print_num(logit_normal); print_str("\n");
     print_str("Logit [Anomaly] : "); print_num(logit_anomaly); print_str("\n");
 
-    print_str("\n>>> FINAL DIAGNOSIS: ANOMALY DETECTED! <<<\n");
+    if (logit_anomaly > logit_normal) {
+        print_str("\n>>> FINAL DIAGNOSIS: ANOMALY DETECTED! <<<\n");
+        trigger_alarm();
+    } else {
+        print_str("\n>>> FINAL DIAGNOSIS: NORMAL BEAT <<<\n");
+    }
     
     print_str("======================================================\n");
     print_str("[DEBUG] PROGRAM FINISHED. ENTERING INFINITE LOOP FOR TERMINAL.\n");

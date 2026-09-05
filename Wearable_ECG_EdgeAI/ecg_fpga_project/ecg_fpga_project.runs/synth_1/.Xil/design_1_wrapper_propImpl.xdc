@@ -1,5 +1,6 @@
 set_property SRC_FILE_INFO {cfile:d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc rfile:../../../ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:design_1_i/processing_system7_0/inst} [current_design]
 set_property SRC_FILE_INFO {cfile:d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/bd_afc3_sc_ul_0_cdc.xdc rfile:../../../ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/bd_afc3_sc_ul_0_cdc.xdc id:2 order:EARLY scoped_inst:design_1_i/axi_smc/inst/sc_ul/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.srcs/constrs_1/new/oled_buzzer.xdc rfile:../../../ecg_fpga_project.srcs/constrs_1/new/oled_buzzer.xdc id:3} [current_design]
 current_instance design_1_i/processing_system7_0/inst
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter clk_fpga_0 0.6
@@ -165,3 +166,18 @@ set_property src_info {type:SCOPED_XDC file:2 line:22 export:INPUT save:INPUT re
 create_waiver -type CDC -id {CDC-7} -user "axi_switch" -desc "Debug output only; no operational CDC" -tags "1171415" -scope -internal -to [get_pins -filter REF_PIN_NAME=~*CLR -of_objects [get_cells -hierarchical -filter {NAME =~ *si_checker_inst/*}]]
 set_property src_info {type:SCOPED_XDC file:2 line:27 export:INPUT save:INPUT read:READ} [current_design]
 create_waiver -type CDC -id {CDC-11} -user "axi_switch" -desc "AXI Switch resets contain known-good CDC paths" -tags "1171415" -scope -internal -from [get_pins -quiet -filter REF_PIN_NAME=~*C -of_objects [get_cells -hierarchical -filter {NAME =~ *gen_axi_full_nxm.sasd_inst/gen_write.m_wdata_reg*}]]
+current_instance
+set_property src_info {type:XDC file:3 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U10 [get_ports {oled_pins_tri_o[0]}]
+set_property src_info {type:XDC file:3 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U9 [get_ports {oled_pins_tri_o[1]}]
+set_property src_info {type:XDC file:3 line:5 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AB12 [get_ports {oled_pins_tri_o[2]}]
+set_property src_info {type:XDC file:3 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AA12 [get_ports {oled_pins_tri_o[3]}]
+set_property src_info {type:XDC file:3 line:9 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U11 [get_ports {oled_pins_tri_o[4]}]
+set_property src_info {type:XDC file:3 line:11 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U12 [get_ports {oled_pins_tri_o[5]}]
+set_property src_info {type:XDC file:3 line:14 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN Y11 [get_ports {buzzer_pin_tri_o[0]}]

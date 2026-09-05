@@ -1,5 +1,6 @@
+
 ################################################################################
-# (c) Copyright 2013 Advanced Micro Devices, Inc. All rights reserved.
+# (c) Copyright 2012 - 2013, 2023 Advanced Micro Devices, Inc. All rights reserved.
 # 
 # This file contains confidential and proprietary information
 # of Advanced Micro Devices, Inc. and is protected under U.S. and
@@ -44,7 +45,18 @@
 # 
 # THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
 # PART OF THIS FILE AT ALL TIMES.
-#
-################################################################################
-create_clock -period 100.0 -name aclk [get_ports aclk]
 
+################################################################################
+
+# This XDC is used only for OOC mode of synthesis, implementation
+# User should update the correct clock period before proceeding further
+# This constraints file contains default clock frequencies to be used during 
+# out-of-context flows such as OOC Synthesis and Hierarchical Designs. 
+# For best results the frequencies should be modified# to match the target 
+# frequencies. 
+
+
+ create_clock -name s_axi_clk -period 10 [get_ports s_axi_aclk]
+## set_property HD.CLK_SRC BUFGCTRL_X0Y0 [get_ports s_axi_aclk]
+
+################################################################################

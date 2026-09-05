@@ -73,7 +73,9 @@ COMPONENT design_1
     FIXED_IO_ddr_vrp : INOUT STD_LOGIC;
     FIXED_IO_ps_srstb : INOUT STD_LOGIC;
     FIXED_IO_ps_clk : INOUT STD_LOGIC;
-    FIXED_IO_ps_porb : INOUT STD_LOGIC
+    FIXED_IO_ps_porb : INOUT STD_LOGIC;
+    oled_pins_tri_o : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+    buzzer_pin_tri_o : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -104,7 +106,9 @@ your_instance_name : design_1
     FIXED_IO_ddr_vrp => FIXED_IO_ddr_vrp,
     FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
     FIXED_IO_ps_clk => FIXED_IO_ps_clk,
-    FIXED_IO_ps_porb => FIXED_IO_ps_porb
+    FIXED_IO_ps_porb => FIXED_IO_ps_porb,
+    oled_pins_tri_o => oled_pins_tri_o,
+    buzzer_pin_tri_o => buzzer_pin_tri_o
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

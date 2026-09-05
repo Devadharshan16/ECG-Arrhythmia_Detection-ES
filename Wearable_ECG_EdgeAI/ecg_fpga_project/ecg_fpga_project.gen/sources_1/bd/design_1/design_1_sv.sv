@@ -94,7 +94,11 @@ module design_1_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   inout wire FIXED_IO_ps_clk,
   (* X_INTERFACE_IGNORE = "true" *)
-  inout wire FIXED_IO_ps_porb
+  inout wire FIXED_IO_ps_porb,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [5:0] oled_pins_tri_o,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [0:0] buzzer_pin_tri_o
 );
 
   design_1 inst (
@@ -118,7 +122,9 @@ module design_1_sv (
     .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
     .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
     .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
-    .FIXED_IO_ps_porb(FIXED_IO_ps_porb)
+    .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
+    .oled_pins_tri_o(oled_pins_tri_o),
+    .buzzer_pin_tri_o(buzzer_pin_tri_o)
   );
 
 endmodule

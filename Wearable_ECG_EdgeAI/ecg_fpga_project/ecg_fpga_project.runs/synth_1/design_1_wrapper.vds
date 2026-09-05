@@ -4,8 +4,8 @@ INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detect
 # SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
 # IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
 # SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-# Start of session at: Sat Sep  5 11:50:43 2026
-# Process ID         : 11756
+# Start of session at: Sat Sep  5 12:35:33 2026
+# Process ID         : 25672
 # Current directory  : D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.runs/synth_1
 # Command line       : vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file           : D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.runs/synth_1/design_1_wrapper.vds
@@ -18,12 +18,12 @@ INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detect
 # CPU Physical cores : 12
 # CPU Logical cores  : 16
 # Host memory        : 16803 MB
-# Swap memory        : 4831 MB
-# Total Virtual      : 21634 MB
-# Available Virtual  : 2396 MB
+# Swap memory        : 5756 MB
+# Total Virtual      : 22559 MB
+# Available Virtual  : 3023 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 581.293 ; gain = 266.262
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 583.246 ; gain = 266.145
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/AMD/2026.1/Vivado/data/ip'.
@@ -37,19 +37,74 @@ INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Designutils 20-5008] Incremental synthesis strategy default
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 20816
+INFO: [Synth 8-7075] Helper process launched with PID 18820
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1426.887 ; gain = 577.824
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1429.555 ; gain = 577.516
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:593]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1R706YB' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1162]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1R706YB' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1162]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_7HNO1D' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1403]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/synth/design_1_axi_gpio_0_0.vhd:85]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 6 - type: integer 
+	Parameter C_GPIO2_WIDTH bound to: 1 - type: integer 
+	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
+	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
+	Parameter C_ALL_OUTPUTS bound to: 1 - type: integer 
+	Parameter C_ALL_OUTPUTS_2 bound to: 1 - type: integer 
+	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_TRI_DEFAULT bound to: 32'b11111111111111111111111111111111 
+	Parameter C_IS_DUAL bound to: 1 - type: integer 
+	Parameter C_DOUT_DEFAULT_2 bound to: 32'b00000000000000000000000000000000 
+	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
+INFO: [Synth 8-3491] module 'axi_gpio' declared at 'd:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:1255' bound to instance 'U0' of component 'axi_gpio' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/synth/design_1_axi_gpio_0_0.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'axi_gpio' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:1341]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2341]
+INFO: [Synth 8-3919] null assignment ignored [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2370]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/de33/hdl/axi_lite_ipif_v3_1_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:182]
+INFO: [Synth 8-226] default block is never used [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:833]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_array_single' declared at 'D:/AMD/2026.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903' bound to instance 'INPUT_DOUBLE_REGS4' of component 'xpm_cdc_array_single' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:851]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single' [D:/AMD/2026.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single' (0#1) [D:/AMD/2026.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_array_single' declared at 'D:/AMD/2026.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903' bound to instance 'INPUT_DOUBLE_REGS5' of component 'xpm_cdc_array_single' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:880]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_array_single__parameterized1' [D:/AMD/2026.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_array_single__parameterized1' (0#1) [D:/AMD/2026.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:903]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:182]
+INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:1341]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_gpio_0_0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/synth/design_1_axi_gpio_0_0.vhd:85]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:655]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1R706YB' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1226]
 INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_auto_pc_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/synth/design_1_axi_mem_intercon_imp_auto_pc_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_38_axi_protocol_converter' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_38_axi3_conv' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:951]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_38_b_downsizer' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2269]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_38_b_downsizer' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2269]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_38_a_axi3_conv' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
 INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_37_axic_fifo' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
 INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_37_fifo_gen' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
@@ -58,11 +113,21 @@ INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [D:/AMD/
 INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_37_fifo_gen' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
 INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_37_axic_fifo' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
 INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_38_a_axi3_conv' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_38_w_axi3_conv' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1998]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_38_w_axi3_conv' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1998]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_38_a_axi3_conv__parameterized0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_37_axic_fifo__parameterized0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_37_fifo_gen__parameterized0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_37_fifo_gen__parameterized0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_37_axic_fifo__parameterized0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_38_a_axi3_conv__parameterized0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
 INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_38_r_axi3_conv' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1784]
 INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_38_r_axi3_conv' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1784]
 INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_38_axi3_conv' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:951]
 INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_38_axi_protocol_converter' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_auto_pc_0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/synth/design_1_axi_mem_intercon_imp_auto_pc_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1R706YB' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1226]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_7HNO1D' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1552]
 INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_auto_us_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_0/synth/design_1_axi_mem_intercon_imp_auto_us_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_38_top' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14527]
 INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_38_axi_upsizer' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7025]
@@ -101,34 +166,16 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_37_axic_regist
 INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_37_axic_register_slice__parameterized4' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:1492]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_37_axic_register_slice__parameterized5' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:1492]
 INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_37_axic_register_slice__parameterized5' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:1492]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_37_axic_register_slice__parameterized6' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:1492]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_37_axic_register_slice__parameterized6' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:1492]
 INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_37_axi_register_slice__parameterized0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:3721]
 INFO: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_37_axi_register_slice' is unconnected for instance 'si_register_slice_inst' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7367]
 INFO: [Synth 8-7023] instance 'si_register_slice_inst' of module 'axi_register_slice_v2_1_37_axi_register_slice' has 93 connections declared, but only 92 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7367]
 INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_38_axi_upsizer' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7025]
 INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_38_top' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14527]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_auto_us_0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_0/synth/design_1_axi_mem_intercon_imp_auto_us_0.v:53]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_7HNO1D' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1403]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1W60HW0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1607]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_auto_pc_1' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_1/synth/design_1_axi_mem_intercon_imp_auto_pc_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_38_axi_protocol_converter__parameterized0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_38_axi3_conv__parameterized0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:951]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_38_b_downsizer' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2269]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_38_b_downsizer' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2269]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_38_a_axi3_conv__parameterized0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_37_axic_fifo__parameterized0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_37_fifo_gen__parameterized0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_37_fifo_gen__parameterized0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_37_axic_fifo__parameterized0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_38_a_axi3_conv__parameterized0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:60]
-INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_38_w_axi3_conv' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1998]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_38_w_axi3_conv' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1998]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_38_axi3_conv__parameterized0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:951]
-INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_38_axi_protocol_converter__parameterized0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_auto_pc_1' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_1/synth/design_1_axi_mem_intercon_imp_auto_pc_1.v:53]
-WARNING: [Synth 8-7071] port 'm_axi_wid' of module 'design_1_axi_mem_intercon_imp_auto_pc_1' is unconnected for instance 'auto_pc' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1757]
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_axi_mem_intercon_imp_auto_pc_1' has 44 connections declared, but only 43 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1757]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_axi_mem_intercon_imp_auto_us_0' is unconnected for instance 'auto_us' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1664]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_axi_mem_intercon_imp_auto_us_0' has 36 connections declared, but only 35 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1664]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_7HNO1D' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1552]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1W60HW0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1702]
 INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_auto_us_1' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_1/synth/design_1_axi_mem_intercon_imp_auto_us_1.v:53]
 INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_38_top__parameterized0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14527]
 INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_38_axi_upsizer__parameterized0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7025]
@@ -143,7 +190,9 @@ INFO: [Synth 8-7023] instance 'si_register_slice_inst' of module 'axi_register_s
 INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_38_axi_upsizer__parameterized0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7025]
 INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_38_top__parameterized0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14527]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_auto_us_1' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_1/synth/design_1_axi_mem_intercon_imp_auto_us_1.v:53]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1W60HW0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1607]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_axi_mem_intercon_imp_auto_us_1' is unconnected for instance 'auto_us' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1832]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_axi_mem_intercon_imp_auto_us_1' has 42 connections declared, but only 41 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1832]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1W60HW0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1702]
 INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_xbar_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_xbar_0/synth/design_1_axi_mem_intercon_imp_xbar_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_39_axi_crossbar' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/eea9/hdl/axi_crossbar_v2_1_vl_rfs.v:4871]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_39_crossbar' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/eea9/hdl/axi_crossbar_v2_1_vl_rfs.v:2232]
@@ -196,10 +245,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__
 INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized1' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
 INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized1' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
 INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized1' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_37_axic_register_slice__parameterized6' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_37_axic_register_slice__parameterized6' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:1492]
 INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_37_axic_register_slice__parameterized7' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:1492]
 INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_37_axic_register_slice__parameterized7' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:1492]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_37_axic_register_slice__parameterized8' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:1492]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_37_axic_register_slice__parameterized8' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:1492]
 INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_37_axi_register_slice__parameterized2' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:3721]
 INFO: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_37_axi_register_slice' is unconnected for instance 'reg_slice_mi' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/eea9/hdl/axi_crossbar_v2_1_vl_rfs.v:3116]
 INFO: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_37_axi_register_slice' has 93 connections declared, but only 92 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/eea9/hdl/axi_crossbar_v2_1_vl_rfs.v:3116]
@@ -228,32 +277,34 @@ INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_39_addr_arbiter
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_39_crossbar' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/eea9/hdl/axi_crossbar_v2_1_vl_rfs.v:2232]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_39_axi_crossbar' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/eea9/hdl/axi_crossbar_v2_1_vl_rfs.v:4871]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_xbar_0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_xbar_0/synth/design_1_axi_mem_intercon_imp_xbar_0.v:53]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'design_1_axi_mem_intercon_imp_xbar_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1132]
-WARNING: [Synth 8-689] width (64) of port connection 's_axi_rdata' does not match port width (128) of module 'design_1_axi_mem_intercon_imp_xbar_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1149]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'design_1_axi_mem_intercon_imp_xbar_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1150]
-WARNING: [Synth 8-689] width (2) of port connection 's_axi_rresp' does not match port width (4) of module 'design_1_axi_mem_intercon_imp_xbar_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1152]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_rvalid' does not match port width (2) of module 'design_1_axi_mem_intercon_imp_xbar_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1153]
-WARNING: [Synth 8-7071] port 's_axi_bid' of module 'design_1_axi_mem_intercon_imp_xbar_0' is unconnected for instance 'xbar' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1083]
-WARNING: [Synth 8-7071] port 's_axi_rid' of module 'design_1_axi_mem_intercon_imp_xbar_0' is unconnected for instance 'xbar' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1083]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_axi_mem_intercon_imp_xbar_0' has 78 connections declared, but only 76 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1083]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:593]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'design_1_axi_mem_intercon_imp_xbar_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1197]
+WARNING: [Synth 8-689] width (64) of port connection 's_axi_rdata' does not match port width (128) of module 'design_1_axi_mem_intercon_imp_xbar_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1214]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'design_1_axi_mem_intercon_imp_xbar_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1215]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_rresp' does not match port width (4) of module 'design_1_axi_mem_intercon_imp_xbar_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1217]
+WARNING: [Synth 8-689] width (1) of port connection 's_axi_rvalid' does not match port width (2) of module 'design_1_axi_mem_intercon_imp_xbar_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1218]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'design_1_axi_mem_intercon_imp_xbar_0' is unconnected for instance 'xbar' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1147]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'design_1_axi_mem_intercon_imp_xbar_0' is unconnected for instance 'xbar' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1147]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_axi_mem_intercon_imp_xbar_0' has 78 connections declared, but only 76 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:1147]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:655]
 INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_afc3' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:10]
 INFO: [Synth 8-6157] synthesizing module 'bd_afc3_sc_ul_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/synth/bd_afc3_sc_ul_0.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [D:/AMD/2026.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [D:/AMD/2026.1/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
 INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_sc_ul_0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/synth/bd_afc3_sc_ul_0.sv:53]
-WARNING: [Synth 8-7071] port 'aresetn_out' of module 'bd_afc3_sc_ul_0' is unconnected for instance 'sc_ul' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:248]
-WARNING: [Synth 8-7071] port 'pc_asserted' of module 'bd_afc3_sc_ul_0' is unconnected for instance 'sc_ul' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:248]
-WARNING: [Synth 8-7071] port 'pc_status' of module 'bd_afc3_sc_ul_0' is unconnected for instance 'sc_ul' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:248]
-WARNING: [Synth 8-7023] instance 'sc_ul' of module 'bd_afc3_sc_ul_0' has 81 connections declared, but only 78 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:248]
+WARNING: [Synth 8-7071] port 'aresetn_out' of module 'bd_afc3_sc_ul_0' is unconnected for instance 'sc_ul' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:305]
+WARNING: [Synth 8-7071] port 'pc_asserted' of module 'bd_afc3_sc_ul_0' is unconnected for instance 'sc_ul' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:305]
+WARNING: [Synth 8-7071] port 'pc_status' of module 'bd_afc3_sc_ul_0' is unconnected for instance 'sc_ul' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:305]
+WARNING: [Synth 8-7023] instance 'sc_ul' of module 'bd_afc3_sc_ul_0' has 100 connections declared, but only 97 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:305]
 INFO: [Synth 8-6155] done synthesizing module 'bd_afc3' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:10]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:53]
-WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'design_1_axi_smc_0' is unconnected for instance 'axi_smc' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:318]
-WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'design_1_axi_smc_0' is unconnected for instance 'axi_smc' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:318]
-WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'design_1_axi_smc_0' is unconnected for instance 'axi_smc' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:318]
-WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'design_1_axi_smc_0' is unconnected for instance 'axi_smc' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:318]
-WARNING: [Synth 8-7023] instance 'axi_smc' of module 'design_1_axi_smc_0' has 78 connections declared, but only 74 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:318]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'design_1_axi_smc_0' is unconnected for instance 'axi_smc' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:363]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'design_1_axi_smc_0' is unconnected for instance 'axi_smc' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:363]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'design_1_axi_smc_0' is unconnected for instance 'axi_smc' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:363]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'design_1_axi_smc_0' is unconnected for instance 'axi_smc' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:363]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'design_1_axi_smc_0' is unconnected for instance 'axi_smc' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:363]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'design_1_axi_smc_0' is unconnected for instance 'axi_smc' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:363]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'design_1_axi_smc_0' has 97 connections declared, but only 91 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:363]
 INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/AMD/2026.1/Vivado/scripts/rt/data/unisim_comp.v:2678]
@@ -278,11 +329,11 @@ INFO: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_process
 INFO: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:461]
 INFO: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:461]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:53]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:393]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:393]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:393]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:393]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 107 connections declared, but only 103 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:393]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:455]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:455]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:455]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:455]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 107 connections declared, but only 103 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:455]
 INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/synth/design_1_rst_ps7_0_50M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
@@ -328,18 +379,22 @@ INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [d:/ECG-Embedded_Sy
 INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_rfs.vhd:304]
 INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/9438/hdl/proc_sys_reset_v5_0_rfs.vhd:1302]
 INFO: [Synth 8-256] done synthesizing module 'design_1_rst_ps7_0_50M_0' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/synth/design_1_rst_ps7_0_50M_0.vhd:74]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:497]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:497]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:497]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:497]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'design_1_rst_ps7_0_50M_0' has 10 connections declared, but only 6 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:497]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:559]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:559]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:559]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:559]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'design_1_rst_ps7_0_50M_0' has 10 connections declared, but only 6 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:559]
 INFO: [Synth 8-6157] synthesizing module 'design_1_tiny_ecg_inference_0_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_tiny_ecg_inference_0_0/synth/design_1_tiny_ecg_inference_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'tiny_ecg_inference' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference.v:9]
-INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6157] synthesizing module 'tiny_ecg_inference_local_ecg_RAM_AUTO_1R1W' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_local_ecg_RAM_AUTO_1R1W.v:7]
 INFO: [Synth 8-6155] done synthesizing module 'tiny_ecg_inference_local_ecg_RAM_AUTO_1R1W' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_local_ecg_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'tiny_ecg_inference_buffer_c1_RAM_AUTO_1R1W' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_buffer_c1_RAM_AUTO_1R1W.v:7]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-6155] done synthesizing module 'tiny_ecg_inference_buffer_c1_RAM_AUTO_1R1W' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_buffer_c1_RAM_AUTO_1R1W.v:7]
 INFO: [Synth 8-6155] done synthesizing module 'tiny_ecg_inference_buffer_c2_RAM_AUTO_1R1W' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_buffer_c2_RAM_AUTO_1R1W.v:7]
 INFO: [Synth 8-6155] done synthesizing module 'tiny_ecg_inference_buffer_c3_RAM_AUTO_1R1W' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_buffer_c3_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'tiny_ecg_inference_flatten_RAM_AUTO_1R1W' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_flatten_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'tiny_ecg_inference_flow_control_loop_pipe_sequential_init' (0#1) [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_flow_control_loop_pipe_sequential_init.v:11]
 INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3876] $readmem data file './tiny_ecg_inference_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_conv1_bias_ROM_AUbkb.dat' is read successfully [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_conv1_bias_ROM_AUbkb.v:28]
 INFO: [Synth 8-3876] $readmem data file './tiny_ecg_inference_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_p_ZL12conv1_weighcud.dat' is read successfully [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_p_ZL12conv1_weighcud.v:28]
@@ -402,43 +457,51 @@ INFO: [Synth 8-3876] $readmem data file './tiny_ecg_inference_tiny_ecg_inference
 INFO: [Synth 8-226] default block is never used [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_sparsemux_33_4_7_1_1.v:126]
 INFO: [Synth 8-155] case statement is not full and has no default [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_CTRL_s_axi.v:197]
 INFO: [Synth 8-155] case statement is not full and has no default [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_control_s_axi.v:179]
-WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWADDR' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWBURST' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWCACHE' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWLEN' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWLOCK' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWPROT' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWQOS' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWREGION' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWSIZE' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWVALID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_BREADY' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_WDATA' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_WID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_WLAST' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_WSTRB' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_WVALID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARADDR' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARBURST' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARCACHE' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARLEN' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARLOCK' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARPROT' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARQOS' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARREGION' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARSIZE' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARVALID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_RREADY' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_WID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
-WARNING: [Synth 8-7023] instance 'tiny_ecg_inference_0' of module 'design_1_tiny_ecg_inference_0_0' has 117 connections declared, but only 86 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:504]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWADDR' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWBURST' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWCACHE' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWLEN' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWLOCK' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWPROT' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWQOS' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWREGION' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWSIZE' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_AWVALID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_BREADY' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_WDATA' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_WID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_WLAST' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_WSTRB' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_IN_WVALID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARADDR' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARBURST' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARCACHE' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARLEN' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARLOCK' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARPROT' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARQOS' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARREGION' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARSIZE' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_ARVALID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_RREADY' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7071] port 'm_axi_DATA_OUT_WID' of module 'design_1_tiny_ecg_inference_0_0' is unconnected for instance 'tiny_ecg_inference_0' [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+WARNING: [Synth 8-7023] instance 'tiny_ecg_inference_0' of module 'design_1_tiny_ecg_inference_0_0' has 117 connections declared, but only 86 given [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/synth/design_1.v:566]
+INFO: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[0].GPIO_DBus_i_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:688]
+INFO: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[1].GPIO_DBus_i_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:688]
+INFO: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[2].GPIO_DBus_i_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:688]
+INFO: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[3].GPIO_DBus_i_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:688]
+INFO: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[4].GPIO_DBus_i_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:688]
+INFO: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[5].GPIO_DBus_i_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:688]
+INFO: [Synth 8-6014] Unused sequential element Dual.ALLOUT1_ND_G2.READ_REG2_GEN[0].GPIO2_DBus_i_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:785]
+INFO: [Synth 8-6014] Unused sequential element Dual.gpio_Data_In_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:875]
+INFO: [Synth 8-6014] Unused sequential element Dual.gpio2_Data_In_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/6ccd/hdl/axi_gpio_v2_0_rfs.vhd:908]
+INFO: [Synth 8-6014] Unused sequential element S_AXI_AUSER_Q_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:280]
 INFO: [Synth 8-6014] Unused sequential element NO_B_CHANNEL.cmd_b_depth_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:852]
 INFO: [Synth 8-6014] Unused sequential element S_AXI_AUSER_Q_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:280]
 INFO: [Synth 8-6014] Unused sequential element cmd_b_push_block_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:636]
-INFO: [Synth 8-3848] Net M_AXI_WID in module/entity axi_protocol_converter_v2_1_38_axi3_conv does not have driver. [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:1054]
-INFO: [Synth 8-6014] Unused sequential element S_AXI_AUSER_Q_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/b706/hdl/axi_protocol_converter_v2_1_vl_rfs.v:280]
 INFO: [Synth 8-3848] Net m_axi_rready in module/entity axi_dwidth_converter_v2_1_38_axi_upsizer__parameterized0 does not have driver. [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7164]
 INFO: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:747]
 INFO: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:786]
@@ -586,18 +649,18 @@ WARNING: [Synth 8-7129] Port I_CH0_ARADDR[16] in module tiny_ecg_inference_DATA_
 WARNING: [Synth 8-7129] Port I_CH0_ARADDR[15] in module tiny_ecg_inference_DATA_OUT_m_axi is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1987.184 ; gain = 1138.121
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1994.125 ; gain = 1142.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1987.184 ; gain = 1138.121
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1994.125 ; gain = 1142.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1987.184 ; gain = 1138.121
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1994.125 ; gain = 1142.086
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.473 . Memory (MB): peak = 1987.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.483 . Memory (MB): peak = 1994.125 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -617,37 +680,46 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/smartconnect.xdc] for cell 'design_1_i/axi_smc/inst'
 Finished Parsing XDC File [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/smartconnect.xdc] for cell 'design_1_i/axi_smc/inst'
+Parsing XDC File [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.srcs/constrs_1/new/oled_buzzer.xdc]
+Finished Parsing XDC File [D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.srcs/constrs_1/new/oled_buzzer.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.srcs/constrs_1/new/oled_buzzer.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/AMD/2026.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_array_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/AMD/2026.1/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Project 1-1714] 6 XPM XDC files have been applied to the design.
+INFO: [Project 1-1714] 8 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2102.945 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2113.410 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.370 . Memory (MB): peak = 2103.625 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.445 . Memory (MB): peak = 2113.645 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 2103.625 ; gain = 1254.562
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 2113.645 ; gain = 1261.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 2103.625 ; gain = 1254.562
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 2113.645 ; gain = 1261.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 2103.625 ; gain = 1254.562
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 2113.645 ; gain = 1261.605
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_37_axic_reg_srl_fifo'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_37_axic_reg_srl_fifo__parameterized0'
@@ -703,6 +775,15 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'tiny_
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'tiny_ecg_inference_DATA_OUT_m_axi_reg_slice__parameterized2'
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0001 |                               00
+                  iSTATE |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE1 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft', re-encoding will not be performed
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -864,7 +945,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'tiny_ecg_inference_DATA_OUT_m_axi_reg_slice__parameterized2'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 2103.625 ; gain = 1254.562
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:49 . Memory (MB): peak = 2113.645 ; gain = 1261.605
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -936,7 +1017,6 @@ INFO: [Synth 8-6014] Unused sequential element tmp_2_reg_6363_reg was removed.  
 INFO: [Synth 8-6014] Unused sequential element tmp_3_reg_6380_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6.v:4208]
 INFO: [Synth 8-6014] Unused sequential element tmp_9_reg_1971_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3.v:1547]
 INFO: [Synth 8-6014] Unused sequential element tmp_10_reg_1976_reg was removed.  [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0972/hdl/verilog/tiny_ecg_inference_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3.v:1540]
-INFO: [Synth 8-12589] Found 1 bits of RAM  (design_1_i/i_2_0/axi_mem_intercon/\s01_couplers/auto_pc /\inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst /i_2_3) with no load. RAM width may be reduced from 5 to 4 
 INFO: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module tiny_ecg_inference_CTRL_s_axi.
 INFO: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused and will be removed from module tiny_ecg_inference_CTRL_s_axi.
 INFO: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module tiny_ecg_inference_control_s_axi.
@@ -1054,7 +1134,7 @@ WARNING: [Synth 8-13373] Removed Macro Instance : design_1_i/tiny_ecg_inference_
 WARNING: [Synth 8-13373] Removed Macro Instance : design_1_i/tiny_ecg_inference_0/insti_2_1/grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600/\mul_64ns_66ns_129_1_1_U10/tmp_product__1 /\mul_64ns_66ns_129_1_1_U10/tmp_product , of type : DSP48E1 in constant propagation
 WARNING: [Synth 8-13373] Removed Macro Instance : design_1_i/tiny_ecg_inference_0/insti_2_1/grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600/tmp_10_reg_1976_reg/tmp_10_reg_1976_reg, of type : DSP48E1 in constant propagation
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:25 . Memory (MB): peak = 2103.625 ; gain = 1254.562
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:31 . Memory (MB): peak = 2113.645 ; gain = 1261.605
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 312, Available = 220. Use report_utilization command for details.
  Sort Area is tiny_ecg_inference__GB1 mul_64ns_66ns_129_1_1_U10/tmp_product_10e : 0 0 : 2062 10448 : Used 1 time 0
@@ -1566,10 +1646,10 @@ WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 312
  DSP resource Status: mac_muladd_8s_7ns_16s_17_4_1_U396/tiny_ecg_inference_mac_muladd_8s_7ns_16s_17_4_1_DSP48_0_U/p_reg_reg_9a 0 1145 1145: Used 1 time : Accepted (202 < 220) uniquify 0 
  DSP resource Status: mul_21s_30ns_51_1_1_U306/tmp_product_cc 0 6119 3405: Used 1 time : Accepted (83 < 220) uniquify 0 
  DSP resource Status: mul_21s_30ns_51_1_1_U306/tmp_product_cc 1 6119 2714: Used 1 time : Accepted (84 < 220) uniquify 0 
-DSP Debug: swapped A/B pins for adder 000001D7498298C0
-DSP Debug: swapped A/B pins for adder 000001D7498ABB10
-DSP Debug: swapped A/B pins for adder 000001D7498AE690
-DSP Debug: swapped A/B pins for adder 000001D7739C08E0
+DSP Debug: swapped A/B pins for adder 000001A690F5D860
+DSP Debug: swapped A/B pins for adder 000001A6D2519E30
+DSP Debug: swapped A/B pins for adder 000001A6D2505670
+DSP Debug: swapped A/B pins for adder 000001A690F55A00
  DSP resource Status: mul_64ns_66ns_129_1_1_U95/tmp_product_d5 0 9497 2460: Used 1 time : Accepted (77 < 220) uniquify 0 
  DSP resource Status: mul_64ns_66ns_129_1_1_U95/tmp_product_d4 0 9805 1996: Used 1 time : Accepted (45 < 220) uniquify 0 
  DSP resource Status: mul_64ns_66ns_129_1_1_U95/tmp_product_d4 1 9805 2007: Used 1 time : Accepted (46 < 220) uniquify 0 
@@ -1674,13 +1754,13 @@ DSP Debug: swapped A/B pins for adder 000001D7739C08E0
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:35 . Memory (MB): peak = 2370.422 ; gain = 1521.359
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:29 ; elapsed = 00:01:42 . Memory (MB): peak = 2373.844 ; gain = 1521.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:44 . Memory (MB): peak = 2462.371 ; gain = 1613.309
+Finished Timing Optimization : Time (s): cpu = 00:01:37 ; elapsed = 00:01:50 . Memory (MB): peak = 2465.781 ; gain = 1613.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -1689,7 +1769,7 @@ INFO: [Synth 8-7052] The timing for the instance design_1_i/tiny_ecg_inference_0
 INFO: [Synth 8-7052] The timing for the instance design_1_i/tiny_ecg_inference_0/inst/flatten_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance design_1_i/tiny_ecg_inference_0/inst/DATA_IN_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:44 ; elapsed = 00:01:57 . Memory (MB): peak = 2572.926 ; gain = 1723.863
+Finished Technology Mapping : Time (s): cpu = 00:01:50 ; elapsed = 00:02:04 . Memory (MB): peak = 2574.414 ; gain = 1722.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1790,12 +1870,6 @@ WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debu
 WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:927]
 WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:927]
 WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:927]
-WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:927]
-WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:927]
-WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:927]
-WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:927]
-WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:927]
-WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:927]
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:2093]
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8c55/hdl/axi_register_slice_v2_1_rfs.v:2094]
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:4390]
@@ -1805,40 +1879,46 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5048]
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5152]
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5060]
-WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5060]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:988]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:988]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:988]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:988]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:988]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:988]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_rfs.v:988]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:47 ; elapsed = 00:02:01 . Memory (MB): peak = 2710.793 ; gain = 1861.730
+Finished IO Insertion : Time (s): cpu = 00:01:53 ; elapsed = 00:02:08 . Memory (MB): peak = 2709.293 ; gain = 1857.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:47 ; elapsed = 00:02:01 . Memory (MB): peak = 2710.793 ; gain = 1861.730
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:53 ; elapsed = 00:02:08 . Memory (MB): peak = 2709.293 ; gain = 1857.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:51 ; elapsed = 00:02:05 . Memory (MB): peak = 2756.113 ; gain = 1907.051
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:57 ; elapsed = 00:02:12 . Memory (MB): peak = 2753.348 ; gain = 1901.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:51 ; elapsed = 00:02:05 . Memory (MB): peak = 2756.113 ; gain = 1907.051
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:57 ; elapsed = 00:02:12 . Memory (MB): peak = 2753.348 ; gain = 1901.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:51 ; elapsed = 00:02:06 . Memory (MB): peak = 2780.000 ; gain = 1930.938
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:58 ; elapsed = 00:02:13 . Memory (MB): peak = 2778.195 ; gain = 1926.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:51 ; elapsed = 00:02:06 . Memory (MB): peak = 2780.000 ; gain = 1930.938
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:58 ; elapsed = 00:02:13 . Memory (MB): peak = 2778.195 ; gain = 1926.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2048,12 +2128,12 @@ Report Cell Usage:
 |2     |BUFG     |     1|
 |3     |CARRY4   |  2654|
 |4     |DSP48E1  |   183|
-|31    |LUT1     |   568|
-|32    |LUT2     |  4924|
-|33    |LUT3     |  3590|
-|34    |LUT4     |  3937|
-|35    |LUT5     |  1912|
-|36    |LUT6     |  4400|
+|31    |LUT1     |   570|
+|32    |LUT2     |  4994|
+|33    |LUT3     |  3583|
+|34    |LUT4     |  3940|
+|35    |LUT5     |  1937|
+|36    |LUT6     |  4387|
 |37    |MUXF7    |    22|
 |38    |PS7      |     1|
 |39    |RAM16X1D |     1|
@@ -2063,25 +2143,26 @@ Report Cell Usage:
 |43    |RAMB18E1 |     2|
 |45    |SRL16    |     1|
 |46    |SRL16E   |   342|
-|47    |SRLC32E  |    55|
+|47    |SRLC32E  |    43|
 |48    |FDCE     |    69|
 |49    |FDPE     |    33|
-|50    |FDRE     | 10367|
-|51    |FDSE     |    63|
+|50    |FDRE     | 10394|
+|51    |FDSE     |    67|
+|52    |OBUF     |     7|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:52 ; elapsed = 00:02:06 . Memory (MB): peak = 2780.000 ; gain = 1930.938
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:58 ; elapsed = 00:02:13 . Memory (MB): peak = 2778.195 ; gain = 1926.156
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 508 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:23 ; elapsed = 00:01:56 . Memory (MB): peak = 2780.000 ; gain = 1814.496
-Synthesis Optimization Complete : Time (s): cpu = 00:01:52 ; elapsed = 00:02:06 . Memory (MB): peak = 2780.000 ; gain = 1930.938
+Synthesis finished with 0 errors, 0 critical warnings and 468 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:28 ; elapsed = 00:02:02 . Memory (MB): peak = 2778.195 ; gain = 1806.637
+Synthesis Optimization Complete : Time (s): cpu = 00:01:58 ; elapsed = 00:02:13 . Memory (MB): peak = 2778.195 ; gain = 1926.156
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.260 . Memory (MB): peak = 2787.094 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.266 . Memory (MB): peak = 2785.355 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 3633 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2797.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2796.117 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 772 instances were transformed.
   RAM16X1D => RAM32X1D (RAMD32(x2)): 1 instance 
@@ -2090,12 +2171,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1S => RAM32X1S (RAMS32): 40 instances
   SRL16 => SRL16E: 1 instance 
 
-Synth Design complete | Checksum: 629b27ed
+Synth Design complete | Checksum: f80e655d
 INFO: [Common 17-83] Releasing license: Vivado_Synthesis
-617 Infos, 279 Warnings, 0 Critical Warnings and 0 Errors encountered.
+654 Infos, 283 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:01 ; elapsed = 00:02:19 . Memory (MB): peak = 2797.914 ; gain = 2188.613
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 2797.914 ; gain = 0.000
+synth_design: Time (s): cpu = 00:02:07 ; elapsed = 00:02:27 . Memory (MB): peak = 2796.117 ; gain = 2186.672
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 2796.117 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Sep  5 11:53:15 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Sep  5 12:38:13 2026...

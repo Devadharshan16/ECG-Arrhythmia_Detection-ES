@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:hls:tiny_ecg_inference:1.0
-// IP Revision: 2114771047
+// IP Revision: 2114772588
 
 `timescale 1ns/1ps
 
@@ -429,7 +429,7 @@ output wire m_axi_DATA_OUT_WVALID;
 
 (* SDX_KERNEL = "true" *)
 (* SDX_KERNEL_TYPE = "hls" *)
-(* SDX_KERNEL_SIM_INST = "inst" *)
+(* SDX_KERNEL_SIM_INST = "" *)
   tiny_ecg_inference #(
     .C_S_AXI_CTRL_ADDR_WIDTH(4),
     .C_S_AXI_CTRL_DATA_WIDTH(32),

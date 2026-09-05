@@ -40,8 +40,16 @@ static inline int8_t requantize_linear(int32_t acc, int32_t multiplier, int32_t 
 
 void tiny_ecg_inference(int8_t input_ecg[90], int8_t output_logits[2]) {
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL
-#pragma HLS INTERFACE m_axi port=input_ecg offset=slave bundle=DATA_IN
-#pragma HLS INTERFACE m_axi port=output_logits offset=slave bundle=DATA_OUT
+#pragma HLS INTERFACE m_axi port=input_ecg offset=slave bundle=DATA_IN depth=90
+#pragma HLS INTERFACE m_axi port=output_logits offset=slave bundle=DATA_OUT depth=2
+
+    // BUG FIX: Sequential memory copy to force an aligned AXI Burst!
+    // This prevents the unaligned random access crash!
+    int8_t local_ecg[90];
+    for(int i = 0; i < 90; i++) {
+#pragma HLS PIPELINE II=1
+        local_ecg[i] = input_ecg[i];
+    }
 
     int8_t buffer_c1[8][45];
 #pragma HLS ARRAY_PARTITION variable=buffer_c1 complete dim=1
@@ -68,7 +76,7 @@ void tiny_ecg_inference(int8_t input_ecg[90], int8_t output_logits[2]) {
 
                 if (in_idx >= 0 && in_idx < INPUT_LENGTH) {
                     // Apply input zero-point offset
-                    x = (int32_t)input_ecg[in_idx] - input_zero_point;
+                    x = (int32_t)local_ecg[in_idx] - input_zero_point;
                 }
 
                 acc += (int32_t)conv1_weight[oc * CONV1_KERNEL + k] * x;

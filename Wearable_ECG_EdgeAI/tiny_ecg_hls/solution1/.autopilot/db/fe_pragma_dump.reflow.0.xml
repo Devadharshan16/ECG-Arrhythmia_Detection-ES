@@ -1,0 +1,14 @@
+<pragmas>
+<pragma file="cnn_hls.cpp" line="157" pragmaType="pipeline" parentfunction="tiny_ecg_inference" off="0" ii="1" rewind="0" style=""/>
+<pragma file="cnn_hls.cpp" line="148" pragmaType="pipeline" parentfunction="tiny_ecg_inference" off="0" ii="1" rewind="0" style=""/>
+<pragma file="cnn_hls.cpp" line="123" pragmaType="pipeline" parentfunction="tiny_ecg_inference" off="0" ii="1" rewind="0" style=""/>
+<pragma file="cnn_hls.cpp" line="95" pragmaType="pipeline" parentfunction="tiny_ecg_inference" off="0" ii="1" rewind="0" style=""/>
+<pragma file="cnn_hls.cpp" line="70" pragmaType="pipeline" parentfunction="tiny_ecg_inference" off="0" ii="1" rewind="0" style=""/>
+<pragma file="cnn_hls.cpp" line="50" pragmaType="pipeline" parentfunction="tiny_ecg_inference" off="0" ii="1" rewind="0" style=""/>
+<pragma file="cnn_hls.cpp" line="42" pragmaType="interface" parentfunction="tiny_ecg_inference" mode="s_axilite" port="" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="cnn_hls.cpp" line="43" pragmaType="interface" parentfunction="tiny_ecg_inference" mode="m_axi" port="input_ecg" bundle="DATA_IN" offset="slave" name="" depth="90" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="cnn_hls.cpp" line="44" pragmaType="interface" parentfunction="tiny_ecg_inference" mode="m_axi" port="output_logits" bundle="DATA_OUT" offset="slave" name="" depth="2" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="cnn_hls.cpp" line="55" pragmaType="array_partition" parentfunction="tiny_ecg_inference" dim="1" factor="0" mode="complete" dynamic="0" variable="buffer_c1"/>
+<pragma file="cnn_hls.cpp" line="58" pragmaType="array_partition" parentfunction="tiny_ecg_inference" dim="1" factor="0" mode="complete" dynamic="0" variable="buffer_c2"/>
+<pragma file="cnn_hls.cpp" line="61" pragmaType="array_partition" parentfunction="tiny_ecg_inference" dim="1" factor="0" mode="complete" dynamic="0" variable="buffer_c3"/>
+</pragmas>

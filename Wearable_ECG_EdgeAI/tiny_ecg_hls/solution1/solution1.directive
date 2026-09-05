@@ -1,0 +1,9 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="tiny_ecg_inference" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="tiny_ecg_inference"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>

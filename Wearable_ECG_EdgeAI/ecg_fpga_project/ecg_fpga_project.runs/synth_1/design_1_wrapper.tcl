@@ -56,11 +56,8 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param tcl.statsThreshold 360
 set_param general.usePosixSpawnForFork 1
-set_param chipscope.maxJobs 4
 set_param bd.open.in_stealth_mode 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -73,7 +70,7 @@ set_property parent.project_path D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/tiny_ecg_inference/hls/impl/ip [current_project]
+set_property ip_repo_paths d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ip_repo [current_project]
 update_ip_catalog
 set_property ip_output_repo d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -91,6 +88,10 @@ set_property used_in_implementation false [get_files -all d:/ECG-Embedded_System
 set_property used_in_synthesis false [get_files -all d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_0/design_1_axi_mem_intercon_imp_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_0/design_1_axi_mem_intercon_imp_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_0/design_1_axi_mem_intercon_imp_auto_us_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_1/design_1_axi_mem_intercon_imp_auto_pc_1_ooc.xdc]
+set_property used_in_synthesis false [get_files -all d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_1/design_1_axi_mem_intercon_imp_auto_us_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_1/design_1_axi_mem_intercon_imp_auto_us_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_1/design_1_axi_mem_intercon_imp_auto_us_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ecg_fpga_project.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }

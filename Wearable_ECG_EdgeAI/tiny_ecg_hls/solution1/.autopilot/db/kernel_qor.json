@@ -1,0 +1,201 @@
+{
+    "name": "tiny_ecg_inference",
+    "type": "function",
+    "pipelined": "yes",
+    "dataflowed": "no",
+    "original_ti": 1387,
+    "original_tl": 1386,
+    "calculated_ti": -1,
+    "calculated_tl": -1,
+    "assume_ti": -1,
+    "assume_tl": -1,
+    "CIs": [
+        {
+            "ID": 0,
+            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_49_1",
+            "type": "function",
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 93,
+            "original_tl": 93,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [],
+            "loops": [
+                {
+                    "name": "VITIS_LOOP_49_1",
+                    "type": "loop",
+                    "trip_count": 90,
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 90,
+                    "original_tl": 92,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": []
+                }
+            ]
+        },
+        {
+            "ID": 1,
+            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3",
+            "type": "function",
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 376,
+            "original_tl": 376,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [],
+            "loops": [
+                {
+                    "name": "VITIS_LOOP_68_2_VITIS_LOOP_69_3",
+                    "type": "loop",
+                    "trip_count": 360,
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 360,
+                    "original_tl": 375,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": []
+                }
+            ]
+        },
+        {
+            "ID": 2,
+            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6",
+            "type": "function",
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 384,
+            "original_tl": 384,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [],
+            "loops": [
+                {
+                    "name": "VITIS_LOOP_93_5_VITIS_LOOP_94_6",
+                    "type": "loop",
+                    "trip_count": 368,
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 368,
+                    "original_tl": 383,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": []
+                }
+            ]
+        },
+        {
+            "ID": 3,
+            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10",
+            "type": "function",
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 207,
+            "original_tl": 207,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [],
+            "loops": [
+                {
+                    "name": "VITIS_LOOP_121_9_VITIS_LOOP_122_10",
+                    "type": "loop",
+                    "trip_count": 192,
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 192,
+                    "original_tl": 206,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": []
+                }
+            ]
+        },
+        {
+            "ID": 4,
+            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_146_13_VITIS_LOOP_147_14",
+            "type": "function",
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 194,
+            "original_tl": 194,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [],
+            "loops": [
+                {
+                    "name": "VITIS_LOOP_146_13_VITIS_LOOP_147_14",
+                    "type": "loop",
+                    "trip_count": 192,
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 192,
+                    "original_tl": 193,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": []
+                }
+            ]
+        },
+        {
+            "ID": 5,
+            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_156_15",
+            "type": "function",
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 11,
+            "original_tl": 11,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [],
+            "loops": [
+                {
+                    "name": "VITIS_LOOP_156_15",
+                    "type": "loop",
+                    "trip_count": 2,
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 2,
+                    "original_tl": 10,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": []
+                }
+            ]
+        }
+    ],
+    "loops": []
+}

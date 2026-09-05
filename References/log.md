@@ -43,3 +43,23 @@
 40. Created cnn_hls.cpp and ran Vitis HLS C-Synthesis. (Status: DSP overutilized at 509%, missing requantization logic). Logged hardware synthesis status in HARDWARE_LOG.md.
 
 41. Fixed cnn_hls.cpp and export_weights_to_cpp.py: Modified Python script to calculate/export fixed-point integer multipliers and shifts. Rewrote HLS C++ kernel to implement mathematically correct PyTorch INT8 requantization (64-bit integer accumulation, zero-point subtraction) and fixed DSP over-utilization by adjusting loop orders and pipeline pragma placement. Verified C++ syntax compilation.
+
+## [2026-09-05] - Hardware AXI Deadlock Fix & UART Output Resolved
+
+### Added
+- **BRAM Caching in HLS (cnn_hls.cpp)**: Added a sequential copy of input_ecg into local_ecg (Block RAM) inside the FPGA to fix the unaligned, random AXI memory access bug that was locking up the memory controller.
+- **Infinite Loop in C (helloworld.c)**: Appended while(1) {} to the end of the main() function to prevent the Zynq Cortex-A9 processor from entering WFI (Wait For Interrupt) sleep before the UART FIFO finished transmitting over the USB bridge.
+
+### Changed
+- **Baremetal UART Polling**: Bypassed standard xil_printf bugs by using a custom print_str driver that polls the Zynq UART TX FIFO directly.
+- **IP Base Addresses**: Hardcoded Nn_Hardware.Control_BaseAddress and Nn_Hardware.Ctrl_BaseAddress in the C code to bypass Vitis SDT driver auto-generation bugs.
+- **Hardware Platform (design_1_wrapper.xsa)**: Re-exported the updated hardware platform containing the BRAM-optimized Neural Network.
+
+### Fixed
+- **FPGA Reset Bug**: Manually cleared the FPGA_RST_CTRL SLCR register in init_hardware() to ensure the HLS IP is explicitly released from PL reset upon boot.
+- **PowerShell COM Port Dropping**: Found that PowerShell's .NET Event Handler silently fails to print to the main console, and ultra-tight loops freeze the UI. Instructed the use of a 1-millisecond polling script to flawlessly capture output.
+
+### Results
+- The Baremetal Neural Network successfully processes ECG data in real-time on the Zynq physical silicon.
+- Extracted the output [Normal: -4, Anomaly: 7] natively from the AXI bus DDR memory.
+- Output prints flawlessly to the PowerShell terminal.

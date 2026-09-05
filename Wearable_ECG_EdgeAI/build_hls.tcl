@@ -1,27 +1,11 @@
-# Create the physical workspace
-open_project -reset Cardiac_1D_CNN_HLS
-
-# Define the hardware entry point
+open_project -reset tiny_ecg_hls
 set_top tiny_ecg_inference
-
-# Attach the C++ engine and the static INT8 parameters
 add_files cnn_hls.cpp
+add_files weights.cpp
 add_files weights.h
-
-# Create a synthesis solution for Vivado routing
-open_solution -reset "solution1" -flow_target vivado
-
-# Hardwire the specific Zynq-7000 part (Bypassing the frozen database)
-set_part {xc7z020clg400-1}
-
-# Target 100MHz (10.0 ns clock)
-create_clock -period 10.0 -name default
-
-# Command the compiler to generate the physical Verilog/RTL logic
+open_solution "solution1" -flow_target vivado
+set_part {xc7z020clg484-1}
+create_clock -period 20.0 -name default
 csynth_design
-
-# Package the generated RTL into an IP catalog for Vivado integration
-export_design -format ip_catalog
-
-# Exit safely
+export_design -rtl verilog -format ip_catalog -output D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/ecg_fpga_project/ip_repo
 exit

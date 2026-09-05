@@ -1,0 +1,23 @@
+{
+  "0": {
+    "basicblocks": 163,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 204,
+    "file": "cnn_hls.cpp",
+    "fileloc": 41,
+    "instructions": 3016,
+    "loads": {
+      "G": 297,
+      "L": 286,
+      "T": 1
+    },
+    "memory_accesses": 372,
+    "name": "tiny_ecg_inference",
+    "stores": {
+      "L": 5,
+      "T": 1
+    },
+    "total_instructions": 3016
+  }
+}

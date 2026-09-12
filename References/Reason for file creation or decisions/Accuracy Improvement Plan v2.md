@@ -54,9 +54,9 @@ Augmentations that are clinically valid for ECG:
 
 ## INT8 Footprint Comparison
 
-| Model | Params | INT8 Size | % of 15 KB BRAM |
-|---|---|---|---|
-| Old TinyECG_CNN | 558 | 0.55 KB | 3.6% |
-| **New TinyECG_CNN_v2** | ~2,900 | ~2.9 KB | 19.3% |
+| Model                  | Params | INT8 Size | % of 15 KB BRAM |
+| ---------------------- | ------ | --------- | --------------- |
+| Old TinyECG_CNN        | 558    | 0.55 KB   | 3.6%            |
+| **New TinyECG_CNN_v2** | ~2,900 | ~2.9 KB   | 19.3%           |
 
 Still well under the 15 KB limit. The extra parameters buy us significantly better feature extraction.

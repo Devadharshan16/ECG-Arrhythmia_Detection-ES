@@ -44,37 +44,11 @@
 
 41. Fixed cnn_hls.cpp and export_weights_to_cpp.py: Modified Python script to calculate/export fixed-point integer multipliers and shifts. Rewrote HLS C++ kernel to implement mathematically correct PyTorch INT8 requantization (64-bit integer accumulation, zero-point subtraction) and fixed DSP over-utilization by adjusting loop orders and pipeline pragma placement. Verified C++ syntax compilation.
 
-## [2026-09-05] - Hardware AXI Deadlock Fix & UART Output Resolved
-
-### Added
-- **BRAM Caching in HLS (cnn_hls.cpp)**: Added a sequential copy of input_ecg into local_ecg (Block RAM) inside the FPGA to fix the unaligned, random AXI memory access bug that was locking up the memory controller.
-- **Infinite Loop in C (helloworld.c)**: Appended while(1) {} to the end of the main() function to prevent the Zynq Cortex-A9 processor from entering WFI (Wait For Interrupt) sleep before the UART FIFO finished transmitting over the USB bridge.
-
-### Changed
-- **Baremetal UART Polling**: Bypassed standard xil_printf bugs by using a custom print_str driver that polls the Zynq UART TX FIFO directly.
-- **IP Base Addresses**: Hardcoded Nn_Hardware.Control_BaseAddress and Nn_Hardware.Ctrl_BaseAddress in the C code to bypass Vitis SDT driver auto-generation bugs.
-- **Hardware Platform (design_1_wrapper.xsa)**: Re-exported the updated hardware platform containing the BRAM-optimized Neural Network.
-
-### Fixed
-- **FPGA Reset Bug**: Manually cleared the FPGA_RST_CTRL SLCR register in init_hardware() to ensure the HLS IP is explicitly released from PL reset upon boot.
-- **PowerShell COM Port Dropping**: Found that PowerShell's .NET Event Handler silently fails to print to the main console, and ultra-tight loops freeze the UI. Instructed the use of a 1-millisecond polling script to flawlessly capture output.
-
-### Results
-- The Baremetal Neural Network successfully processes ECG data in real-time on the Zynq physical silicon.
-- Extracted the output [Normal: -4, Anomaly: 7] natively from the AXI bus DDR memory.
-- Output prints flawlessly to the PowerShell terminal.
-
-## [2026-09-13] - Hardware Benchmark Completion & OLED Text Engine
-
-### Added
-- **OLED Graphics Driver (oled.h)**: Implemented a custom baremetal C SPI driver for the SSD1306 OLED (Zynq DISP1). Wrote a dynamic 3x-scaling algorithm (oled_print_large) that stretches a 5x7 ASCII font to span the entire 128x32 screen for PREDICT ANOMALY.
-- **Clinical Benchmark Validation (helloworld.c)**: Added a dynamic 20-beat clinical trial array. Automatically tracks TP, TN, FP, FN and computes Accuracy, Precision, Recall, and F1-Score locally on the ARM CPU.
-- **Global Timer Profiling (xtime_l.h)**: Integrated Cortex-A9 64-bit global timer to capture exact microsecond inference latency per heartbeat.
-- **Thermal Profiling (xadcps.h)**: Configured the internal Zynq XADC to track physical silicon die temperatures natively during execution.
-
-### Changed
-- **Hardware Architecture (add_gpio.tcl)**: Extended Vivado block design to include a dual-channel AXI GPIO IP for the OLED pins (Channel 1) and external PMOD Buzzer (Channel 2).
-- **Fixed Vitis Macros**: Bridged the Xilinx macro mismatch (XPAR_CPU_CORE_CLOCK_FREQ_HZ) that was breaking xtime_l.h compilation in modern Vitis SDT generators.
-
-### Results
-- Fully verified, standalone edge AI server running exclusively on PL logic. Evaluates and scores itself identically to the host PC training scripts.
+42. Solved random AXI Memory lockups by adding a BRAM Cache (local_ecg) inside the FPGA to sequentialize DDR reads.
+43. Bypassed Vitis UART driver auto-generation bugs by hardcoding Nn_Hardware Control base addresses directly into the C code.
+44. Fixed Zynq Cortex-A9 WFI (Wait For Interrupt) freezing issue by trapping the baremetal main() function in an infinite while(1) loop.
+45. Wired up the physical Zynq DISP1 (SSD1306 OLED) and PMOD JA1 (Buzzer) by injecting a dual-channel AXI GPIO IP block into the Vivado Block Design.
+46. Created custom baremetal SPI graphics library (oled.h) with a 3x-scaling algorithm to render massive text across the 128x32 OLED screen.
+47. Fixed Vitis Unified IDE (2026.1) bug where xtime_l.h was excluded from export, by manually copying it to bypass driver generation errors.
+48. Fixed Xilinx macro name mismatch (XPAR_CPU_CORE_CLOCK_FREQ_HZ) inside the global timer driver.
+49. Finalized Clinical Edge AI Pipeline: Zynq 7000 reads live MIT-BIH dataset (DS2 test patients) directly over USB via Python stream_usb.py, processes them on physical programmable logic with microsecond latency tracking, checks die temperature via XADC, updates OLED, and automatically scores True Positives.

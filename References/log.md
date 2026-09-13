@@ -63,3 +63,18 @@
 - The Baremetal Neural Network successfully processes ECG data in real-time on the Zynq physical silicon.
 - Extracted the output [Normal: -4, Anomaly: 7] natively from the AXI bus DDR memory.
 - Output prints flawlessly to the PowerShell terminal.
+
+## [2026-09-13] - Hardware Benchmark Completion & OLED Text Engine
+
+### Added
+- **OLED Graphics Driver (oled.h)**: Implemented a custom baremetal C SPI driver for the SSD1306 OLED (Zynq DISP1). Wrote a dynamic 3x-scaling algorithm (oled_print_large) that stretches a 5x7 ASCII font to span the entire 128x32 screen for PREDICT ANOMALY.
+- **Clinical Benchmark Validation (helloworld.c)**: Added a dynamic 20-beat clinical trial array. Automatically tracks TP, TN, FP, FN and computes Accuracy, Precision, Recall, and F1-Score locally on the ARM CPU.
+- **Global Timer Profiling (xtime_l.h)**: Integrated Cortex-A9 64-bit global timer to capture exact microsecond inference latency per heartbeat.
+- **Thermal Profiling (xadcps.h)**: Configured the internal Zynq XADC to track physical silicon die temperatures natively during execution.
+
+### Changed
+- **Hardware Architecture (add_gpio.tcl)**: Extended Vivado block design to include a dual-channel AXI GPIO IP for the OLED pins (Channel 1) and external PMOD Buzzer (Channel 2).
+- **Fixed Vitis Macros**: Bridged the Xilinx macro mismatch (XPAR_CPU_CORE_CLOCK_FREQ_HZ) that was breaking xtime_l.h compilation in modern Vitis SDT generators.
+
+### Results
+- Fully verified, standalone edge AI server running exclusively on PL logic. Evaluates and scores itself identically to the host PC training scripts.

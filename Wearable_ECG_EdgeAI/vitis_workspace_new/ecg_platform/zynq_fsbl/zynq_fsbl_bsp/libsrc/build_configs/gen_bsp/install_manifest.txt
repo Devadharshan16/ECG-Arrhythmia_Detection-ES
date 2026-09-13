@@ -20,6 +20,9 @@ D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xdmaps_hw.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xenv.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xenv_standalone.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xgpio.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xgpio_i.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xgpio_l.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xilffs.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xilffs_config.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xilrsa.h
@@ -90,6 +93,9 @@ D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xdmaps_hw.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xenv.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xenv_standalone.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xgpio.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xgpio_i.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xgpio_l.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xilffs.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xilffs_config.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xilrsa.h
@@ -161,6 +167,9 @@ D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xdmaps_hw.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xenv.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xenv_standalone.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xgpio.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xgpio_i.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xgpio_l.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xilffs.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xilffs_config.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xilrsa.h
@@ -232,6 +241,9 @@ D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xdmaps_hw.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xenv.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xenv_standalone.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xgpio.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xgpio_i.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xgpio_l.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xilffs.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xilffs_config.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/zynq_fsbl/zynq_fsbl_bsp/include/xilrsa.h

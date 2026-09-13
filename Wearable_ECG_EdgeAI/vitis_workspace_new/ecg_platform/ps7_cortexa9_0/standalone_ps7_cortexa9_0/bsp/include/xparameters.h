@@ -53,6 +53,24 @@
 #define XPAR_XDMAPS_0_INTERRUPTS 0x400d
 #define XPAR_XDMAPS_0_INTERRUPT_PARENT 0xf8f01000
 
+#define XPAR_XGPIO_NUM_INSTANCES 1
+
+/* Definitions for peripheral AXI_GPIO_0 */
+#define XPAR_AXI_GPIO_0_COMPATIBLE "xlnx,axi-gpio-2.0"
+#define XPAR_AXI_GPIO_0_BASEADDR 0x40020000
+#define XPAR_AXI_GPIO_0_HIGHADDR 0x4002ffff
+#define XPAR_AXI_GPIO_0_INTERRUPT_PRESENT 0x0
+#define XPAR_AXI_GPIO_0_IS_DUAL 0x1
+#define XPAR_AXI_GPIO_0_GPIO_WIDTH 0x6
+
+/* Canonical definitions for peripheral AXI_GPIO_0 */
+#define XPAR_XGPIO_0_BASEADDR 0x40020000
+#define XPAR_XGPIO_0_HIGHADDR 0x4002ffff
+#define XPAR_XGPIO_0_COMPATIBLE "xlnx,axi-gpio-2.0"
+#define XPAR_XGPIO_0_GPIO_WIDTH 0x6
+#define XPAR_XGPIO_0_INTERRUPT_PRESENT 0x0
+#define XPAR_XGPIO_0_IS_DUAL 0x1
+
 #define XPAR_XSCUGIC_NUM_INSTANCES 1
 
 /* Definitions for peripheral INTC */

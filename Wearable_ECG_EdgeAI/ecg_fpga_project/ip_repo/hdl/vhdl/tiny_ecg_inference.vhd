@@ -172,7 +172,7 @@ architecture behav of tiny_ecg_inference is
     attribute DowngradeIPIdentifiedWarnings of behav : architecture is "yes";
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "tiny_ecg_inference_tiny_ecg_inference,hls_ip_2026_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=20.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=14.600000,HLS_SYN_LAT=1386,HLS_SYN_TPT=none,HLS_SYN_MEM=3,HLS_SYN_DSP=0,HLS_SYN_FF=9962,HLS_SYN_LUT=26797,HLS_VERSION=2026_1}";
+    "tiny_ecg_inference_tiny_ecg_inference,hls_ip_2026_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=1408,HLS_SYN_TPT=none,HLS_SYN_MEM=3,HLS_SYN_DSP=0,HLS_SYN_FF=13996,HLS_SYN_LUT=27488,HLS_VERSION=2026_1}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (121 downto 0) := "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001";
@@ -1686,6 +1686,12 @@ architecture behav of tiny_ecg_inference is
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_buffer_c1_39_ce0 : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_buffer_c1_39_we0 : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_buffer_c1_39_d0 : STD_LOGIC_VECTOR (6 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5121_p_din0 : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5121_p_din1 : STD_LOGIC_VECTOR (65 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5121_p_ce : STD_LOGIC;
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5125_p_din0 : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5125_p_din1 : STD_LOGIC_VECTOR (65 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5125_p_ce : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_ap_start : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_ap_done : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_ap_idle : STD_LOGIC;
@@ -1962,6 +1968,15 @@ architecture behav of tiny_ecg_inference is
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_buffer_c2_47_ce0 : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_buffer_c2_47_we0 : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_buffer_c2_47_d0 : STD_LOGIC_VECTOR (6 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5129_p_din0 : STD_LOGIC_VECTOR (20 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5129_p_din1 : STD_LOGIC_VECTOR (29 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5129_p_ce : STD_LOGIC;
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5121_p_din0 : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5121_p_din1 : STD_LOGIC_VECTOR (65 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5121_p_ce : STD_LOGIC;
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5125_p_din0 : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5125_p_din1 : STD_LOGIC_VECTOR (65 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5125_p_ce : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_ap_start : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_ap_done : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_ap_idle : STD_LOGIC;
@@ -2126,6 +2141,12 @@ architecture behav of tiny_ecg_inference is
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_buffer_c3_15_ce0 : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_buffer_c3_15_we0 : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_buffer_c3_15_d0 : STD_LOGIC_VECTOR (6 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5129_p_din0 : STD_LOGIC_VECTOR (20 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5129_p_din1 : STD_LOGIC_VECTOR (29 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5129_p_ce : STD_LOGIC;
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5121_p_din0 : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5121_p_din1 : STD_LOGIC_VECTOR (65 downto 0);
+    signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5121_p_ce : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_146_13_VITIS_LOOP_147_14_fu_2925_ap_start : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_146_13_VITIS_LOOP_147_14_fu_2925_ap_done : STD_LOGIC;
     signal grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_146_13_VITIS_LOOP_147_14_fu_2925_ap_idle : STD_LOGIC;
@@ -2257,6 +2278,18 @@ architecture behav of tiny_ecg_inference is
     signal flatten_address1_local : STD_LOGIC_VECTOR (7 downto 0);
     signal flatten_ce0_local : STD_LOGIC;
     signal flatten_address0_local : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_fu_5121_p2 : STD_LOGIC_VECTOR (128 downto 0);
+    signal grp_fu_5121_p0 : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_fu_5121_p1 : STD_LOGIC_VECTOR (65 downto 0);
+    signal grp_fu_5121_ce : STD_LOGIC;
+    signal grp_fu_5125_p2 : STD_LOGIC_VECTOR (128 downto 0);
+    signal grp_fu_5125_p0 : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_fu_5125_p1 : STD_LOGIC_VECTOR (65 downto 0);
+    signal grp_fu_5125_ce : STD_LOGIC;
+    signal grp_fu_5129_p2 : STD_LOGIC_VECTOR (50 downto 0);
+    signal grp_fu_5129_p0 : STD_LOGIC_VECTOR (20 downto 0);
+    signal grp_fu_5129_p1 : STD_LOGIC_VECTOR (29 downto 0);
+    signal grp_fu_5129_ce : STD_LOGIC;
     signal ap_NS_fsm : STD_LOGIC_VECTOR (121 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
@@ -2642,7 +2675,15 @@ architecture behav of tiny_ecg_inference is
         buffer_c1_39_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
         buffer_c1_39_ce0 : OUT STD_LOGIC;
         buffer_c1_39_we0 : OUT STD_LOGIC;
-        buffer_c1_39_d0 : OUT STD_LOGIC_VECTOR (6 downto 0) );
+        buffer_c1_39_d0 : OUT STD_LOGIC_VECTOR (6 downto 0);
+        grp_fu_5121_p_din0 : OUT STD_LOGIC_VECTOR (63 downto 0);
+        grp_fu_5121_p_din1 : OUT STD_LOGIC_VECTOR (65 downto 0);
+        grp_fu_5121_p_dout0 : IN STD_LOGIC_VECTOR (128 downto 0);
+        grp_fu_5121_p_ce : OUT STD_LOGIC;
+        grp_fu_5125_p_din0 : OUT STD_LOGIC_VECTOR (63 downto 0);
+        grp_fu_5125_p_din1 : OUT STD_LOGIC_VECTOR (65 downto 0);
+        grp_fu_5125_p_dout0 : IN STD_LOGIC_VECTOR (128 downto 0);
+        grp_fu_5125_p_ce : OUT STD_LOGIC );
     end component;
 
 
@@ -2965,7 +3006,19 @@ architecture behav of tiny_ecg_inference is
         buffer_c2_47_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
         buffer_c2_47_ce0 : OUT STD_LOGIC;
         buffer_c2_47_we0 : OUT STD_LOGIC;
-        buffer_c2_47_d0 : OUT STD_LOGIC_VECTOR (6 downto 0) );
+        buffer_c2_47_d0 : OUT STD_LOGIC_VECTOR (6 downto 0);
+        grp_fu_5129_p_din0 : OUT STD_LOGIC_VECTOR (20 downto 0);
+        grp_fu_5129_p_din1 : OUT STD_LOGIC_VECTOR (29 downto 0);
+        grp_fu_5129_p_dout0 : IN STD_LOGIC_VECTOR (50 downto 0);
+        grp_fu_5129_p_ce : OUT STD_LOGIC;
+        grp_fu_5121_p_din0 : OUT STD_LOGIC_VECTOR (63 downto 0);
+        grp_fu_5121_p_din1 : OUT STD_LOGIC_VECTOR (65 downto 0);
+        grp_fu_5121_p_dout0 : IN STD_LOGIC_VECTOR (128 downto 0);
+        grp_fu_5121_p_ce : OUT STD_LOGIC;
+        grp_fu_5125_p_din0 : OUT STD_LOGIC_VECTOR (63 downto 0);
+        grp_fu_5125_p_din1 : OUT STD_LOGIC_VECTOR (65 downto 0);
+        grp_fu_5125_p_dout0 : IN STD_LOGIC_VECTOR (128 downto 0);
+        grp_fu_5125_p_ce : OUT STD_LOGIC );
     end component;
 
 
@@ -3184,7 +3237,15 @@ architecture behav of tiny_ecg_inference is
         buffer_c3_15_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
         buffer_c3_15_ce0 : OUT STD_LOGIC;
         buffer_c3_15_we0 : OUT STD_LOGIC;
-        buffer_c3_15_d0 : OUT STD_LOGIC_VECTOR (6 downto 0) );
+        buffer_c3_15_d0 : OUT STD_LOGIC_VECTOR (6 downto 0);
+        grp_fu_5129_p_din0 : OUT STD_LOGIC_VECTOR (20 downto 0);
+        grp_fu_5129_p_din1 : OUT STD_LOGIC_VECTOR (29 downto 0);
+        grp_fu_5129_p_dout0 : IN STD_LOGIC_VECTOR (50 downto 0);
+        grp_fu_5129_p_ce : OUT STD_LOGIC;
+        grp_fu_5121_p_din0 : OUT STD_LOGIC_VECTOR (63 downto 0);
+        grp_fu_5121_p_din1 : OUT STD_LOGIC_VECTOR (65 downto 0);
+        grp_fu_5121_p_dout0 : IN STD_LOGIC_VECTOR (128 downto 0);
+        grp_fu_5121_p_ce : OUT STD_LOGIC );
     end component;
 
 
@@ -3508,6 +3569,40 @@ architecture behav of tiny_ecg_inference is
         zext_ln161_129 : IN STD_LOGIC_VECTOR (6 downto 0);
         zext_ln161_191 : IN STD_LOGIC_VECTOR (6 downto 0);
         zext_ln161_64 : IN STD_LOGIC_VECTOR (6 downto 0) );
+    end component;
+
+
+    component tiny_ecg_inference_mul_64ns_66ns_129_5_1 IS
+    generic (
+        ID : INTEGER;
+        NUM_STAGE : INTEGER;
+        din0_WIDTH : INTEGER;
+        din1_WIDTH : INTEGER;
+        dout_WIDTH : INTEGER );
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        din0 : IN STD_LOGIC_VECTOR (63 downto 0);
+        din1 : IN STD_LOGIC_VECTOR (65 downto 0);
+        ce : IN STD_LOGIC;
+        dout : OUT STD_LOGIC_VECTOR (128 downto 0) );
+    end component;
+
+
+    component tiny_ecg_inference_mul_21s_30ns_51_2_1 IS
+    generic (
+        ID : INTEGER;
+        NUM_STAGE : INTEGER;
+        din0_WIDTH : INTEGER;
+        din1_WIDTH : INTEGER;
+        dout_WIDTH : INTEGER );
+    port (
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        din0 : IN STD_LOGIC_VECTOR (20 downto 0);
+        din1 : IN STD_LOGIC_VECTOR (29 downto 0);
+        ce : IN STD_LOGIC;
+        dout : OUT STD_LOGIC_VECTOR (50 downto 0) );
     end component;
 
 
@@ -5648,7 +5743,15 @@ begin
         buffer_c1_39_address0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_buffer_c1_39_address0,
         buffer_c1_39_ce0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_buffer_c1_39_ce0,
         buffer_c1_39_we0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_buffer_c1_39_we0,
-        buffer_c1_39_d0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_buffer_c1_39_d0);
+        buffer_c1_39_d0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_buffer_c1_39_d0,
+        grp_fu_5121_p_din0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5121_p_din0,
+        grp_fu_5121_p_din1 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5121_p_din1,
+        grp_fu_5121_p_dout0 => grp_fu_5121_p2,
+        grp_fu_5121_p_ce => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5121_p_ce,
+        grp_fu_5125_p_din0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5125_p_din0,
+        grp_fu_5125_p_din1 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5125_p_din1,
+        grp_fu_5125_p_dout0 => grp_fu_5125_p2,
+        grp_fu_5125_p_ce => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5125_p_ce);
 
     grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665 : component tiny_ecg_inference_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6
     port map (
@@ -5969,7 +6072,19 @@ begin
         buffer_c2_47_address0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_buffer_c2_47_address0,
         buffer_c2_47_ce0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_buffer_c2_47_ce0,
         buffer_c2_47_we0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_buffer_c2_47_we0,
-        buffer_c2_47_d0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_buffer_c2_47_d0);
+        buffer_c2_47_d0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_buffer_c2_47_d0,
+        grp_fu_5129_p_din0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5129_p_din0,
+        grp_fu_5129_p_din1 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5129_p_din1,
+        grp_fu_5129_p_dout0 => grp_fu_5129_p2,
+        grp_fu_5129_p_ce => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5129_p_ce,
+        grp_fu_5121_p_din0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5121_p_din0,
+        grp_fu_5121_p_din1 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5121_p_din1,
+        grp_fu_5121_p_dout0 => grp_fu_5121_p2,
+        grp_fu_5121_p_ce => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5121_p_ce,
+        grp_fu_5125_p_din0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5125_p_din0,
+        grp_fu_5125_p_din1 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5125_p_din1,
+        grp_fu_5125_p_dout0 => grp_fu_5125_p2,
+        grp_fu_5125_p_ce => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5125_p_ce);
 
     grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803 : component tiny_ecg_inference_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10
     port map (
@@ -6186,7 +6301,15 @@ begin
         buffer_c3_15_address0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_buffer_c3_15_address0,
         buffer_c3_15_ce0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_buffer_c3_15_ce0,
         buffer_c3_15_we0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_buffer_c3_15_we0,
-        buffer_c3_15_d0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_buffer_c3_15_d0);
+        buffer_c3_15_d0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_buffer_c3_15_d0,
+        grp_fu_5129_p_din0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5129_p_din0,
+        grp_fu_5129_p_din1 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5129_p_din1,
+        grp_fu_5129_p_dout0 => grp_fu_5129_p2,
+        grp_fu_5129_p_ce => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5129_p_ce,
+        grp_fu_5121_p_din0 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5121_p_din0,
+        grp_fu_5121_p_din1 => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5121_p_din1,
+        grp_fu_5121_p_dout0 => grp_fu_5121_p2,
+        grp_fu_5121_p_ce => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5121_p_ce);
 
     grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_146_13_VITIS_LOOP_147_14_fu_2925 : component tiny_ecg_inference_tiny_ecg_inference_Pipeline_VITIS_LOOP_146_13_VITIS_LOOP_147_14
     port map (
@@ -6749,6 +6872,51 @@ begin
         I_CH0_WSTRB => grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_156_15_fu_2946_m_axi_DATA_OUT_0_WSTRB,
         I_CH0_BVALID => DATA_OUT_0_BVALID,
         I_CH0_BREADY => DATA_OUT_0_BREADY);
+
+    mul_64ns_66ns_129_5_1_U977 : component tiny_ecg_inference_mul_64ns_66ns_129_5_1
+    generic map (
+        ID => 1,
+        NUM_STAGE => 5,
+        din0_WIDTH => 64,
+        din1_WIDTH => 66,
+        dout_WIDTH => 129)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        din0 => grp_fu_5121_p0,
+        din1 => grp_fu_5121_p1,
+        ce => grp_fu_5121_ce,
+        dout => grp_fu_5121_p2);
+
+    mul_64ns_66ns_129_5_1_U978 : component tiny_ecg_inference_mul_64ns_66ns_129_5_1
+    generic map (
+        ID => 1,
+        NUM_STAGE => 5,
+        din0_WIDTH => 64,
+        din1_WIDTH => 66,
+        dout_WIDTH => 129)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        din0 => grp_fu_5125_p0,
+        din1 => grp_fu_5125_p1,
+        ce => grp_fu_5125_ce,
+        dout => grp_fu_5125_p2);
+
+    mul_21s_30ns_51_2_1_U979 : component tiny_ecg_inference_mul_21s_30ns_51_2_1
+    generic map (
+        ID => 1,
+        NUM_STAGE => 2,
+        din0_WIDTH => 21,
+        din1_WIDTH => 30,
+        dout_WIDTH => 51)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        din0 => grp_fu_5129_p0,
+        din1 => grp_fu_5129_p1,
+        ce => grp_fu_5129_ce,
+        dout => grp_fu_5129_p2);
 
 
 
@@ -12508,6 +12676,120 @@ begin
             flatten_we0 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_146_13_VITIS_LOOP_147_14_fu_2925_flatten_we0;
         else 
             flatten_we0 <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    grp_fu_5121_ce_assign_proc : process(grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5121_p_ce, grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5121_p_ce, grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5121_p_ce, ap_CS_fsm_state13, ap_CS_fsm_state15, ap_CS_fsm_state17)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
+            grp_fu_5121_ce <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5121_p_ce;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
+            grp_fu_5121_ce <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5121_p_ce;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
+            grp_fu_5121_ce <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5121_p_ce;
+        else 
+            grp_fu_5121_ce <= ap_const_logic_1;
+        end if; 
+    end process;
+
+
+    grp_fu_5121_p0_assign_proc : process(grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5121_p_din0, grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5121_p_din0, grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5121_p_din0, ap_CS_fsm_state13, ap_CS_fsm_state15, ap_CS_fsm_state17)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
+            grp_fu_5121_p0 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5121_p_din0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
+            grp_fu_5121_p0 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5121_p_din0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
+            grp_fu_5121_p0 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5121_p_din0;
+        else 
+            grp_fu_5121_p0 <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        end if; 
+    end process;
+
+
+    grp_fu_5121_p1_assign_proc : process(grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5121_p_din1, grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5121_p_din1, grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5121_p_din1, ap_CS_fsm_state13, ap_CS_fsm_state15, ap_CS_fsm_state17)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
+            grp_fu_5121_p1 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5121_p_din1;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
+            grp_fu_5121_p1 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5121_p_din1;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
+            grp_fu_5121_p1 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5121_p_din1;
+        else 
+            grp_fu_5121_p1 <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        end if; 
+    end process;
+
+
+    grp_fu_5125_ce_assign_proc : process(grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5125_p_ce, grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5125_p_ce, ap_CS_fsm_state13, ap_CS_fsm_state15)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
+            grp_fu_5125_ce <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5125_p_ce;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
+            grp_fu_5125_ce <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5125_p_ce;
+        else 
+            grp_fu_5125_ce <= ap_const_logic_1;
+        end if; 
+    end process;
+
+
+    grp_fu_5125_p0_assign_proc : process(grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5125_p_din0, grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5125_p_din0, ap_CS_fsm_state13, ap_CS_fsm_state15)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
+            grp_fu_5125_p0 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5125_p_din0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
+            grp_fu_5125_p0 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5125_p_din0;
+        else 
+            grp_fu_5125_p0 <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        end if; 
+    end process;
+
+
+    grp_fu_5125_p1_assign_proc : process(grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5125_p_din1, grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5125_p_din1, ap_CS_fsm_state13, ap_CS_fsm_state15)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
+            grp_fu_5125_p1 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5125_p_din1;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state13)) then 
+            grp_fu_5125_p1 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3_fu_2600_grp_fu_5125_p_din1;
+        else 
+            grp_fu_5125_p1 <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+        end if; 
+    end process;
+
+
+    grp_fu_5129_ce_assign_proc : process(grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5129_p_ce, grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5129_p_ce, ap_CS_fsm_state15, ap_CS_fsm_state17)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
+            grp_fu_5129_ce <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5129_p_ce;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
+            grp_fu_5129_ce <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5129_p_ce;
+        else 
+            grp_fu_5129_ce <= ap_const_logic_1;
+        end if; 
+    end process;
+
+
+    grp_fu_5129_p0_assign_proc : process(grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5129_p_din0, grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5129_p_din0, ap_CS_fsm_state15, ap_CS_fsm_state17)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
+            grp_fu_5129_p0 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5129_p_din0;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
+            grp_fu_5129_p0 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5129_p_din0;
+        else 
+            grp_fu_5129_p0 <= "XXXXXXXXXXXXXXXXXXXXX";
+        end if; 
+    end process;
+
+
+    grp_fu_5129_p1_assign_proc : process(grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5129_p_din1, grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5129_p_din1, ap_CS_fsm_state15, ap_CS_fsm_state17)
+    begin
+        if ((ap_const_logic_1 = ap_CS_fsm_state17)) then 
+            grp_fu_5129_p1 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10_fu_2803_grp_fu_5129_p_din1;
+        elsif ((ap_const_logic_1 = ap_CS_fsm_state15)) then 
+            grp_fu_5129_p1 <= grp_tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6_fu_2665_grp_fu_5129_p_din1;
+        else 
+            grp_fu_5129_p1 <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 

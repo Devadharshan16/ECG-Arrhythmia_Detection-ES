@@ -1677,7 +1677,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0df49030</spirit:value>
+            <spirit:value>3f35a0e7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1693,7 +1693,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>1b20b2ef</spirit:value>
+            <spirit:value>16ebe822</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1709,7 +1709,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2ff4e7e2</spirit:value>
+            <spirit:value>832720f7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1725,7 +1725,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>41e09d16</spirit:value>
+            <spirit:value>a88dd417</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4440,19 +4440,19 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_19s_30ns_49_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_19s_30ns_49_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_21s_30ns_51_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_21s_30ns_51_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_31s_21s_51_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_31s_21s_51_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_64ns_66ns_129_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_64ns_66ns_129_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -5353,22 +5353,22 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_19s_30ns_49_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_19s_30ns_49_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_21s_30ns_51_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_21s_30ns_51_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_31s_21s_51_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_31s_21s_51_2_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_64ns_66ns_129_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/tiny_ecg_inference_mul_64ns_66ns_129_5_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -6274,19 +6274,19 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_19s_30ns_49_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_19s_30ns_49_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_21s_30ns_51_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_21s_30ns_51_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_31s_21s_51_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_31s_21s_51_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_64ns_66ns_129_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_64ns_66ns_129_5_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -6580,7 +6580,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/tiny_ecg_inference.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_8b9bcf33</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_62ca8fe6</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -6956,22 +6956,22 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_19s_30ns_49_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_19s_30ns_49_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_21s_30ns_51_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_21s_30ns_51_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_31s_21s_51_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_31s_21s_51_2_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_64ns_66ns_129_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/tiny_ecg_inference_mul_64ns_66ns_129_5_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -7642,7 +7642,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="25">20</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="25">10</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>machine</spirit:name>
@@ -7654,11 +7654,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="28">1386</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="28">1408</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="29">1387</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.II" spirit:order="29">1409</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -7671,8 +7671,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Tiny_ecg_inference</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114772588</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-09-05T06:18:31Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114784080</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-09-13T05:51:04Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -7683,10 +7683,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="24d4e5fd"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="8ce55fa6"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="2bbfa563"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d25802df"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9be28bdc"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="12fec4fe"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="cf043ab4"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="2687fc7e"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="6e0625d3"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

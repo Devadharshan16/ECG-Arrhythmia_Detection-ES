@@ -541,7 +541,7 @@
       },
       "tiny_ecg_inference_0": {
         "vlnv": "xilinx.com:hls:tiny_ecg_inference:1.0",
-        "ip_revision": "2114772588",
+        "ip_revision": "2114784080",
         "xci_name": "design_1_tiny_ecg_inference_0_0",
         "xci_path": "ip\\design_1_tiny_ecg_inference_0_0\\design_1_tiny_ecg_inference_0_0.xci",
         "inst_hier_path": "tiny_ecg_inference_0",
@@ -1418,8 +1418,8 @@
           "axi_smc/aclk",
           "processing_system7_0/M_AXI_GP0_ACLK",
           "axi_mem_intercon/S01_ACLK",
-          "tiny_ecg_inference_0/ap_clk",
-          "axi_gpio_0/s_axi_aclk"
+          "axi_gpio_0/s_axi_aclk",
+          "tiny_ecg_inference_0/ap_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1436,8 +1436,8 @@
           "axi_mem_intercon/ARESETN",
           "axi_smc/aresetn",
           "axi_mem_intercon/S01_ARESETN",
-          "tiny_ecg_inference_0/ap_rst_n",
-          "axi_gpio_0/s_axi_aresetn"
+          "axi_gpio_0/s_axi_aresetn",
+          "tiny_ecg_inference_0/ap_rst_n"
         ]
       }
     },

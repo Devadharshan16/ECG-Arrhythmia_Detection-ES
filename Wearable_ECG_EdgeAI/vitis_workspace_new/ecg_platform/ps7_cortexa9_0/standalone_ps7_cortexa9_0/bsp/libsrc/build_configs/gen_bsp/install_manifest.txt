@@ -17,6 +17,9 @@ D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xdmaps_hw.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xenv.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xenv_standalone.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xgpio.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xgpio_i.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xgpio_l.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xiltimer.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xil_assert.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xil_cache.h
@@ -81,6 +84,9 @@ D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xdmaps_hw.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xenv.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xenv_standalone.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xgpio.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xgpio_i.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xgpio_l.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xiltimer.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xil_assert.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xil_cache.h
@@ -146,6 +152,9 @@ D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xdmaps_hw.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xenv.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xenv_standalone.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xgpio.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xgpio_i.h
+D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xgpio_l.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xiltimer.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xil_assert.h
 D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/vitis_workspace_new/ecg_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include/xil_cache.h

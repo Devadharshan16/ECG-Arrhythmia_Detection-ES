@@ -283,7 +283,7 @@
           },
           "SUPPORTS_NARROW_BURST": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "WUSER_BITS_PER_BYTE": {
             "value": "0",
@@ -421,7 +421,7 @@
           },
           "SUPPORTS_NARROW_BURST": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "WUSER_BITS_PER_BYTE": {
             "value": "0",
@@ -559,7 +559,7 @@
           },
           "SUPPORTS_NARROW_BURST": {
             "value": "0",
-            "value_src": "default"
+            "value_src": "default_prop"
           },
           "WUSER_BITS_PER_BYTE": {
             "value": "0",

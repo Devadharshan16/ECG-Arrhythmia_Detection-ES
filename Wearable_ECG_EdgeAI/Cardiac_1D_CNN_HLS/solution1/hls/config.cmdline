@@ -1,0 +1,3 @@
+relativeroot=D:/ECG-Embedded_System/Wearable_ECG_EdgeAI/Cardiac_1D_CNN_HLS
+original_argv=-c --mode hls --config hls_config.cfg --work_dir solution1 
+

@@ -1,0 +1,156 @@
+<ENTRY>
+{
+ "thisFile": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS\\solution1\\solution1.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "09/12/26 14:53:13",
+ "timestampMillis": "1789204993524",
+ "buildStep": {
+  "cmdId": "68a3f183-070a-4e27-b6f9-b8d719e890a5",
+  "name": "vitis-run",
+  "logFile": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS\\solution1\\logs\\solution1.steps.log",
+  "commandLine": "D:/AMD/2026.1/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config hls_config.cfg --work_dir solution1 ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "hls_config.cfg",
+   "--work_dir",
+   "solution1"
+  ],
+  "iniFiles": [],
+  "cwd": "D:\\ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "09/12/26 14:53:13",
+ "timestampMillis": "1789204993524",
+ "status": {
+  "cmdId": "68a3f183-070a-4e27-b6f9-b8d719e890a5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "09/12/26 14:53:15",
+ "timestampMillis": "1789204995568",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\cnn_hls.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2026.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "09/12/26 14:53:15",
+ "timestampMillis": "1789204995569",
+ "buildStep": {
+  "cmdId": "36d2f44f-f85a-4d85-9fcc-953b092f889e",
+  "name": "",
+  "logFile": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS\\solution1\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "D:\\ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "09/12/26 14:53:15",
+ "timestampMillis": "1789204995569",
+ "status": {
+  "cmdId": "36d2f44f-f85a-4d85-9fcc-953b092f889e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "09/12/26 14:53:18",
+ "timestampMillis": "1789204998951",
+ "status": {
+  "cmdId": "36d2f44f-f85a-4d85-9fcc-953b092f889e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "09/12/26 14:53:19",
+ "timestampMillis": "1789204999011",
+ "status": {
+  "cmdId": "68a3f183-070a-4e27-b6f9-b8d719e890a5",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "09/12/26 14:53:19",
+ "timestampMillis": "1789204999011",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "09/12/26 14:53:19",
+ "timestampMillis": "1789204999011",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

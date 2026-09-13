@@ -60,9 +60,8 @@ int init_hardware() {
     *((volatile uint32_t *)0xF8000240) = 0x00000000;
     *((volatile uint32_t *)0xF8000004) = 0x767B;
 
-    // Swapped addresses to prevent the hardware freeze
-    Nn_Hardware.Control_BaseAddress = 0x40010000;
-    Nn_Hardware.Ctrl_BaseAddress    = 0x40000000;
+    Nn_Hardware.Control_BaseAddress = 0x40000000;
+    Nn_Hardware.Ctrl_BaseAddress    = 0x40010000;
     
     Nn_Hardware.IsReady             = XIL_COMPONENT_IS_READY;
     return XST_SUCCESS;

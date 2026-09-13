@@ -1,0 +1,47 @@
+{
+  "0": {
+    "basicblocks": 207,
+    "calls": "1 1 1 2",
+    "control_depth": 4,
+    "def_use_depth": 197,
+    "file": "cnn_hls.cpp",
+    "fileloc": 41,
+    "instructions": 3366,
+    "loads": {
+      "G": 297,
+      "L": 286,
+      "T": 1
+    },
+    "memory_accesses": 590,
+    "name": "tiny_ecg_inference",
+    "stores": {
+      "L": 5,
+      "T": 1
+    },
+    "total_instructions": 3447
+  },
+  "1": {
+    "basicblocks": 3,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 6,
+    "file": "cnn_hls.cpp",
+    "fileloc": 4,
+    "instructions": 20,
+    "memory_accesses": 0,
+    "name": "requantize_and_relu",
+    "total_instructions": 20
+  },
+  "2": {
+    "basicblocks": 3,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 6,
+    "file": "cnn_hls.cpp",
+    "fileloc": 25,
+    "instructions": 21,
+    "memory_accesses": 0,
+    "name": "requantize_linear",
+    "total_instructions": 21
+  }
+}

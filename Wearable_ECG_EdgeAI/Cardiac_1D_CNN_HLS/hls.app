@@ -2,9 +2,12 @@
     <files>
         <file name="weights.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="cnn_hls.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
-	<file name="../tb_tiny_ecg_inference.cpp" sc="0" tb="true" cflags="" csimflags="" blackbox="false"/>
+        <file name="../tb_tiny_ecg_inference.cpp" sc="0" tb="true" cflags="" csimflags="" blackbox="false"/>
     </files>
     <solutions>
         <solution name="solution1" status=""/>
     </solutions>
+    <Simulation argv="">
+        <SimFlow name="csim" setup="false" optimizeCompile="false" clean="false" ldflags="" mflags=""/>
+    </Simulation>
 </AutoPilot:project>

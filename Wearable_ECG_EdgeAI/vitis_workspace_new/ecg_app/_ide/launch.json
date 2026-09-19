@@ -32,7 +32,7 @@
         "zynqInitialization": {
           "isFsbl": false,
           "usingFSBL": {
-            "initWithFSBL": true,
+            "initWithFSBL": false,
             "fsblFile": "${workspaceFolder}\\ecg_platform\\export\\ecg_platform\\sw\\boot\\fsbl.elf",
             "fsblExitSymbol": "FsblHandoffJtagExit"
           },

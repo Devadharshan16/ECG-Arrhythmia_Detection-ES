@@ -1,11 +1,38 @@
+import os
 import numpy as np
+import torch
+from model_cnn import TinyECG_CNN
 from ecg_dataset import MITBIH_Dataset, DS2_TEST
 
-INPUT_SCALE = 0.0385783575
-INPUT_ZERO_POINT = 104
 
-def quantize(x_float):
-    q = np.round(x_float / INPUT_SCALE) + INPUT_ZERO_POINT
+def load_input_qparams(model_path="saved_models/tiny_ecg_qat.pth"):
+    """Read input scale and zero_point directly from the trained QAT model's QuantStub.
+    This guarantees the values exactly match what the FPGA hardware uses."""
+    backend = torch.backends.quantized.supported_engines[0]
+    torch.backends.quantized.engine = backend
+
+    model = TinyECG_CNN()
+    model.train()
+    model.fuse_model()
+    model.qconfig = torch.ao.quantization.get_default_qat_qconfig(backend)
+    torch.ao.quantization.prepare_qat(model, inplace=True)
+    model.eval()
+    torch.ao.quantization.convert(model, inplace=True)
+    model.load_state_dict(torch.load(model_path, weights_only=True))
+    model.eval()
+
+    scale = model.quant.scale
+    zp = model.quant.zero_point
+    if isinstance(scale, torch.Tensor):
+        scale = scale.item()
+    if isinstance(zp, torch.Tensor):
+        zp = zp.item()
+
+    return float(scale), int(zp)
+
+
+def quantize(x_float, scale, zero_point):
+    q = np.round(x_float / scale) + zero_point
     q = np.clip(q, -128, 127)
     return q.astype(np.int8)
 
@@ -14,6 +41,11 @@ def main():
     print("=" * 60)
     print("Exporting complete DS2 dataset")
     print("=" * 60)
+
+    # Load the exact scale and zero_point from the trained model
+    INPUT_SCALE, INPUT_ZERO_POINT = load_input_qparams()
+    print(f"Input scale     : {INPUT_SCALE:.10f}")
+    print(f"Input zero_point: {INPUT_ZERO_POINT}")
 
     dataset = MITBIH_Dataset(
         data_dir="mitdb_data",
@@ -47,7 +79,7 @@ def main():
 
         x_np = x.squeeze(0).numpy()
 
-        q = quantize(x_np)
+        q = quantize(x_np, INPUT_SCALE, INPUT_ZERO_POINT)
 
         row = ", ".join(str(int(v)) for v in q)
 

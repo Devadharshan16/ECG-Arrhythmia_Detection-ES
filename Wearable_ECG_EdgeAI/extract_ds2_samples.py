@@ -32,6 +32,9 @@ def load_input_qparams(model_path="saved_models/tiny_ecg_qat.pth"):
 
 
 def quantize(x_float, scale, zero_point):
+    # The HLS kernel does: x = local_ecg[i] - input_zero_point (104)
+    # This means the hardware expects raw quantized values in the uint8-equivalent range,
+    # cast directly to int8. Standard [-128,127] clipping is the correct approach here.
     q = np.round(x_float / scale) + zero_point
     q = np.clip(q, -128, 127)
     return q.astype(np.int8)

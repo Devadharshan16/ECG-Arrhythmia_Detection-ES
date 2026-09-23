@@ -4,36 +4,36 @@ target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:20
 target triple = "fpga64-xilinx-none"
 
 ; Function Attrs: inaccessiblemem_or_argmemonly noinline willreturn
-define void @apatb_tiny_ecg_inference_ir(i8* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="90" "maxi" %input_ecg, i8* noalias nocapture nonnull "fpga.decayed.dim.hint"="2" "maxi" %output_logits) local_unnamed_addr #0 {
+define void @apatb_tiny_ecg_inference_ir(i8* noalias nocapture nonnull readonly "fpga.decayed.dim.hint"="96" "maxi" %input_ecg, i8* noalias nocapture nonnull "fpga.decayed.dim.hint"="8" "maxi" %output_logits) local_unnamed_addr #0 {
 entry:
-  %0 = bitcast i8* %input_ecg to [90 x i8]*
-  %input_ecg_copy = alloca [90 x i8], align 512
-  %1 = bitcast i8* %output_logits to [2 x i8]*
-  %output_logits_copy = alloca [2 x i8], align 512
-  call fastcc void @copy_in([90 x i8]* nonnull %0, [90 x i8]* nonnull align 512 %input_ecg_copy, [2 x i8]* nonnull %1, [2 x i8]* nonnull align 512 %output_logits_copy)
-  call void @apatb_tiny_ecg_inference_hw([90 x i8]* %input_ecg_copy, [2 x i8]* %output_logits_copy)
-  call void @copy_back([90 x i8]* %0, [90 x i8]* %input_ecg_copy, [2 x i8]* %1, [2 x i8]* %output_logits_copy)
+  %0 = bitcast i8* %input_ecg to [96 x i8]*
+  %input_ecg_copy = alloca [96 x i8], align 512
+  %1 = bitcast i8* %output_logits to [8 x i8]*
+  %output_logits_copy = alloca [8 x i8], align 512
+  call fastcc void @copy_in([96 x i8]* nonnull %0, [96 x i8]* nonnull align 512 %input_ecg_copy, [8 x i8]* nonnull %1, [8 x i8]* nonnull align 512 %output_logits_copy)
+  call void @apatb_tiny_ecg_inference_hw([96 x i8]* %input_ecg_copy, [8 x i8]* %output_logits_copy)
+  call void @copy_back([96 x i8]* %0, [96 x i8]* %input_ecg_copy, [8 x i8]* %1, [8 x i8]* %output_logits_copy)
   ret void
 }
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
-define internal fastcc void @copy_in([90 x i8]* noalias readonly, [90 x i8]* noalias align 512, [2 x i8]* noalias readonly, [2 x i8]* noalias align 512) unnamed_addr #1 {
+define internal fastcc void @copy_in([96 x i8]* noalias readonly, [96 x i8]* noalias align 512, [8 x i8]* noalias readonly, [8 x i8]* noalias align 512) unnamed_addr #1 {
 entry:
-  call fastcc void @onebyonecpy_hls.p0a90i8([90 x i8]* align 512 %1, [90 x i8]* %0)
-  call fastcc void @onebyonecpy_hls.p0a2i8([2 x i8]* align 512 %3, [2 x i8]* %2)
+  call fastcc void @onebyonecpy_hls.p0a96i8([96 x i8]* align 512 %1, [96 x i8]* %0)
+  call fastcc void @onebyonecpy_hls.p0a8i8([8 x i8]* align 512 %3, [8 x i8]* %2)
   ret void
 }
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
-define internal fastcc void @onebyonecpy_hls.p0a90i8([90 x i8]* noalias align 512 %dst, [90 x i8]* noalias readonly %src) unnamed_addr #2 {
+define internal fastcc void @onebyonecpy_hls.p0a96i8([96 x i8]* noalias align 512 %dst, [96 x i8]* noalias readonly %src) unnamed_addr #2 {
 entry:
-  %0 = icmp eq [90 x i8]* %dst, null
-  %1 = icmp eq [90 x i8]* %src, null
+  %0 = icmp eq [96 x i8]* %dst, null
+  %1 = icmp eq [96 x i8]* %src, null
   %2 = or i1 %0, %1
   br i1 %2, label %ret, label %copy
 
 copy:                                             ; preds = %entry
-  call void @arraycpy_hls.p0a90i8([90 x i8]* nonnull %dst, [90 x i8]* nonnull %src, i64 90)
+  call void @arraycpy_hls.p0a96i8([96 x i8]* nonnull %dst, [96 x i8]* nonnull %src, i64 96)
   br label %ret
 
 ret:                                              ; preds = %copy, %entry
@@ -41,10 +41,10 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
-define void @arraycpy_hls.p0a90i8([90 x i8]* %dst, [90 x i8]* readonly %src, i64 %num) local_unnamed_addr #3 {
+define void @arraycpy_hls.p0a96i8([96 x i8]* %dst, [96 x i8]* readonly %src, i64 %num) local_unnamed_addr #3 {
 entry:
-  %0 = icmp eq [90 x i8]* %src, null
-  %1 = icmp eq [90 x i8]* %dst, null
+  %0 = icmp eq [96 x i8]* %src, null
+  %1 = icmp eq [96 x i8]* %dst, null
   %2 = or i1 %1, %0
   br i1 %2, label %ret, label %copy
 
@@ -57,8 +57,8 @@ for.loop.lr.ph:                                   ; preds = %copy
 
 for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
   %for.loop.idx2 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
-  %dst.addr = getelementptr [90 x i8], [90 x i8]* %dst, i64 0, i64 %for.loop.idx2
-  %src.addr = getelementptr [90 x i8], [90 x i8]* %src, i64 0, i64 %for.loop.idx2
+  %dst.addr = getelementptr [96 x i8], [96 x i8]* %dst, i64 0, i64 %for.loop.idx2
+  %src.addr = getelementptr [96 x i8], [96 x i8]* %src, i64 0, i64 %for.loop.idx2
   %3 = load i8, i8* %src.addr, align 1
   store i8 %3, i8* %dst.addr, align 1
   %for.loop.idx.next = add nuw nsw i64 %for.loop.idx2, 1
@@ -73,15 +73,15 @@ ret:                                              ; preds = %copy.split, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
-define internal fastcc void @onebyonecpy_hls.p0a2i8([2 x i8]* noalias align 512 %dst, [2 x i8]* noalias readonly %src) unnamed_addr #2 {
+define internal fastcc void @onebyonecpy_hls.p0a8i8([8 x i8]* noalias align 512 %dst, [8 x i8]* noalias readonly %src) unnamed_addr #2 {
 entry:
-  %0 = icmp eq [2 x i8]* %dst, null
-  %1 = icmp eq [2 x i8]* %src, null
+  %0 = icmp eq [8 x i8]* %dst, null
+  %1 = icmp eq [8 x i8]* %src, null
   %2 = or i1 %0, %1
   br i1 %2, label %ret, label %copy
 
 copy:                                             ; preds = %entry
-  call void @arraycpy_hls.p0a2i8([2 x i8]* nonnull %dst, [2 x i8]* nonnull %src, i64 2)
+  call void @arraycpy_hls.p0a8i8([8 x i8]* nonnull %dst, [8 x i8]* nonnull %src, i64 8)
   br label %ret
 
 ret:                                              ; preds = %copy, %entry
@@ -89,10 +89,10 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
-define void @arraycpy_hls.p0a2i8([2 x i8]* %dst, [2 x i8]* readonly %src, i64 %num) local_unnamed_addr #3 {
+define void @arraycpy_hls.p0a8i8([8 x i8]* %dst, [8 x i8]* readonly %src, i64 %num) local_unnamed_addr #3 {
 entry:
-  %0 = icmp eq [2 x i8]* %src, null
-  %1 = icmp eq [2 x i8]* %dst, null
+  %0 = icmp eq [8 x i8]* %src, null
+  %1 = icmp eq [8 x i8]* %dst, null
   %2 = or i1 %1, %0
   br i1 %2, label %ret, label %copy
 
@@ -105,8 +105,8 @@ for.loop.lr.ph:                                   ; preds = %copy
 
 for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
   %for.loop.idx2 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
-  %dst.addr = getelementptr [2 x i8], [2 x i8]* %dst, i64 0, i64 %for.loop.idx2
-  %src.addr = getelementptr [2 x i8], [2 x i8]* %src, i64 0, i64 %for.loop.idx2
+  %dst.addr = getelementptr [8 x i8], [8 x i8]* %dst, i64 0, i64 %for.loop.idx2
+  %src.addr = getelementptr [8 x i8], [8 x i8]* %src, i64 0, i64 %for.loop.idx2
   %3 = load i8, i8* %src.addr, align 1
   store i8 %3, i8* %dst.addr, align 1
   %for.loop.idx.next = add nuw nsw i64 %for.loop.idx2, 1
@@ -121,31 +121,31 @@ ret:                                              ; preds = %copy.split, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
-define internal fastcc void @copy_out([90 x i8]* noalias, [90 x i8]* noalias readonly align 512, [2 x i8]* noalias, [2 x i8]* noalias readonly align 512) unnamed_addr #4 {
+define internal fastcc void @copy_out([96 x i8]* noalias, [96 x i8]* noalias readonly align 512, [8 x i8]* noalias, [8 x i8]* noalias readonly align 512) unnamed_addr #4 {
 entry:
-  call fastcc void @onebyonecpy_hls.p0a90i8([90 x i8]* %0, [90 x i8]* align 512 %1)
-  call fastcc void @onebyonecpy_hls.p0a2i8([2 x i8]* %2, [2 x i8]* align 512 %3)
+  call fastcc void @onebyonecpy_hls.p0a96i8([96 x i8]* %0, [96 x i8]* align 512 %1)
+  call fastcc void @onebyonecpy_hls.p0a8i8([8 x i8]* %2, [8 x i8]* align 512 %3)
   ret void
 }
 
-declare void @apatb_tiny_ecg_inference_hw([90 x i8]* %input_ecg, [2 x i8]* %output_logits)
+declare void @apatb_tiny_ecg_inference_hw([96 x i8]* %input_ecg, [8 x i8]* %output_logits)
 
 ; Function Attrs: argmemonly noinline norecurse willreturn
-define internal fastcc void @copy_back([90 x i8]* noalias, [90 x i8]* noalias readonly align 512, [2 x i8]* noalias, [2 x i8]* noalias readonly align 512) unnamed_addr #4 {
+define internal fastcc void @copy_back([96 x i8]* noalias, [96 x i8]* noalias readonly align 512, [8 x i8]* noalias, [8 x i8]* noalias readonly align 512) unnamed_addr #4 {
 entry:
-  call fastcc void @onebyonecpy_hls.p0a2i8([2 x i8]* %2, [2 x i8]* align 512 %3)
+  call fastcc void @onebyonecpy_hls.p0a8i8([8 x i8]* %2, [8 x i8]* align 512 %3)
   ret void
 }
 
 declare void @tiny_ecg_inference_hw_stub(i8* noalias nocapture nonnull readonly, i8* noalias nocapture nonnull)
 
-define void @tiny_ecg_inference_hw_stub_wrapper([90 x i8]* %input_ecg, [2 x i8]* %output_logits) #5 {
+define void @tiny_ecg_inference_hw_stub_wrapper([96 x i8]* %input_ecg, [8 x i8]* %output_logits) #5 {
 entry:
-  call void @copy_out([90 x i8]* null, [90 x i8]* %input_ecg, [2 x i8]* null, [2 x i8]* %output_logits)
-  %0 = bitcast [90 x i8]* %input_ecg to i8*
-  %1 = bitcast [2 x i8]* %output_logits to i8*
+  call void @copy_out([96 x i8]* null, [96 x i8]* %input_ecg, [8 x i8]* null, [8 x i8]* %output_logits)
+  %0 = bitcast [96 x i8]* %input_ecg to i8*
+  %1 = bitcast [8 x i8]* %output_logits to i8*
   call void @tiny_ecg_inference_hw_stub(i8* %0, i8* %1)
-  call void @copy_in([90 x i8]* null, [90 x i8]* %input_ecg, [2 x i8]* null, [2 x i8]* %output_logits)
+  call void @copy_in([96 x i8]* null, [96 x i8]* %input_ecg, [8 x i8]* null, [8 x i8]* %output_logits)
   ret void
 }
 

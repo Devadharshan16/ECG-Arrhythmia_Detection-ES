@@ -32,12 +32,12 @@ def load_input_qparams(model_path="saved_models/tiny_ecg_qat.pth"):
 
 
 def quantize(x_float, scale, zero_point):
-    # The HLS kernel does: x = local_ecg[i] - input_zero_point (104)
-    # This means the hardware expects raw quantized values in the uint8-equivalent range,
-    # cast directly to int8. Standard [-128,127] clipping is the correct approach here.
+    # HLS now expects uint8_t input in [0, 255] — matches PyTorch quint8.
+    # e.g. QRS peak: round(x/scale)+104 = 140 -> sent as uint8(140).
+    # HLS then computes: (int32_t)140 - 104 = 36. Correct.
     q = np.round(x_float / scale) + zero_point
-    q = np.clip(q, -128, 127)
-    return q.astype(np.int8)
+    q = np.clip(q, 0, 255)
+    return q.astype(np.uint8)
 
 def main():
 
@@ -71,7 +71,7 @@ def main():
     lines.append("")
 
     lines.append(
-        "const int8_t ds2_all_samples[DS2_TOTAL_SAMPLES][90] = {"
+        "const uint8_t ds2_all_samples[DS2_TOTAL_SAMPLES][90] = {"
     )
 
     labels = []

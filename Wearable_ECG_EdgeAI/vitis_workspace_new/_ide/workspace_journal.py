@@ -1,13 +1,6 @@
-# 2026-09-20T16:35:23.129589200
+# 2026-09-23T08:38:52.458906900
 import vitis
 
 client = vitis.create_client()
 client.set_workspace(path="vitis_workspace_new")
-
-comp = client.get_component(name="ecg_app")
-comp.build()
-
-vitis.dispose()
-
-vitis.dispose()
 

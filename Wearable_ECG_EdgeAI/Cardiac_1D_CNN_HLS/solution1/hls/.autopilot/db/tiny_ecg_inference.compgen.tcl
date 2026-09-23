@@ -12,7 +12,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set name tiny_ecg_inference_mul_21s_30ns_51_2_1
+set name tiny_ecg_inference_mul_22s_30ns_52_2_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 1 ALLOW_PRAGMA 1
 }

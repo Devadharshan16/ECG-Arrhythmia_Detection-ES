@@ -15,7 +15,7 @@ set hasInterrupt 0
 set DLRegFirstOffset 0
 set DLRegItemOffset 0
 set svuvm_can_support 1
-set cdfgNum 9
+set cdfgNum 11
 set C_modelName {tiny_ecg_inference}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
@@ -296,7 +296,7 @@ set NewPortList {[
 set ArgLastReadFirstWriteLatency {
 	tiny_ecg_inference {
 		DATA_IN {Type I LastRead 1 FirstWrite -1}
-		DATA_OUT {Type O LastRead 117 FirstWrite 12}
+		DATA_OUT {Type O LastRead 119 FirstWrite 2}
 		input_ecg {Type I LastRead 0 FirstWrite -1}
 		output_logits {Type I LastRead 0 FirstWrite -1}
 		conv1_bias {Type I LastRead -1 FirstWrite -1}
@@ -357,7 +357,7 @@ set ArgLastReadFirstWriteLatency {
 		p_ZL12conv3_weight_23 {Type I LastRead -1 FirstWrite -1}
 		conv3_multiplier {Type I LastRead -1 FirstWrite -1}
 		conv3_shift {Type I LastRead -1 FirstWrite -1}}
-	tiny_ecg_inference_Pipeline_VITIS_LOOP_49_1 {
+	tiny_ecg_inference_Pipeline_VITIS_LOOP_55_1 {
 		DATA_IN {Type I LastRead 1 FirstWrite -1}
 		input_ecg {Type I LastRead 0 FirstWrite -1}
 		local_ecg_4 {Type O LastRead -1 FirstWrite 2}
@@ -365,52 +365,54 @@ set ArgLastReadFirstWriteLatency {
 		local_ecg_2 {Type O LastRead -1 FirstWrite 2}
 		local_ecg_1 {Type O LastRead -1 FirstWrite 2}
 		local_ecg {Type O LastRead -1 FirstWrite 2}}
-	tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3 {
+	tiny_ecg_inference_Pipeline_6 {
+		local_out {Type O LastRead -1 FirstWrite 0}}
+	tiny_ecg_inference_Pipeline_VITIS_LOOP_77_2_VITIS_LOOP_78_3 {
 		local_ecg {Type I LastRead 12 FirstWrite -1}
 		local_ecg_1 {Type I LastRead 12 FirstWrite -1}
 		local_ecg_2 {Type I LastRead 12 FirstWrite -1}
 		local_ecg_3 {Type I LastRead 12 FirstWrite -1}
 		local_ecg_4 {Type I LastRead 12 FirstWrite -1}
-		buffer_c1 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_1 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_2 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_3 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_4 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_5 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_6 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_7 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_8 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_9 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_10 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_11 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_12 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_13 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_14 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_15 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_16 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_17 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_18 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_19 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_20 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_21 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_22 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_23 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_24 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_25 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_26 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_27 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_28 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_29 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_30 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_31 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_32 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_33 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_34 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_35 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_36 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_37 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_38 {Type O LastRead -1 FirstWrite 21}
-		buffer_c1_39 {Type O LastRead -1 FirstWrite 21}
+		buffer_c1 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_1 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_2 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_3 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_4 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_5 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_6 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_7 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_8 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_9 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_10 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_11 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_12 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_13 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_14 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_15 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_16 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_17 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_18 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_19 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_20 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_21 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_22 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_23 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_24 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_25 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_26 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_27 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_28 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_29 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_30 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_31 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_32 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_33 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_34 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_35 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_36 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_37 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_38 {Type O LastRead -1 FirstWrite 22}
+		buffer_c1_39 {Type O LastRead -1 FirstWrite 22}
 		conv1_bias {Type I LastRead -1 FirstWrite -1}
 		p_ZL12conv1_weight_0 {Type I LastRead -1 FirstWrite -1}
 		p_ZL12conv1_weight_1 {Type I LastRead -1 FirstWrite -1}
@@ -419,7 +421,7 @@ set ArgLastReadFirstWriteLatency {
 		p_ZL12conv1_weight_4 {Type I LastRead -1 FirstWrite -1}
 		conv1_multiplier {Type I LastRead -1 FirstWrite -1}
 		conv1_shift {Type I LastRead -1 FirstWrite -1}}
-	tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6 {
+	tiny_ecg_inference_Pipeline_VITIS_LOOP_103_5_VITIS_LOOP_104_6 {
 		buffer_c1 {Type I LastRead 10 FirstWrite -1}
 		buffer_c1_1 {Type I LastRead 10 FirstWrite -1}
 		buffer_c1_2 {Type I LastRead 10 FirstWrite -1}
@@ -531,7 +533,7 @@ set ArgLastReadFirstWriteLatency {
 		p_ZL12conv2_weight_19 {Type I LastRead -1 FirstWrite -1}
 		conv2_multiplier {Type I LastRead -1 FirstWrite -1}
 		conv2_shift {Type I LastRead -1 FirstWrite -1}}
-	tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10 {
+	tiny_ecg_inference_Pipeline_VITIS_LOOP_130_9_VITIS_LOOP_131_10 {
 		buffer_c2 {Type I LastRead 9 FirstWrite -1}
 		buffer_c2_1 {Type I LastRead 9 FirstWrite -1}
 		buffer_c2_2 {Type I LastRead 9 FirstWrite -1}
@@ -623,7 +625,7 @@ set ArgLastReadFirstWriteLatency {
 		p_ZL12conv3_weight_23 {Type I LastRead -1 FirstWrite -1}
 		conv3_multiplier {Type I LastRead -1 FirstWrite -1}
 		conv3_shift {Type I LastRead -1 FirstWrite -1}}
-	tiny_ecg_inference_Pipeline_VITIS_LOOP_146_13_VITIS_LOOP_147_14 {
+	tiny_ecg_inference_Pipeline_VITIS_LOOP_156_13_VITIS_LOOP_157_14 {
 		buffer_c3 {Type I LastRead 1 FirstWrite -1}
 		buffer_c3_1 {Type I LastRead 1 FirstWrite -1}
 		buffer_c3_2 {Type I LastRead 1 FirstWrite -1}
@@ -641,217 +643,220 @@ set ArgLastReadFirstWriteLatency {
 		buffer_c3_14 {Type I LastRead 1 FirstWrite -1}
 		buffer_c3_15 {Type I LastRead 1 FirstWrite -1}
 		flatten {Type O LastRead -1 FirstWrite 3}}
-	tiny_ecg_inference_Pipeline_VITIS_LOOP_156_15 {
-		DATA_OUT {Type O LastRead -1 FirstWrite 12}
+	tiny_ecg_inference_Pipeline_VITIS_LOOP_167_15 {
+		zext_ln173_128 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_127 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_126 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_125 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_124 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_123 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_122 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_121 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_120 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_119 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_118 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_117 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_116 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_115 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_114 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_113 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_112 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_111 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_110 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_109 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_108 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_107 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_106 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_105 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_104 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_103 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_102 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_101 {Type I LastRead 0 FirstWrite -1}
+		x_483 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_100 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_99 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_98 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_97 {Type I LastRead 0 FirstWrite -1}
+		x_479 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_96 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_95 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_94 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_93 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_92 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_91 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_90 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_89 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_88 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_87 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_86 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_85 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_84 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_83 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_82 {Type I LastRead 0 FirstWrite -1}
+		x_464 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_81 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_80 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_79 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_78 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_77 {Type I LastRead 0 FirstWrite -1}
+		x_459 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_76 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_75 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_74 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_73 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_72 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_71 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_70 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_69 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_68 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_67 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_66 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_65 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_63 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_62 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_61 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_60 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_59 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_58 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_57 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_56 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_55 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_54 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_53 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_52 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_51 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_50 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_49 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_48 {Type I LastRead 0 FirstWrite -1}
+		x_429 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_47 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_46 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_45 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_44 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_43 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_42 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_41 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_40 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_39 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_38 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_37 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_36 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_35 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_34 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_33 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_32 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_31 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_30 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_29 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_28 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_27 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_26 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_25 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_24 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_23 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_22 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_21 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_20 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_19 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_18 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_17 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_16 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_15 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_14 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_13 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_12 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_11 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_10 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_9 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_8 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_7 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_6 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_5 {Type I LastRead 0 FirstWrite -1}
+		x_387 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_4 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_3 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_2 {Type I LastRead 0 FirstWrite -1}
+		x_383 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_1 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173 {Type I LastRead 0 FirstWrite -1}
+		zext_ln167 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_190 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_189 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_188 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_187 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_186 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_185 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_184 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_183 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_182 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_181 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_180 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_179 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_178 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_177 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_176 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_175 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_174 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_173 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_172 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_171 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_170 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_169 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_168 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_167 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_166 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_165 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_164 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_163 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_162 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_161 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_160 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_159 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_158 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_157 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_156 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_155 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_154 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_153 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_152 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_151 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_150 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_149 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_148 {Type I LastRead 0 FirstWrite -1}
+		x_529 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_147 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_146 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_145 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_144 {Type I LastRead 0 FirstWrite -1}
+		x_525 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_143 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_142 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_141 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_140 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_139 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_138 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_137 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_136 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_135 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_134 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_133 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_132 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_131 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_130 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_129 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_191 {Type I LastRead 0 FirstWrite -1}
+		zext_ln173_64 {Type I LastRead 0 FirstWrite -1}
+		local_out {Type O LastRead -1 FirstWrite 12}}
+	tiny_ecg_inference_Pipeline_VITIS_LOOP_181_17 {
+		DATA_OUT {Type O LastRead -1 FirstWrite 2}
 		output_logits {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_128 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_127 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_126 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_125 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_124 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_123 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_122 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_121 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_120 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_119 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_118 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_117 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_116 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_115 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_114 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_113 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_112 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_111 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_110 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_109 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_108 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_107 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_106 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_105 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_104 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_103 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_102 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_101 {Type I LastRead 0 FirstWrite -1}
-		x_234 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_100 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_99 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_98 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_97 {Type I LastRead 0 FirstWrite -1}
-		x_230 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_96 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_95 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_94 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_93 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_92 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_91 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_90 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_89 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_88 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_87 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_86 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_85 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_84 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_83 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_82 {Type I LastRead 0 FirstWrite -1}
-		x_215 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_81 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_80 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_79 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_78 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_77 {Type I LastRead 0 FirstWrite -1}
-		x_210 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_76 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_75 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_74 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_73 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_72 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_71 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_70 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_69 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_68 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_67 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_66 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_65 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_63 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_62 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_61 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_60 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_59 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_58 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_57 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_56 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_55 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_54 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_53 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_52 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_51 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_50 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_49 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_48 {Type I LastRead 0 FirstWrite -1}
-		x_180 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_47 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_46 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_45 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_44 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_43 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_42 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_41 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_40 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_39 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_38 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_37 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_36 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_35 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_34 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_33 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_32 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_31 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_30 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_29 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_28 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_27 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_26 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_25 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_24 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_23 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_22 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_21 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_20 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_19 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_18 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_17 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_16 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_15 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_14 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_13 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_12 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_11 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_10 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_9 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_8 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_7 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_6 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_5 {Type I LastRead 0 FirstWrite -1}
-		x_138 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_4 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_3 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_2 {Type I LastRead 0 FirstWrite -1}
-		x_134 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_1 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161 {Type I LastRead 0 FirstWrite -1}
-		zext_ln156 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_190 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_189 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_188 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_187 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_186 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_185 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_184 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_183 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_182 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_181 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_180 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_179 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_178 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_177 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_176 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_175 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_174 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_173 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_172 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_171 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_170 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_169 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_168 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_167 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_166 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_165 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_164 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_163 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_162 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_161 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_160 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_159 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_158 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_157 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_156 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_155 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_154 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_153 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_152 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_151 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_150 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_149 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_148 {Type I LastRead 0 FirstWrite -1}
-		x_280 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_147 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_146 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_145 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_144 {Type I LastRead 0 FirstWrite -1}
-		x_276 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_143 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_142 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_141 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_140 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_139 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_138 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_137 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_136 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_135 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_134 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_133 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_132 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_131 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_130 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_129 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_191 {Type I LastRead 0 FirstWrite -1}
-		zext_ln161_64 {Type I LastRead 0 FirstWrite -1}}}
+		local_out {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1408", "Max" : "1408"}
-	, {"Name" : "Interval", "Min" : "1409", "Max" : "1409"}
+	{"Name" : "Latency", "Min" : "1428", "Max" : "1428"}
+	, {"Name" : "Interval", "Min" : "1429", "Max" : "1429"}
 ]}
 
 set PipelineEnableSignalInfo {[

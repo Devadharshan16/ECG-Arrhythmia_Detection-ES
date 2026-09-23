@@ -12,7 +12,7 @@
 
 parameter DataWidth = 8;
 parameter AddressWidth = 5;
-parameter AddressRange = 18;
+parameter AddressRange = 20;
 
 input [AddressWidth-1:0] address0;
 input ce0;

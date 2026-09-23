@@ -403,7 +403,7 @@ const float conv1_weight_scale[8] = {
 };
 
 const float conv1_output_scale = 0.0162009504f;
-const int8_t conv1_output_zp = 0;
+const int32_t conv1_output_zp = 0;
 
 
 const int32_t conv1_multiplier[8] = {
@@ -471,7 +471,7 @@ const float conv2_weight_scale[16] = {
 };
 
 const float conv2_output_scale = 0.0180181973f;
-const int8_t conv2_output_zp = 0;
+const int32_t conv2_output_zp = 0;
 
 
 const int32_t conv2_multiplier[16] = {
@@ -549,7 +549,7 @@ const float conv3_weight_scale[16] = {
 };
 
 const float conv3_output_scale = 0.0182111673f;
-const int8_t conv3_output_zp = 0;
+const int32_t conv3_output_zp = 0;
 
 
 const int32_t conv3_multiplier[16] = {
@@ -601,7 +601,7 @@ const float fc_weight_scale[2] = {
 };
 
 const float fc_output_scale = 0.0111928526f;
-const int8_t fc_output_zp = 136;
+const int32_t fc_output_zp = 136;
 
 
 const int32_t fc_multiplier[2] = {
@@ -613,7 +613,7 @@ const int32_t fc_shift[2] = {
 
 
 const float input_scale = 0.0385783575f;
-const int8_t input_zero_point = 104;
+const int32_t input_zero_point = 104;
 
 
 const int CONV1_IN_CH = 1, CONV1_OUT_CH = 8, CONV1_KERNEL = 5, CONV1_STRIDE = 2, CONV1_PAD = 2;
@@ -623,7 +623,10 @@ const int FC_IN = 192, FC_OUT = 2;
 const int INPUT_LENGTH = 90;
 # 3 "../cnn_hls.cpp" 2
 
-static inline int8_t requantize_and_relu(int32_t acc, int32_t multiplier, int32_t shift, int8_t output_zp) {
+
+
+
+static inline uint8_t requantize_and_relu(int32_t acc, int32_t multiplier, int32_t shift, int32_t output_zp) {
 
     int64_t acc64 = (int64_t)acc * (int64_t)multiplier;
 
@@ -639,12 +642,14 @@ static inline int8_t requantize_and_relu(int32_t acc, int32_t multiplier, int32_
     if (res < output_zp) res = output_zp;
 
 
-    if (res > 127) return 127;
-    if (res < -128) return -128;
-    return (int8_t)res;
+    if (res > 255) return (uint8_t)255;
+    if (res < 0) return (uint8_t)0;
+    return (uint8_t)res;
 }
 
-static inline int8_t requantize_linear(int32_t acc, int32_t multiplier, int32_t shift, int8_t output_zp) {
+
+
+static inline uint8_t requantize_linear(int32_t acc, int32_t multiplier, int32_t shift, int32_t output_zp) {
     int64_t acc64 = (int64_t)acc * (int64_t)multiplier;
 
     if (shift > 0) {
@@ -655,52 +660,57 @@ static inline int8_t requantize_linear(int32_t acc, int32_t multiplier, int32_t 
     res += output_zp;
 
 
-    if (res > 127) return 127;
-    if (res < -128) return -128;
-    return (int8_t)res;
+    if (res > 255) return (uint8_t)255;
+    if (res < 0) return (uint8_t)0;
+    return (uint8_t)res;
 }
 
-__attribute__((sdx_kernel("tiny_ecg_inference", 0))) void tiny_ecg_inference(int8_t input_ecg[90], int8_t output_logits[2]) {
+
+
+__attribute__((sdx_kernel("tiny_ecg_inference", 0))) void tiny_ecg_inference(uint8_t input_ecg[96], uint8_t output_logits[8]) {
 #line 1 "directive"
 #pragma HLSDIRECTIVE TOP name=tiny_ecg_inference
-# 41 "../cnn_hls.cpp"
+# 48 "../cnn_hls.cpp"
 
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL
-#pragma HLS INTERFACE m_axi port=input_ecg offset=slave bundle=DATA_IN depth=90
-#pragma HLS INTERFACE m_axi port=output_logits offset=slave bundle=DATA_OUT depth=2
+#pragma HLS INTERFACE m_axi port=input_ecg offset=slave bundle=DATA_IN depth=96
+#pragma HLS INTERFACE m_axi port=output_logits offset=slave bundle=DATA_OUT depth=8
 
 
-
-    int8_t local_ecg[90];
-    VITIS_LOOP_49_1: for(int i = 0; i < 90; i++) {
+    uint8_t local_ecg[96];
+    VITIS_LOOP_55_1: for(int i = 0; i < 96; i++) {
 #pragma HLS PIPELINE II=1
         local_ecg[i] = input_ecg[i];
     }
 
-    int8_t buffer_c1[8][45];
+
+    uint8_t buffer_c1[8][45];
 #pragma HLS ARRAY_PARTITION variable=buffer_c1 complete dim=1
 
-    int8_t buffer_c2[16][23];
+    uint8_t buffer_c2[16][23];
 #pragma HLS ARRAY_PARTITION variable=buffer_c2 complete dim=1
 
-    int8_t buffer_c3[16][12];
+    uint8_t buffer_c3[16][12];
 #pragma HLS ARRAY_PARTITION variable=buffer_c3 complete dim=1
-    int8_t flatten[192];
+
+    uint8_t flatten[192];
 
 
 
 
 
-    VITIS_LOOP_68_2: for (int out_idx = 0; out_idx < 45; ++out_idx) {
-        VITIS_LOOP_69_3: for (int oc = 0; oc < CONV1_OUT_CH; ++oc) {
+
+    VITIS_LOOP_77_2: for (int out_idx = 0; out_idx < 45; ++out_idx) {
+        VITIS_LOOP_78_3: for (int oc = 0; oc < CONV1_OUT_CH; ++oc) {
 #pragma HLS PIPELINE II=1
             int32_t acc = conv1_bias[oc];
 
-            VITIS_LOOP_73_4: for (int k = 0; k < CONV1_KERNEL; ++k) {
+            VITIS_LOOP_82_4: for (int k = 0; k < CONV1_KERNEL; ++k) {
                 int in_idx = out_idx * CONV1_STRIDE + k - CONV1_PAD;
                 int32_t x = 0;
 
                 if (in_idx >= 0 && in_idx < INPUT_LENGTH) {
+
 
                     x = (int32_t)local_ecg[in_idx] - input_zero_point;
                 }
@@ -716,18 +726,17 @@ __attribute__((sdx_kernel("tiny_ecg_inference", 0))) void tiny_ecg_inference(int
 
 
 
-    VITIS_LOOP_93_5: for (int out_idx = 0; out_idx < 23; ++out_idx) {
-        VITIS_LOOP_94_6: for (int oc = 0; oc < CONV2_OUT_CH; ++oc) {
+    VITIS_LOOP_103_5: for (int out_idx = 0; out_idx < 23; ++out_idx) {
+        VITIS_LOOP_104_6: for (int oc = 0; oc < CONV2_OUT_CH; ++oc) {
 #pragma HLS PIPELINE II=1
             int32_t acc = conv2_bias[oc];
 
-            VITIS_LOOP_98_7: for (int k = 0; k < CONV2_KERNEL; ++k) {
-                VITIS_LOOP_99_8: for (int in_ch = 0; in_ch < CONV2_IN_CH; ++in_ch) {
+            VITIS_LOOP_108_7: for (int k = 0; k < CONV2_KERNEL; ++k) {
+                VITIS_LOOP_109_8: for (int in_ch = 0; in_ch < CONV2_IN_CH; ++in_ch) {
                     int in_idx = out_idx * CONV2_STRIDE + k - CONV2_PAD;
                     int32_t x = 0;
 
                     if (in_idx >= 0 && in_idx < 45) {
-
 
                         x = (int32_t)buffer_c1[in_ch][in_idx] - conv1_output_zp;
                     }
@@ -744,17 +753,18 @@ __attribute__((sdx_kernel("tiny_ecg_inference", 0))) void tiny_ecg_inference(int
 
 
 
-    VITIS_LOOP_121_9: for (int out_idx = 0; out_idx < 12; ++out_idx) {
-        VITIS_LOOP_122_10: for (int oc = 0; oc < CONV3_OUT_CH; ++oc) {
+    VITIS_LOOP_130_9: for (int out_idx = 0; out_idx < 12; ++out_idx) {
+        VITIS_LOOP_131_10: for (int oc = 0; oc < CONV3_OUT_CH; ++oc) {
 #pragma HLS PIPELINE II=1
             int32_t acc = conv3_bias[oc];
 
-            VITIS_LOOP_126_11: for (int k = 0; k < CONV3_KERNEL; ++k) {
-                VITIS_LOOP_127_12: for (int in_ch = 0; in_ch < CONV3_IN_CH; ++in_ch) {
+            VITIS_LOOP_135_11: for (int k = 0; k < CONV3_KERNEL; ++k) {
+                VITIS_LOOP_136_12: for (int in_ch = 0; in_ch < CONV3_IN_CH; ++in_ch) {
                     int in_idx = out_idx * CONV3_STRIDE + k - CONV3_PAD;
                     int32_t x = 0;
 
                     if (in_idx >= 0 && in_idx < 23) {
+
                         x = (int32_t)buffer_c2[in_ch][in_idx] - conv2_output_zp;
                     }
 
@@ -769,8 +779,8 @@ __attribute__((sdx_kernel("tiny_ecg_inference", 0))) void tiny_ecg_inference(int
 
 
 
-    VITIS_LOOP_146_13: for (int i = 0; i < 16; ++i) {
-        VITIS_LOOP_147_14: for (int j = 0; j < 12; ++j) {
+    VITIS_LOOP_156_13: for (int i = 0; i < 16; ++i) {
+        VITIS_LOOP_157_14: for (int j = 0; j < 12; ++j) {
 #pragma HLS PIPELINE II=1
             flatten[i * 12 + j] = buffer_c3[i][j];
         }
@@ -779,15 +789,23 @@ __attribute__((sdx_kernel("tiny_ecg_inference", 0))) void tiny_ecg_inference(int
 
 
 
-    VITIS_LOOP_156_15: for (int out_class = 0; out_class < FC_OUT; ++out_class) {
+    uint8_t local_out[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+    VITIS_LOOP_167_15: for (int out_class = 0; out_class < FC_OUT; ++out_class) {
 #pragma HLS PIPELINE II=1
         int32_t acc = fc_bias[out_class];
 
-        VITIS_LOOP_160_16: for (int idx = 0; idx < FC_IN; ++idx) {
+        VITIS_LOOP_171_16: for (int idx = 0; idx < FC_IN; ++idx) {
+
             int32_t x = (int32_t)flatten[idx] - conv3_output_zp;
             acc += (int32_t)fc_weight[out_class * FC_IN + idx] * x;
         }
 
-        output_logits[out_class] = requantize_linear(acc, fc_multiplier[out_class], fc_shift[out_class], fc_output_zp);
+        local_out[out_class] = requantize_linear(acc, fc_multiplier[out_class], fc_shift[out_class], fc_output_zp);
+    }
+
+
+    VITIS_LOOP_181_17: for (int i = 0; i < 8; i++) {
+#pragma HLS PIPELINE II=1
+        output_logits[i] = local_out[i];
     }
 }

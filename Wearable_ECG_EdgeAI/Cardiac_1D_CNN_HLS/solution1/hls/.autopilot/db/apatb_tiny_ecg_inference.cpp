@@ -1309,7 +1309,7 @@ void apatb_tiny_ecg_inference_hw(void* __xlx_apatb_param_input_ecg, void* __xlx_
   };
   port2.param = { __xlx_apatb_param_input_ecg };
   port2.mname = { "input_ecg" };
-  port2.nbytes = { 90 };
+  port2.nbytes = { 96 };
 
 #ifdef USE_BINARY_TV_FILE
   static hls::sim::Memory<hls::sim::Input, hls::sim::Output> port3 {
@@ -1343,7 +1343,7 @@ void apatb_tiny_ecg_inference_hw(void* __xlx_apatb_param_input_ecg, void* __xlx_
   };
   port3.param = { __xlx_apatb_param_output_logits };
   port3.mname = { "output_logits" };
-  port3.nbytes = { 2 };
+  port3.nbytes = { 8 };
 
   try {
 #ifdef POST_CHECK

@@ -10,7 +10,7 @@
     q0,
     reset, clk);
 
-parameter DataWidth = 7;
+parameter DataWidth = 8;
 parameter AddressWidth = 4;
 parameter AddressRange = 12;
 

@@ -11,7 +11,7 @@ use ieee.std_logic_unsigned.all;
 entity tiny_ecg_inference_buffer_c1_RAM_AUTO_1R1W is
     generic(
         MEM_TYPE        : string    := "auto";
-        DataWidth       : integer   := 7;
+        DataWidth       : integer   := 8;
         AddressWidth    : integer   := 4;
         AddressRange    : integer   := 9
     );

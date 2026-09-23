@@ -248,18 +248,18 @@ extern "C" void apatb_tiny_ecg_inference_hw(volatile void * __xlx_apatb_param_in
 using hls::sim::createStream;
   // Collect __xlx_input_ecg__tmp_vec
 std::vector<Byte<1>> __xlx_input_ecg__tmp_vec;
-for (size_t i = 0; i < 90; ++i){
+for (size_t i = 0; i < 96; ++i){
 __xlx_input_ecg__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_input_ecg)[i]);
 }
-  int __xlx_size_param_input_ecg = 90;
+  int __xlx_size_param_input_ecg = 96;
   int __xlx_offset_param_input_ecg = 0;
   int __xlx_offset_byte_param_input_ecg = 0*1;
   // Collect __xlx_output_logits__tmp_vec
 std::vector<Byte<1>> __xlx_output_logits__tmp_vec;
-for (size_t i = 0; i < 2; ++i){
+for (size_t i = 0; i < 8; ++i){
 __xlx_output_logits__tmp_vec.push_back(((Byte<1>*)__xlx_apatb_param_output_logits)[i]);
 }
-  int __xlx_size_param_output_logits = 2;
+  int __xlx_size_param_output_logits = 8;
   int __xlx_offset_param_output_logits = 0;
   int __xlx_offset_byte_param_output_logits = 0*1;
   // DUT call

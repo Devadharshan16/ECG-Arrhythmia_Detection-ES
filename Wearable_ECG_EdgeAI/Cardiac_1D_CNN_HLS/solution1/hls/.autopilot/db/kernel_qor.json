@@ -3,8 +3,8 @@
     "type": "function",
     "pipelined": "yes",
     "dataflowed": "no",
-    "original_ti": 1409,
-    "original_tl": 1408,
+    "original_ti": 1429,
+    "original_tl": 1428,
     "calculated_ti": -1,
     "calculated_tl": -1,
     "assume_ti": -1,
@@ -12,12 +12,12 @@
     "CIs": [
         {
             "ID": 0,
-            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_49_1",
+            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_55_1",
             "type": "function",
             "pipelined": "yes",
             "dataflowed": "no",
-            "original_ti": 93,
-            "original_tl": 93,
+            "original_ti": 99,
+            "original_tl": 99,
             "calculated_ti": -1,
             "calculated_tl": -1,
             "assume_ti": -1,
@@ -25,13 +25,44 @@
             "CIs": [],
             "loops": [
                 {
-                    "name": "VITIS_LOOP_49_1",
+                    "name": "VITIS_LOOP_55_1",
                     "type": "loop",
-                    "trip_count": 90,
+                    "trip_count": 96,
                     "pipelined": "yes",
                     "dataflowed": "no",
-                    "original_ti": 90,
-                    "original_tl": 92,
+                    "original_ti": 96,
+                    "original_tl": 98,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": []
+                }
+            ]
+        },
+        {
+            "ID": 5,
+            "name": "tiny_ecg_inference_Pipeline_6",
+            "type": "function",
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 10,
+            "original_tl": 10,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [],
+            "loops": [
+                {
+                    "name": "Loop 1",
+                    "type": "loop",
+                    "trip_count": 8,
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 8,
+                    "original_tl": 8,
                     "calculated_ti": -1,
                     "calculated_tl": -1,
                     "assume_ti": -1,
@@ -43,12 +74,12 @@
         },
         {
             "ID": 1,
-            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_68_2_VITIS_LOOP_69_3",
+            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_77_2_VITIS_LOOP_78_3",
             "type": "function",
             "pipelined": "yes",
             "dataflowed": "no",
-            "original_ti": 382,
-            "original_tl": 382,
+            "original_ti": 383,
+            "original_tl": 383,
             "calculated_ti": -1,
             "calculated_tl": -1,
             "assume_ti": -1,
@@ -56,13 +87,13 @@
             "CIs": [],
             "loops": [
                 {
-                    "name": "VITIS_LOOP_68_2_VITIS_LOOP_69_3",
+                    "name": "VITIS_LOOP_77_2_VITIS_LOOP_78_3",
                     "type": "loop",
                     "trip_count": 360,
                     "pipelined": "yes",
                     "dataflowed": "no",
                     "original_ti": 360,
-                    "original_tl": 381,
+                    "original_tl": 382,
                     "calculated_ti": -1,
                     "calculated_tl": -1,
                     "assume_ti": -1,
@@ -74,7 +105,7 @@
         },
         {
             "ID": 2,
-            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_93_5_VITIS_LOOP_94_6",
+            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_103_5_VITIS_LOOP_104_6",
             "type": "function",
             "pipelined": "yes",
             "dataflowed": "no",
@@ -87,7 +118,7 @@
             "CIs": [],
             "loops": [
                 {
-                    "name": "VITIS_LOOP_93_5_VITIS_LOOP_94_6",
+                    "name": "VITIS_LOOP_103_5_VITIS_LOOP_104_6",
                     "type": "loop",
                     "trip_count": 368,
                     "pipelined": "yes",
@@ -105,7 +136,7 @@
         },
         {
             "ID": 3,
-            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_121_9_VITIS_LOOP_122_10",
+            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_130_9_VITIS_LOOP_131_10",
             "type": "function",
             "pipelined": "yes",
             "dataflowed": "no",
@@ -118,7 +149,7 @@
             "CIs": [],
             "loops": [
                 {
-                    "name": "VITIS_LOOP_121_9_VITIS_LOOP_122_10",
+                    "name": "VITIS_LOOP_130_9_VITIS_LOOP_131_10",
                     "type": "loop",
                     "trip_count": 192,
                     "pipelined": "yes",
@@ -136,7 +167,7 @@
         },
         {
             "ID": 4,
-            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_146_13_VITIS_LOOP_147_14",
+            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_156_13_VITIS_LOOP_157_14",
             "type": "function",
             "pipelined": "yes",
             "dataflowed": "no",
@@ -149,7 +180,7 @@
             "CIs": [],
             "loops": [
                 {
-                    "name": "VITIS_LOOP_146_13_VITIS_LOOP_147_14",
+                    "name": "VITIS_LOOP_156_13_VITIS_LOOP_157_14",
                     "type": "loop",
                     "trip_count": 192,
                     "pipelined": "yes",
@@ -166,8 +197,8 @@
             ]
         },
         {
-            "ID": 5,
-            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_156_15",
+            "ID": 6,
+            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_167_15",
             "type": "function",
             "pipelined": "yes",
             "dataflowed": "no",
@@ -180,13 +211,44 @@
             "CIs": [],
             "loops": [
                 {
-                    "name": "VITIS_LOOP_156_15",
+                    "name": "VITIS_LOOP_167_15",
                     "type": "loop",
                     "trip_count": 2,
                     "pipelined": "yes",
                     "dataflowed": "no",
                     "original_ti": 2,
                     "original_tl": 14,
+                    "calculated_ti": -1,
+                    "calculated_tl": -1,
+                    "assume_ti": -1,
+                    "assume_tl": -1,
+                    "CIs": [],
+                    "loops": []
+                }
+            ]
+        },
+        {
+            "ID": 7,
+            "name": "tiny_ecg_inference_Pipeline_VITIS_LOOP_181_17",
+            "type": "function",
+            "pipelined": "yes",
+            "dataflowed": "no",
+            "original_ti": 11,
+            "original_tl": 11,
+            "calculated_ti": -1,
+            "calculated_tl": -1,
+            "assume_ti": -1,
+            "assume_tl": -1,
+            "CIs": [],
+            "loops": [
+                {
+                    "name": "VITIS_LOOP_181_17",
+                    "type": "loop",
+                    "trip_count": 8,
+                    "pipelined": "yes",
+                    "dataflowed": "no",
+                    "original_ti": 8,
+                    "original_tl": 10,
                     "calculated_ti": -1,
                     "calculated_tl": -1,
                     "assume_ti": -1,

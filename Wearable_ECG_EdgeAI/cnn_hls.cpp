@@ -1,69 +1,78 @@
 #include <stdint.h>
 #include "weights.h"
 
-static inline int8_t requantize_and_relu(int32_t acc, int32_t multiplier, int32_t shift, int8_t output_zp) {
-    // M = multiplier / 2^shift. We use int64_t to prevent overflow during multiplication.
+// FIX: requantize_and_relu now returns uint8_t (quint8 range [0, 255]).
+// output_zp is int32_t (no longer int8_t, so fc_output_zp=136 no longer overflows).
+// ReLU clamps to [output_zp, 255], matching PyTorch quint8 behaviour.
+static inline uint8_t requantize_and_relu(int32_t acc, int32_t multiplier, int32_t shift, int32_t output_zp) {
+    // M = multiplier / 2^shift. Use int64_t to prevent overflow during multiplication.
     int64_t acc64 = (int64_t)acc * (int64_t)multiplier;
-    
+
     // Add rounding factor (half of the divisor) if shift > 0
     if (shift > 0) {
         acc64 += (1LL << (shift - 1));
     }
-    
+
     int32_t res = (int32_t)(acc64 >> shift);
     res += output_zp;
-    
-    // ReLU: The real value is max(0, x). In quantized domain, 0 corresponds to output_zp.
+
+    // ReLU: real value is max(0, x). In quant domain 0 maps to output_zp.
     if (res < output_zp) res = output_zp;
-    
-    // Clamp to INT8 range
-    if (res > 127) return 127;
-    if (res < -128) return -128;
-    return (int8_t)res;
+
+    // FIX: Clamp to quint8 range [0, 255], NOT int8 [-128, 127].
+    if (res > 255) return (uint8_t)255;
+    if (res < 0)   return (uint8_t)0;
+    return (uint8_t)res;
 }
 
-static inline int8_t requantize_linear(int32_t acc, int32_t multiplier, int32_t shift, int8_t output_zp) {
+// requantize_linear for the FC layer — no ReLU, stays int8_t for signed logit comparison.
+// output_zp is int32_t (no overflow for any value in [0, 255]).
+static inline uint8_t requantize_linear(int32_t acc, int32_t multiplier, int32_t shift, int32_t output_zp) {
     int64_t acc64 = (int64_t)acc * (int64_t)multiplier;
-    
+
     if (shift > 0) {
         acc64 += (1LL << (shift - 1));
     }
-    
+
     int32_t res = (int32_t)(acc64 >> shift);
     res += output_zp;
-    
-    // Clamp to INT8 range (No ReLU for final dense layer)
-    if (res > 127) return 127;
-    if (res < -128) return -128;
-    return (int8_t)res;
+
+    // FIX: clamp to uint8 range [0, 255] because PyTorch FC layer produces quint8
+    if (res > 255) return (uint8_t)255;
+    if (res < 0) return (uint8_t)0;
+    return (uint8_t)res;
 }
 
-void tiny_ecg_inference(int8_t input_ecg[90], int8_t output_logits[2]) {
+// FIX: Pad AXI Master bursts to multiples of 8 bytes (64 bits) to prevent Zynq HP port deadlocks.
+// input_ecg padded to 96 bytes. output_logits padded to 8 bytes.
+void tiny_ecg_inference(uint8_t input_ecg[96], uint8_t output_logits[8]) {
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL
-#pragma HLS INTERFACE m_axi port=input_ecg offset=slave bundle=DATA_IN depth=90
-#pragma HLS INTERFACE m_axi port=output_logits offset=slave bundle=DATA_OUT depth=2
+#pragma HLS INTERFACE m_axi port=input_ecg offset=slave bundle=DATA_IN depth=96
+#pragma HLS INTERFACE m_axi port=output_logits offset=slave bundle=DATA_OUT depth=8
 
-    // BUG FIX: Sequential memory copy to force an aligned AXI Burst!
-    // This prevents the unaligned random access crash!
-    int8_t local_ecg[90];
-    for(int i = 0; i < 90; i++) {
+    // Force an aligned 96-byte AXI Burst to prevent unaligned lockups
+    uint8_t local_ecg[96];
+    for(int i = 0; i < 96; i++) {
 #pragma HLS PIPELINE II=1
         local_ecg[i] = input_ecg[i];
     }
 
-    int8_t buffer_c1[8][45];
+    // FIX: Activation buffers are uint8_t (quint8 [0, 255]), not int8_t.
+    uint8_t buffer_c1[8][45];
 #pragma HLS ARRAY_PARTITION variable=buffer_c1 complete dim=1
 
-    int8_t buffer_c2[16][23];
+    uint8_t buffer_c2[16][23];
 #pragma HLS ARRAY_PARTITION variable=buffer_c2 complete dim=1
 
-    int8_t buffer_c3[16][12];
+    uint8_t buffer_c3[16][12];
 #pragma HLS ARRAY_PARTITION variable=buffer_c3 complete dim=1
-    int8_t flatten[192];
+
+    uint8_t flatten[192];
 
     // ------------------------------------------------------------------
     // Layer 1: Conv1D 1 -> 8, kernel 5, stride 2, padding 2
     // Output: 8 x 45
+    // input_zero_point is int32_t in weights.h — no overflow.
     // ------------------------------------------------------------------
     for (int out_idx = 0; out_idx < 45; ++out_idx) {
         for (int oc = 0; oc < CONV1_OUT_CH; ++oc) {
@@ -75,7 +84,8 @@ void tiny_ecg_inference(int8_t input_ecg[90], int8_t output_logits[2]) {
                 int32_t x = 0;
 
                 if (in_idx >= 0 && in_idx < INPUT_LENGTH) {
-                    // Apply input zero-point offset
+                    // FIX: local_ecg is uint8_t, cast to int32_t before subtraction
+                    // gives correct range: e.g. 140 - 104 = 36 (was 127 - 104 = 23).
                     x = (int32_t)local_ecg[in_idx] - input_zero_point;
                 }
 
@@ -101,8 +111,7 @@ void tiny_ecg_inference(int8_t input_ecg[90], int8_t output_logits[2]) {
                     int32_t x = 0;
 
                     if (in_idx >= 0 && in_idx < 45) {
-                        // Previous layer was relu'd and clamped, but we must subtract its zero point
-                        // to get the true mathematical value for the next layer.
+                        // FIX: buffer_c1 is uint8_t, subtraction into int32_t is correct.
                         x = (int32_t)buffer_c1[in_ch][in_idx] - conv1_output_zp;
                     }
 
@@ -129,6 +138,7 @@ void tiny_ecg_inference(int8_t input_ecg[90], int8_t output_logits[2]) {
                     int32_t x = 0;
 
                     if (in_idx >= 0 && in_idx < 23) {
+                        // FIX: buffer_c2 is uint8_t.
                         x = (int32_t)buffer_c2[in_ch][in_idx] - conv2_output_zp;
                     }
 
@@ -153,15 +163,23 @@ void tiny_ecg_inference(int8_t input_ecg[90], int8_t output_logits[2]) {
     // ------------------------------------------------------------------
     // Layer 4: Dense 192 -> 2 logits
     // ------------------------------------------------------------------
+    uint8_t local_out[8] = {0, 0, 0, 0, 0, 0, 0, 0};
     for (int out_class = 0; out_class < FC_OUT; ++out_class) {
 #pragma HLS PIPELINE II=1
         int32_t acc = fc_bias[out_class];
 
         for (int idx = 0; idx < FC_IN; ++idx) {
+            // FIX: flatten is uint8_t; conv3_output_zp is int32_t — no overflow.
             int32_t x = (int32_t)flatten[idx] - conv3_output_zp;
             acc += (int32_t)fc_weight[out_class * FC_IN + idx] * x;
         }
 
-        output_logits[out_class] = requantize_linear(acc, fc_multiplier[out_class], fc_shift[out_class], fc_output_zp);
+        local_out[out_class] = requantize_linear(acc, fc_multiplier[out_class], fc_shift[out_class], fc_output_zp);
+    }
+    
+    // Force an aligned 8-byte AXI Burst
+    for (int i = 0; i < 8; i++) {
+#pragma HLS PIPELINE II=1
+        output_logits[i] = local_out[i];
     }
 }

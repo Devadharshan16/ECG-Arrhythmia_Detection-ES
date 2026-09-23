@@ -86,8 +86,8 @@ void print_float(float num) {
 XTiny_ecg_inference Nn_Hardware;
 XAdcPs XAdcInst;
 
-__attribute__((aligned(32))) int8_t input_ecg[90];
-__attribute__((aligned(32))) int8_t output_logits[2];
+__attribute__((aligned(32))) uint8_t input_ecg[96];
+__attribute__((aligned(32))) uint8_t output_logits[8];
 
 #define NUM_TEST_BEATS 80
 
@@ -230,12 +230,12 @@ int main() {
 
         Xil_DCacheFlushRange(
             (UINTPTR)input_ecg,
-            90 * sizeof(int8_t)
+            96 * sizeof(uint8_t)
         );
 
         Xil_DCacheFlushRange(
             (UINTPTR)output_logits,
-            2 * sizeof(int8_t)
+            8 * sizeof(uint8_t)
         );
 
         print_str("Setting accelerator input...\n");
@@ -314,7 +314,7 @@ int main() {
 
         Xil_DCacheInvalidateRange(
             (UINTPTR)output_logits,
-            2 * sizeof(int8_t)
+            8 * sizeof(uint8_t)
         );
 
         int predicted_class =

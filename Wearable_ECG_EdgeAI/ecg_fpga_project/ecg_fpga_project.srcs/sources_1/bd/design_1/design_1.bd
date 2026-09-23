@@ -12,7 +12,6 @@
     },
     "design_tree": {
       "processing_system7_0": "",
-      "tiny_ecg_inference_0": "",
       "axi_mem_intercon": {
         "xbar": "",
         "s00_couplers": {
@@ -27,7 +26,8 @@
       },
       "rst_ps7_0_50M": "",
       "axi_smc": "",
-      "axi_gpio_0": ""
+      "axi_gpio_0": "",
+      "tiny_ecg_inference_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -535,60 +535,6 @@
                   }
                 }
               }
-            }
-          }
-        }
-      },
-      "tiny_ecg_inference_0": {
-        "vlnv": "xilinx.com:hls:tiny_ecg_inference:1.0",
-        "ip_revision": "2114784080",
-        "xci_name": "design_1_tiny_ecg_inference_0_0",
-        "xci_path": "ip\\design_1_tiny_ecg_inference_0_0\\design_1_tiny_ecg_inference_0_0.xci",
-        "inst_hier_path": "tiny_ecg_inference_0",
-        "has_run_ip_tcl": "true",
-        "interface_ports": {
-          "m_axi_DATA_IN": {
-            "bd_attributes": {
-              "TYPE": {
-                "value": "END_POINT",
-                "value_src": "auto"
-              }
-            },
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "Data_m_axi_DATA_IN",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFFFFFFFFFF",
-              "width": "64"
-            }
-          },
-          "m_axi_DATA_OUT": {
-            "bd_attributes": {
-              "TYPE": {
-                "value": "END_POINT",
-                "value_src": "auto"
-              }
-            },
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "Data_m_axi_DATA_OUT",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFFFFFFFFFF",
-              "width": "64"
-            }
-          }
-        },
-        "addressing": {
-          "address_spaces": {
-            "Data_m_axi_DATA_IN": {
-              "range": "16E",
-              "width": "64"
-            },
-            "Data_m_axi_DATA_OUT": {
-              "range": "16E",
-              "width": "64"
             }
           }
         }
@@ -1334,6 +1280,60 @@
           },
           "C_IS_DUAL": {
             "value": "1"
+          }
+        }
+      },
+      "tiny_ecg_inference_0": {
+        "vlnv": "xilinx.com:hls:tiny_ecg_inference:1.0",
+        "ip_revision": "2114797752",
+        "xci_name": "design_1_tiny_ecg_inference_0_1",
+        "xci_path": "ip\\design_1_tiny_ecg_inference_0_1\\design_1_tiny_ecg_inference_0_1.xci",
+        "inst_hier_path": "tiny_ecg_inference_0",
+        "has_run_ip_tcl": "true",
+        "interface_ports": {
+          "m_axi_DATA_IN": {
+            "bd_attributes": {
+              "TYPE": {
+                "value": "END_POINT",
+                "value_src": "auto"
+              }
+            },
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data_m_axi_DATA_IN",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFFFFFFFFFF",
+              "width": "64"
+            }
+          },
+          "m_axi_DATA_OUT": {
+            "bd_attributes": {
+              "TYPE": {
+                "value": "END_POINT",
+                "value_src": "auto"
+              }
+            },
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data_m_axi_DATA_OUT",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFFFFFFFFFF",
+              "width": "64"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Data_m_axi_DATA_IN": {
+              "range": "16E",
+              "width": "64"
+            },
+            "Data_m_axi_DATA_OUT": {
+              "range": "16E",
+              "width": "64"
+            }
           }
         }
       }

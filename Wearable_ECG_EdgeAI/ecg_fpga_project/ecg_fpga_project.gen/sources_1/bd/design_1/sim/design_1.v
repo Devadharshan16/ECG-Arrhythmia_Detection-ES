@@ -2,7 +2,7 @@
 //Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
-//Date        : Sun Sep 13 12:34:53 2026
+//Date        : Tue Sep 22 23:14:58 2026
 //Host        : Devadharshan running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -563,7 +563,7 @@ module design_1
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_50M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
-  design_1_tiny_ecg_inference_0_0 tiny_ecg_inference_0
+  design_1_tiny_ecg_inference_0_1 tiny_ecg_inference_0
        (.ap_clk(processing_system7_0_FCLK_CLK0),
         .ap_rst_n(rst_ps7_0_50M_peripheral_aresetn),
         .m_axi_DATA_IN_ARADDR(tiny_ecg_inference_0_m_axi_DATA_IN_ARADDR),

@@ -13,7 +13,7 @@ entity tiny_ecg_inference_local_ecg_RAM_AUTO_1R1W is
         MEM_TYPE        : string    := "auto";
         DataWidth       : integer   := 8;
         AddressWidth    : integer   := 5;
-        AddressRange    : integer   := 18
+        AddressRange    : integer   := 20
     );
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0);

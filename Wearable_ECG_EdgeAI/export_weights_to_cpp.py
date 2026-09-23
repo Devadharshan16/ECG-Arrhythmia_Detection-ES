@@ -208,7 +208,7 @@ def export_weights():
         H.append("")
         if hasattr(layer, 'scale'):
             H.append(f"const float {name}_output_scale = {layer.scale:.10f}f;")
-            H.append(f"const int8_t {name}_output_zp = {int(layer.zero_point)};")
+            H.append(f"const int32_t {name}_output_zp = {int(layer.zero_point)};")  # int32_t: never overflows
             H.append("")
         H.append(f"/* Fixed-point Requantization Multipliers and Shifts */")
         H.append(format_int_array(f"{name}_multiplier", multipliers, "int32_t", per_line=8))
@@ -218,7 +218,7 @@ def export_weights():
     # --- Input quantization from QuantStub ---
     H.append("/* ---- Input Quantization (QuantStub) ---- */")
     H.append(f"const float input_scale = {quant_scale:.10f}f;")
-    H.append(f"const int8_t input_zero_point = {int(quant_zp)};")
+    H.append(f"const int32_t input_zero_point = {int(quant_zp)};")  # int32_t: never overflows
     H.append("")
 
     # --- Layer configuration constants ---

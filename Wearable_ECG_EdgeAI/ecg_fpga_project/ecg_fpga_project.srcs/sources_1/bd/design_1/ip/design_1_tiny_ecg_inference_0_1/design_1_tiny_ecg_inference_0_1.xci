@@ -4,7 +4,7 @@
     "xci_name": "design_1_tiny_ecg_inference_0_1",
     "cell_name": "tiny_ecg_inference_0",
     "component_reference": "xilinx.com:hls:tiny_ecg_inference:1.0",
-    "ip_revision": "2114797752",
+    "ip_revision": "2114800025",
     "gen_directory": "../../../../../../ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_tiny_ecg_inference_0_1",
     "parameters": {
       "component_parameters": {
@@ -82,7 +82,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "2114797752" } ],
+        "IPREVISION": [ { "value": "2114800025" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../ecg_fpga_project.gen/sources_1/bd/design_1/ip/design_1_tiny_ecg_inference_0_1" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -789,5 +789,5 @@
       }
     }
   },
-  "checksum": "84c97174"
+  "checksum": "4fb0cad9"
 }

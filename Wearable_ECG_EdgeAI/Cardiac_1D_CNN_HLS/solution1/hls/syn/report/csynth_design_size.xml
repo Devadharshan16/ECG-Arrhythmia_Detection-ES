@@ -33,8 +33,8 @@
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
                 <row id="0" col0="tiny_ecg_inference" col1="cnn_hls.cpp:48" col2="477" col3="3036" col4="3345" col5="4791" col6="4441">
-                    <row id="2" col0="requantize_and_relu" col1="cnn_hls.cpp:7" col2="87" col2_disp=" 87 (3 calls)" col3="" col4="" col5="" col6=""/>
-                    <row id="1" col0="requantize_linear" col1="cnn_hls.cpp:30" col2="25" col3="" col4="" col5="" col6=""/>
+                    <row id="1" col0="requantize_and_relu" col1="cnn_hls.cpp:7" col2="87" col2_disp=" 87 (3 calls)" col3="" col4="" col5="" col6=""/>
+                    <row id="2" col0="requantize_linear" col1="cnn_hls.cpp:30" col2="25" col3="" col4="" col5="" col6=""/>
                 </row>
             </rows>
             <notes/>

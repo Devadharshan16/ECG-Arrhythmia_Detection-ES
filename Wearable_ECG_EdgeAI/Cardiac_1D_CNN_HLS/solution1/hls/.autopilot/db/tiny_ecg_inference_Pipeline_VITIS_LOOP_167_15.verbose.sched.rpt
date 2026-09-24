@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'tiny_ecg_inference_Pipeline_VITIS_LOOP_167_15'
 ================================================================
-* Date:           Tue Sep 22 23:11:55 2026
+* Date:           Thu Sep 24 13:05:01 2026
 
 * Version:        2026.1 (Build 6493734 on Jun 16 2026)
 * Project:        solution1
@@ -1795,7 +1795,7 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'add' operation 14 bit ('res', ../cnn_hls.cpp:38->../cnn_hls.cpp:177) [1530]  (1.679 ns)
 	'icmp' operation 1 bit ('icmp_ln41', ../cnn_hls.cpp:41->../cnn_hls.cpp:177) [1533]  (1.825 ns)
-	'select' operation 8 bit ('select_ln41_1', ../cnn_hls.cpp:41->../cnn_hls.cpp:177) [1536]  (0.000 ns)
+	'or' operation 1 bit ('or_ln41', ../cnn_hls.cpp:41->../cnn_hls.cpp:177) [1537]  (0.000 ns)
 	'select' operation 8 bit ('select_ln41', ../cnn_hls.cpp:41->../cnn_hls.cpp:177) [1538]  (1.248 ns)
 	'store' operation ('store_ln177', ../cnn_hls.cpp:177) of variable 'select_ln41', ../cnn_hls.cpp:41->../cnn_hls.cpp:177 8 bit on array 'local_out' [1540]  (2.322 ns)
 

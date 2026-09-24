@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 112,
-    "calls": "2 2 2 1",
+    "calls": "1 1 1 2",
     "control_depth": 3,
     "def_use_depth": 7,
     "file": "cnn_hls.cpp",
@@ -21,18 +21,6 @@
     "total_instructions": 477
   },
   "1": {
-    "basicblocks": 8,
-    "calls": "",
-    "control_depth": 0,
-    "def_use_depth": 4,
-    "file": "cnn_hls.cpp",
-    "fileloc": 30,
-    "instructions": 25,
-    "memory_accesses": 0,
-    "name": "requantize_linear",
-    "total_instructions": 25
-  },
-  "2": {
     "basicblocks": 10,
     "calls": "",
     "control_depth": 0,
@@ -43,5 +31,17 @@
     "memory_accesses": 0,
     "name": "requantize_and_relu",
     "total_instructions": 29
+  },
+  "2": {
+    "basicblocks": 8,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "cnn_hls.cpp",
+    "fileloc": 30,
+    "instructions": 25,
+    "memory_accesses": 0,
+    "name": "requantize_linear",
+    "total_instructions": 25
   }
 }

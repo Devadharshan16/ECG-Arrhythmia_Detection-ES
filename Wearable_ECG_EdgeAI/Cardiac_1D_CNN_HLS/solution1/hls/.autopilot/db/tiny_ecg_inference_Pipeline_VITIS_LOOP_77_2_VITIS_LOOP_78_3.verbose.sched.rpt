@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'tiny_ecg_inference_Pipeline_VITIS_LOOP_77_2_VITIS_LOOP_78_3'
 ================================================================
-* Date:           Tue Sep 22 23:11:45 2026
+* Date:           Thu Sep 24 13:04:53 2026
 
 * Version:        2026.1 (Build 6493734 on Jun 16 2026)
 * Project:        solution1
@@ -547,7 +547,7 @@ Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 The critical path consists of the following:
 	'store' operation ('store_ln0') of constant 0 9 bit on local variable 'indvar_flatten' [57]  (1.588 ns)
 	'load' operation 9 bit ('indvar_flatten_load', ../cnn_hls.cpp:77) on local variable 'indvar_flatten' [62]  (0.000 ns)
-	'add' operation 9 bit ('add_ln77', ../cnn_hls.cpp:77) [64]  (1.823 ns)
+	'icmp' operation 1 bit ('icmp_ln77', ../cnn_hls.cpp:77) [63]  (1.823 ns)
 	'store' operation ('store_ln77', ../cnn_hls.cpp:77) of variable 'add_ln77', ../cnn_hls.cpp:77 9 bit on local variable 'indvar_flatten' [434]  (1.588 ns)
 
  <State 2>: 6.082ns
@@ -655,7 +655,7 @@ The critical path consists of the following:
  <State 23>: 3.570ns
 The critical path consists of the following:
 	'select' operation 8 bit ('select_ln23', ../cnn_hls.cpp:23->../cnn_hls.cpp:95) [278]  (1.248 ns)
-	'store' operation ('store_ln95', ../cnn_hls.cpp:95) of variable 'select_ln23', ../cnn_hls.cpp:23->../cnn_hls.cpp:95 8 bit on array 'buffer_c1' [406]  (2.322 ns)
+	'store' operation ('store_ln95', ../cnn_hls.cpp:95) of variable 'select_ln23', ../cnn_hls.cpp:23->../cnn_hls.cpp:95 8 bit on array 'buffer_c1_36' [422]  (2.322 ns)
 
 
 ============================================================

@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "09/22/26 23:11:26",
- "timestampMillis": "1790098886174",
+ "dateTimestamp": "09/24/26 13:04:29",
+ "timestampMillis": "1790235269633",
  "buildStep": {
-  "cmdId": "2fa53d97-6fd4-4b6a-aeb3-7636c36eff6e",
+  "cmdId": "93cdb6bc-c39f-4b24-b166-ceb56ec4f220",
   "name": "v++",
   "logFile": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS\\solution1\\logs\\solution1.steps.log",
   "commandLine": "D:/AMD/2026.1/Vitis/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config hls_config.cfg --work_dir solution1 ",
@@ -38,10 +38,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "09/22/26 23:11:26",
- "timestampMillis": "1790098886175",
+ "dateTimestamp": "09/24/26 13:04:29",
+ "timestampMillis": "1790235269634",
  "status": {
-  "cmdId": "2fa53d97-6fd4-4b6a-aeb3-7636c36eff6e",
+  "cmdId": "93cdb6bc-c39f-4b24-b166-ceb56ec4f220",
   "state": "CS_RUNNING"
  }
 }
@@ -49,8 +49,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "09/22/26 23:11:29",
- "timestampMillis": "1790098889090",
+ "dateTimestamp": "09/24/26 13:04:36",
+ "timestampMillis": "1790235276851",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -85,10 +85,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "09/22/26 23:11:29",
- "timestampMillis": "1790098889090",
+ "dateTimestamp": "09/24/26 13:04:36",
+ "timestampMillis": "1790235276853",
  "buildStep": {
-  "cmdId": "2914417c-2031-4431-adfd-d6b83500d6f1",
+  "cmdId": "ed8f4f7f-2bb7-4121-8b2a-d12fff887c70",
   "name": "",
   "logFile": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS\\solution1\\hls\\hls.log",
   "commandLine": "",
@@ -101,10 +101,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "09/22/26 23:11:29",
- "timestampMillis": "1790098889091",
+ "dateTimestamp": "09/24/26 13:04:36",
+ "timestampMillis": "1790235276853",
  "status": {
-  "cmdId": "2914417c-2031-4431-adfd-d6b83500d6f1",
+  "cmdId": "ed8f4f7f-2bb7-4121-8b2a-d12fff887c70",
   "state": "CS_RUNNING"
  }
 }
@@ -112,8 +112,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "09/22/26 23:11:29",
- "timestampMillis": "1790098889091",
+ "dateTimestamp": "09/24/26 13:04:36",
+ "timestampMillis": "1790235276853",
  "report": {
   "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS\\solution1\\hls\\hls_data.json",
   "name": "",
@@ -126,8 +126,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "09/22/26 23:11:29",
- "timestampMillis": "1790098889091",
+ "dateTimestamp": "09/24/26 13:04:36",
+ "timestampMillis": "1790235276854",
  "report": {
   "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS\\solution1\\hls\\syn\\report\\csynth.rpt",
   "name": "",
@@ -140,8 +140,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "09/22/26 23:11:29",
- "timestampMillis": "1790098889091",
+ "dateTimestamp": "09/24/26 13:04:36",
+ "timestampMillis": "1790235276854",
  "report": {
   "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS\\solution1\\hls\\syn\\report\\csynth.xml",
   "name": "",
@@ -154,8 +154,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "09/22/26 23:12:17",
- "timestampMillis": "1790098937686",
+ "dateTimestamp": "09/24/26 13:05:29",
+ "timestampMillis": "1790235329493",
  "report": {
   "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS\\solution1\\hls",
   "name": "",
@@ -168,8 +168,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "09/22/26 23:12:17",
- "timestampMillis": "1790098937687",
+ "dateTimestamp": "09/24/26 13:05:29",
+ "timestampMillis": "1790235329494",
  "report": {
   "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS\\solution1\\hls",
   "name": "",
@@ -182,8 +182,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "09/22/26 23:12:17",
- "timestampMillis": "1790098937687",
+ "dateTimestamp": "09/24/26 13:05:29",
+ "timestampMillis": "1790235329494",
  "report": {
   "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS\\solution1\\hls",
   "name": "",
@@ -196,10 +196,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "09/22/26 23:12:17",
- "timestampMillis": "1790098937687",
+ "dateTimestamp": "09/24/26 13:05:29",
+ "timestampMillis": "1790235329495",
  "status": {
-  "cmdId": "2914417c-2031-4431-adfd-d6b83500d6f1",
+  "cmdId": "ed8f4f7f-2bb7-4121-8b2a-d12fff887c70",
   "state": "CS_PASSED"
  }
 }
@@ -207,10 +207,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "09/22/26 23:12:34",
- "timestampMillis": "1790098954954",
+ "dateTimestamp": "09/24/26 13:05:59",
+ "timestampMillis": "1790235359660",
  "status": {
-  "cmdId": "2fa53d97-6fd4-4b6a-aeb3-7636c36eff6e",
+  "cmdId": "93cdb6bc-c39f-4b24-b166-ceb56ec4f220",
   "state": "CS_PASSED"
  }
 }
@@ -218,8 +218,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "09/22/26 23:12:34",
- "timestampMillis": "1790098954972",
+ "dateTimestamp": "09/24/26 13:05:59",
+ "timestampMillis": "1790235359681",
  "report": {
   "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS\\solution1\\reports\\v++_compile_solution1_guidance.html",
   "name": "",
@@ -232,8 +232,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "09/22/26 23:12:34",
- "timestampMillis": "1790098954972",
+ "dateTimestamp": "09/24/26 13:05:59",
+ "timestampMillis": "1790235359681",
  "report": {
   "path": "D:/ECG-Embedded_System\\Wearable_ECG_EdgeAI\\Cardiac_1D_CNN_HLS\\solution1\\reports\\.db\\v++_compile_solution1_guidance.pb3",
   "name": "",

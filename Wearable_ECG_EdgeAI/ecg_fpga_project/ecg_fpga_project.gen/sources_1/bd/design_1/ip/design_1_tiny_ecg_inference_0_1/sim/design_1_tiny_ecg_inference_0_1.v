@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:hls:tiny_ecg_inference:1.0
-// IP Revision: 2114797752
+// IP Revision: 2114800025
 
 `timescale 1ns/1ps
 

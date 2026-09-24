@@ -15,8 +15,7 @@
 #ifndef XPAR_CPU_CORTEXA9_0_CPU_CLK_FREQ_HZ
 #define XPAR_CPU_CORTEXA9_0_CPU_CLK_FREQ_HZ XPAR_CPU_CORE_CLOCK_FREQ_HZ
 #endif
-
-#include "xtime_l.h"
+#include "xiltimer.h"
 
 /* ---------------------------------------------------------------------
  * FIXED PRINT FUNCTIONS

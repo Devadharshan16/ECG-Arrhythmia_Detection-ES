@@ -1285,7 +1285,7 @@
       },
       "tiny_ecg_inference_0": {
         "vlnv": "xilinx.com:hls:tiny_ecg_inference:1.0",
-        "ip_revision": "2114797752",
+        "ip_revision": "2114800025",
         "xci_name": "design_1_tiny_ecg_inference_0_1",
         "xci_path": "ip\\design_1_tiny_ecg_inference_0_1\\design_1_tiny_ecg_inference_0_1.xci",
         "inst_hier_path": "tiny_ecg_inference_0",

@@ -1,0 +1,2295 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.09.24 21:08:44 =~=~=~=~=~=~=~=~=~=~=~=
+
+======================================================
+   Wearable ECG Edge-AI Hardware Accelerator (Zynq)   
+======================================================
+
+DS2 Dataset Loaded
+Total DS2 Beats: 51170
+
+Randomly Selected 150 DS2 Beats:
+Beat 1 -> Dataset Index: 24
+Beat 2 -> Dataset Index: 31579
+Beat 3 -> Dataset Index: 38786
+Beat 4 -> Dataset Index: 42811
+Beat 5 -> Dataset Index: 3697
+Beat 6 -> Dataset Index: 37629
+Beat 7 -> Dataset Index: 6118
+Beat 8 -> Dataset Index: 18759
+Beat 9 -> Dataset Index: 3273
+Beat 10 -> Dataset Index: 21048
+Beat 11 -> Dataset Index: 4907
+Beat 12 -> Dataset Index: 50554
+Beat 13 -> Dataset Index: 5992
+Beat 14 -> Dataset Index: 8534
+Beat 15 -> Dataset Index: 29190
+Beat 16 -> Dataset Index: 32236
+Beat 17 -> Dataset Index: 8971
+Beat 18 -> Dataset Index: 1283
+Beat 19 -> Dataset Index: 30773
+Beat 20 -> Dataset Index: 25908
+Beat 21 -> Dataset Index: 25720
+Beat 22 -> Dataset Index: 27578
+Beat 23 -> Dataset Index: 18836
+Beat 24 -> Dataset Index: 19180
+Beat 25 -> Dataset Index: 13724
+Beat 26 -> Dataset Index: 797
+Beat 27 -> Dataset Index: 15826
+Beat 28 -> Dataset Index: 37340
+Beat 29 -> Dataset Index: 15245
+Beat 30 -> Dataset Index: 23283
+Beat 31 -> Dataset Index: 39672
+Beat 32 -> Dataset Index: 33147
+Beat 33 -> Dataset Index: 38853
+Beat 34 -> Dataset Index: 31852
+Beat 35 -> Dataset Index: 576
+Beat 36 -> Dataset Index: 32312
+Beat 37 -> Dataset Index: 49411
+Beat 38 -> Dataset Index: 47298
+Beat 39 -> Dataset Index: 5263
+Beat 40 -> Dataset Index: 5246
+Beat 41 -> Dataset Index: 36905
+Beat 42 -> Dataset Index: 10615
+Beat 43 -> Dataset Index: 34982
+Beat 44 -> Dataset Index: 1204
+Beat 45 -> Dataset Index: 8201
+Beat 46 -> Dataset Index: 3934
+Beat 47 -> Dataset Index: 1113
+Beat 48 -> Dataset Index: 22016
+Beat 49 -> Dataset Index: 821
+Beat 50 -> Dataset Index: 16473
+Beat 51 -> Dataset Index: 9971
+Beat 52 -> Dataset Index: 40059
+Beat 53 -> Dataset Index: 13273
+Beat 54 -> Dataset Index: 46488
+Beat 55 -> Dataset Index: 11001
+Beat 56 -> Dataset Index: 32490
+Beat 57 -> Dataset Index: 46690
+Beat 58 -> Dataset Index: 28617
+Beat 59 -> Dataset Index: 23985
+Beat 60 -> Dataset Index: 44784
+Beat 61 -> Dataset Index: 39509
+Beat 62 -> Dataset Index: 40668
+Beat 63 -> Dataset Index: 5908
+Beat 64 -> Dataset Index: 36055
+Beat 65 -> Dataset Index: 10278
+Beat 66 -> Dataset Index: 25503
+Beat 67 -> Dataset Index: 26022
+Beat 68 -> Dataset Index: 10243
+Beat 69 -> Dataset Index: 7737
+Beat 70 -> Dataset Index: 13192
+Beat 71 -> Dataset Index: 21232
+Beat 72 -> Dataset Index: 38140
+Beat 73 -> Dataset Index: 31273
+Beat 74 -> Dataset Index: 43822
+Beat 75 -> Dataset Index: 8946
+Beat 76 -> Dataset Index: 41133
+Beat 77 -> Dataset Index: 8606
+Beat 78 -> Dataset Index: 46267
+Beat 79 -> Dataset Index: 32477
+Beat 80 -> Dataset Index: 21309
+Beat 81 -> Dataset Index: 20701
+Beat 82 -> Dataset Index: 20341
+Beat 83 -> Dataset Index: 13896
+Beat 84 -> Dataset Index: 30396
+Beat 85 -> Dataset Index: 17460
+Beat 86 -> Dataset Index: 42668
+Beat 87 -> Dataset Index: 29858
+Beat 88 -> Dataset Index: 16525
+Beat 89 -> Dataset Index: 47103
+Beat 90 -> Dataset Index: 37244
+Beat 91 -> Dataset Index: 16227
+Beat 92 -> Dataset Index: 40614
+Beat 93 -> Dataset Index: 36763
+Beat 94 -> Dataset Index: 11385
+Beat 95 -> Dataset Index: 38730
+Beat 96 -> Dataset Index: 24939
+Beat 97 -> Dataset Index: 1890
+Beat 98 -> Dataset Index: 38518
+Beat 99 -> Dataset Index: 42352
+Beat 100 -> Dataset Index: 23664
+Beat 101 -> Dataset Index: 30233
+Beat 102 -> Dataset Index: 10800
+Beat 103 -> Dataset Index: 40982
+Beat 104 -> Dataset Index: 12340
+Beat 105 -> Dataset Index: 28383
+Beat 106 -> Dataset Index: 28183
+Beat 107 -> Dataset Index: 18740
+Beat 108 -> Dataset Index: 46158
+Beat 109 -> Dataset Index: 47289
+Beat 110 -> Dataset Index: 50410
+Beat 111 -> Dataset Index: 9338
+Beat 112 -> Dataset Index: 6800
+Beat 113 -> Dataset Index: 39791
+Beat 114 -> Dataset Index: 32106
+Beat 115 -> Dataset Index: 17441
+Beat 116 -> Dataset Index: 50548
+Beat 117 -> Dataset Index: 45292
+Beat 118 -> Dataset Index: 11317
+Beat 119 -> Dataset Index: 20768
+Beat 120 -> Dataset Index: 46212
+Beat 121 -> Dataset Index: 22745
+Beat 122 -> Dataset Index: 48025
+Beat 123 -> Dataset Index: 5183
+Beat 124 -> Dataset Index: 36070
+Beat 125 -> Dataset Index: 46572
+Beat 126 -> Dataset Index: 27579
+Beat 127 -> Dataset Index: 18436
+Beat 128 -> Dataset Index: 37029
+Beat 129 -> Dataset Index: 42372
+Beat 130 -> Dataset Index: 39779
+Beat 131 -> Dataset Index: 34636
+Beat 132 -> Dataset Index: 47148
+Beat 133 -> Dataset Index: 38313
+Beat 134 -> Dataset Index: 46557
+Beat 135 -> Dataset Index: 27539
+Beat 136 -> Dataset Index: 31641
+Beat 137 -> Dataset Index: 6854
+Beat 138 -> Dataset Index: 46378
+Beat 139 -> Dataset Index: 36679
+Beat 140 -> Dataset Index: 33387
+Beat 141 -> Dataset Index: 50083
+Beat 142 -> Dataset Index: 37389
+Beat 143 -> Dataset Index: 30600
+Beat 144 -> Dataset Index: 212
+Beat 145 -> Dataset Index: 5355
+Beat 146 -> Dataset Index: 19049
+Beat 147 -> Dataset Index: 38284
+Beat 148 -> Dataset Index: 12983
+Beat 149 -> Dataset Index: 11656
+Beat 150 -> Dataset Index: 29916
+
+Starting inference iteration 1
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 1 / 150 ---
+DS2 Dataset Index: 24
+NORMAL
+H/W Latency : 4511.13 us
+Die Temp (C): 42.52 C
+
+Starting inference iteration 2
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 2 / 150 ---
+DS2 Dataset Index: 31579
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 42.62 C
+
+Starting inference iteration 3
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 3 / 150 ---
+DS2 Dataset Index: 38786
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 42.71 C
+
+Starting inference iteration 4
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 4 / 150 ---
+DS2 Dataset Index: 0
+NORMAL
+H/W Latency : 4511.38 us
+Die Temp (C): 42.58 C
+
+Starting inference iteration 5
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 5 / 150 ---
+DS2 Dataset Index: 3697
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 42.52 C
+
+Starting inference iteration 6
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 6 / 150 ---
+DS2 Dataset Index: 37629
+Ground Truth: ANOMALY
+NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 42.93 C
+
+Starting inference iteration 7
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 7 / 150 ---
+DS2 Dataset Index: 6118
+ANOMALY
+H/W Latency : 4511.36 us
+Die Temp (C): 43.00 C
+
+Starting inference iteration 8
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 8 / 150 ---
+DS2 Dataset Index: 18759
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 42.68 C
+
+Starting inference iteration 9
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 9 / 150 ---
+DS2 Dataset Index: 3273
+NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 42.58 C
+
+Starting inference iteration 10
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 10 / 150 ---
+DS2 Dataset Index: 21048
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 42.91 C
+
+Starting inference iteration 11
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 11 / 150 ---
+DS2 Dataset Index: 4907
+NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 42.84 C
+
+Starting inference iteration 12
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 12 / 150 ---
+DS2 Dataset Index: 50554
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 42.85 C
+
+Starting inference iteration 13
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 13 / 150 ---
+DS2 Dataset Index: 5992
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.17 C
+
+Starting inference iteration 14
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 14 / 150 ---
+DS2 Dataset Index: 8534
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 42.85 C
+
+Starting inference iteration 15
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 15 / 150 ---
+DS2 Dataset Index: 29190
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 43.18 C
+
+Starting inference iteration 16
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 16 / 150 ---
+DS2 Dataset Index: 32236
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 43.17 C
+
+Starting inference iteration 17
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 17 / 150 ---
+DS2 Dataset Index: 8971
+NORMAL
+H/W Latency : 4511.45 us
+Die Temp (C): 43.35 C
+
+Starting inference iteration 18
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 18 / 150 ---
+DS2 Dataset Index: 1283
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 43.26 C
+
+Starting inference iteration 19
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 19 / 150 ---
+DS2 Dataset Index: 30773
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.05 C
+
+Starting inference iteration 20
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 20 / 150 ---
+DS2 Dataset Index: 25908
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.01 C
+
+Starting inference iteration 21
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 21 / 150 ---
+DS2 Dataset Index: 25720
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.05 C
+
+Starting inference iteration 22
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 22 / 150 ---
+DS2 Dataset Index: 27578
+NORMAL
+H/W Latency : 4511.38 us
+Die Temp (C): 43.57 C
+
+Starting inference iteration 23
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 23 / 150 ---
+DS2 Dataset Index: 18836
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 43.48 C
+
+Starting inference iteration 24
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 24 / 150 ---
+DS2 Dataset Index: 19180
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.35 C
+
+Starting inference iteration 25
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 25 / 150 ---
+DS2 Dataset Index: 13724
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.47 C
+
+Starting inference iteration 26
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 26 / 150 ---
+DS2 Dataset Index: 797
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.18 C
+
+Starting inference iteration 27
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 27 / 150 ---
+DS2 Dataset Index: 15826
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 43.38 C
+
+Starting inference iteration 28
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 28 / 150 ---
+DS2 Dataset Index: 37340
+NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 43.35 C
+
+Starting inference iteration 29
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 29 / 150 ---
+DS2 Dataset Index: 15245
+NORMAL
+H/W Latency : 4511.45 us
+Die Temp (C): 43.30 C
+
+Starting inference iteration 30
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 30 / 150 ---
+DS2 Dataset Index: 23283
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.49 us
+Die Temp (C): 43.53 C
+
+Starting inference iteration 31
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 31 / 150 ---
+DS2 Dataset Index: 39672
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.65 C
+
+Starting inference iteration 32
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 32 / 150 ---
+DS2 Dataset Index: 33147
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 43.39 C
+
+Starting inference iteration 33
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 33 / 150 ---
+DS2 Dataset Index: 38853
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.65 C
+
+Starting inference iteration 34
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 34 / 150 ---
+DS2 Dataset Index: 31852
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.65 C
+
+Starting inference iteration 35
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 35 / 150 ---
+DS2 Dataset Index: 576
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.35 C
+
+Starting inference iteration 36
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 36 / 150 ---
+DS2 Dataset Index: 32312
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.34 C
+
+Starting inference iteration 37
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 37 / 150 ---
+DS2 Dataset Index: 49411
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.95 C
+
+Starting inference iteration 38
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 38 / 150 ---
+DS2 Dataset Index: 47298
+NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 43.45 C
+
+Starting inference iteration 39
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 39 / 150 ---
+DS2 Dataset Index: 5263
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.74 C
+
+Starting inference iteration 40
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 40 / 150 ---
+DS2 Dataset Index: 5246
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.49 C
+
+Starting inference iteration 41
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 41 / 150 ---
+DS2 Dataset Index: 36905
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.63 C
+
+Starting inference iteration 42
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 42 / 150 ---
+DS2 Dataset Index: 10615
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.83 C
+
+Starting inference iteration 43
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 43 / 150 ---
+DS2 Dataset Index: 34982
+NORMAL
+H/W Latency : 4511.38 us
+Die Temp (C): 43.55 C
+
+Starting inference iteration 44
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 44 / 150 ---
+DS2 Dataset Index: 1204
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.04 C
+
+Starting inference iteration 45
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 45 / 150 ---
+DS2 Dataset Index: 8201
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.47 C
+
+Starting inference iteration 46
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 46 / 150 ---
+DS2 Dataset Index: 3934
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.55 C
+
+Starting inference iteration 47
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 47 / 150 ---
+DS2 Dataset Index: 1113
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.66 C
+
+Starting inference iteration 48
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 48 / 150 ---
+DS2 Dataset Index: 22016
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.13 C
+
+Starting inference iteration 49
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 49 / 150 ---
+DS2 Dataset Index: 821
+NORMAL
+H/W Latency : 4511.47 us
+Die Temp (C): 43.80 C
+
+Starting inference iteration 50
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 50 / 150 ---
+DS2 Dataset Index: 16473
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 43.94 C
+
+Starting inference iteration 51
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 51 / 150 ---
+DS2 Dataset Index: 9971
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.19 C
+
+Starting inference iteration 52
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 52 / 150 ---
+DS2 Dataset Index: 40059
+NORMAL
+H/W Latency : 4511.45 us
+Die Temp (C): 44.10 C
+
+Starting inference iteration 53
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 53 / 150 ---
+DS2 Dataset Index: 13273
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 43.66 C
+
+Starting inference iteration 54
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 54 / 150 ---
+DS2 Dataset Index: 46488
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 44.12 C
+
+Starting inference iteration 55
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 55 / 150 ---
+DS2 Dataset Index: 11001
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.78 C
+
+Starting inference iteration 56
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 56 / 150 ---
+DS2 Dataset Index: 32490
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 43.68 C
+
+Starting inference iteration 57
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 57 / 150 ---
+DS2 Dataset Index: 46690
+NORMAL
+H/W Latency : 4511.45 us
+Die Temp (C): 44.15 C
+
+Starting inference iteration 58
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 58 / 150 ---
+DS2 Dataset Index: 28617
+NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 44.06 C
+
+Starting inference iteration 59
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 59 / 150 ---
+DS2 Dataset Index: 23985
+NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 44.21 C
+
+Starting inference iteration 60
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 60 / 150 ---
+DS2 Dataset Index: 44784
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 44.19 C
+
+Starting inference iteration 61
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 61 / 150 ---
+DS2 Dataset Index: 39509
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.99 C
+
+Starting inference iteration 62
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 62 / 150 ---
+DS2 Dataset Index: 40668
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.45 us
+Die Temp (C): 43.83 C
+
+Starting inference iteration 63
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 63 / 150 ---
+DS2 Dataset Index: 5908
+NORMAL
+H/W Latency : 4511.34 us
+Die Temp (C): 43.68 C
+
+Starting inference iteration 64
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 64 / 150 ---
+DS2 Dataset Index: 36055
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 44.00 C
+
+Starting inference iteration 65
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 65 / 150 ---
+DS2 Dataset Index: 10278
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.17 C
+
+Starting inference iteration 66
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 66 / 150 ---
+DS2 Dataset Index: 25503
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.25 C
+
+Starting inference iteration 67
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 67 / 150 ---
+DS2 Dataset Index: 26022
+NORMAL
+H/W Latency : 4511.38 us
+Die Temp (C): 44.11 C
+
+Starting inference iteration 68
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 68 / 150 ---
+DS2 Dataset Index: 10243
+NORMAL
+H/W Latency : 4511.43 us
+Die Temp (C): 44.22 C
+
+Starting inference iteration 69
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 69 / 150 ---
+DS2 Dataset Index: 7737
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 44.44 C
+
+Starting inference iteration 70
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 70 / 150 ---
+DS2 Dataset Index: 13192
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.10 C
+
+Starting inference iteration 71
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 71 / 150 ---
+DS2 Dataset Index: 21232
+NORMAL
+H/W Latency : 4511.43 us
+Die Temp (C): 44.37 C
+
+Starting inference iteration 72
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 72 / 150 ---
+DS2 Dataset Index: 38140
+NORMAL
+H/W Latency : 4511.38 us
+Die Temp (C): 44.31 C
+
+Starting inference iteration 73
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 73 / 150 ---
+DS2 Dataset Index: 31273
+ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 44.39 C
+
+Starting inference iteration 74
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 74 / 150 ---
+DS2 Dataset Index: 43822
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 44.42 C
+
+Starting inference iteration 75
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 75 / 150 ---
+DS2 Dataset Index: 8946
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.15 C
+
+Starting inference iteration 76
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 76 / 150 ---
+DS2 Dataset Index: 41133
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.11 C
+
+Starting inference iteration 77
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 77 / 150 ---
+DS2 Dataset Index: 8606
+NORMAL
+H/W Latency : 4511.45 us
+Die Temp (C): 43.98 C
+
+Starting inference iteration 78
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 78 / 150 ---
+DS2 Dataset Index: 46267
+Ground Truth: ANOMALY
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.25 C
+
+Starting inference iteration 79
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 79 / 150 ---
+DS2 Dataset Index: 32477
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.35 C
+
+Starting inference iteration 80
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 80 / 150 ---
+DS2 Dataset Index: 21309
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.38 C
+
+Starting inference iteration 81
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 81 / 150 ---
+DS2 Dataset Index: 20701
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 44.55 C
+
+Starting inference iteration 82
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 82 / 150 ---
+DS2 Dataset Index: 20341
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.59 C
+
+Starting inference iteration 83
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 83 / 150 ---
+DS2 Dataset Index: 13896
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 44.58 C
+
+Starting inference iteration 84
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 84 / 150 ---
+DS2 Dataset Index: 30396
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.49 us
+Die Temp (C): 44.41 C
+
+Starting inference iteration 85
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 85 / 150 ---
+DS2 Dataset Index: 17460
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.20 C
+
+Starting inference iteration 86
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 86 / 150 ---
+DS2 Dataset Index: 42668
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.51 C
+
+Starting inference iteration 87
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 87 / 150 ---
+DS2 Dataset Index: 29858
+NORMAL
+H/W Latency : 4511.38 us
+Die Temp (C): 44.52 C
+
+Starting inference iteration 88
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 88 / 150 ---
+DS2 Dataset Index: 16525
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.49 us
+Die Temp (C): 44.32 C
+
+Starting inference iteration 89
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 89 / 150 ---
+DS2 Dataset Index: 47103
+NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 44.25 C
+
+Starting inference iteration 90
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 90 / 150 ---
+DS2 Dataset Index: 37244
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 44.30 C
+
+Starting inference iteration 91
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 91 / 150 ---
+DS2 Dataset Index: 16227
+NORMAL
+H/W Latency : 4511.58 us
+Die Temp (C): 44.61 C
+
+Starting inference iteration 92
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 92 / 150 ---
+DS2 Dataset Index: 40614
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.41 C
+
+Starting inference iteration 93
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 93 / 150 ---
+DS2 Dataset Index: 36763
+NORMAL
+H/W Latency : 4511.45 us
+Die Temp (C): 44.23 C
+
+Starting inference iteration 94
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 94 / 150 ---
+DS2 Dataset Index: 11385
+ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 44.33 C
+
+Starting inference iteration 95
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 95 / 150 ---
+DS2 Dataset Index: 38730
+ANOMALY
+H/W Latency : 4511.43 us
+Die Temp (C): 44.57 C
+
+Starting inference iteration 96
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 96 / 150 ---
+DS2 Dataset Index: 24939
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.57 C
+
+Starting inference iteration 97
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 97 / 150 ---
+DS2 Dataset Index: 1890
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.55 C
+
+Starting inference iteration 98
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 98 / 150 ---
+DS2 Dataset Index: 38518
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.61 C
+
+Starting inference iteration 99
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 99 / 150 ---
+DS2 Dataset Index: 42352
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 44.12 C
+
+Starting inference iteration 100
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 100 / 150 ---
+DS2 Dataset Index: 23664
+NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 44.58 C
+
+Starting inference iteration 101
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 101 / 150 ---
+DS2 Dataset Index: 30233
+NORMAL
+H/W Latency : 4511.38 us
+Die Temp (C): 44.28 C
+
+Starting inference iteration 102
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 102 / 150 ---
+DS2 Dataset Index: 10800
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.60 C
+
+Starting inference iteration 103
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 103 / 150 ---
+DS2 Dataset Index: 40982
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.73 C
+
+Starting inference iteration 104
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 104 / 150 ---
+DS2 Dataset Index: 12340
+NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 44.41 C
+
+Starting inference iteration 105
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 105 / 150 ---
+DS2 Dataset Index: 28383
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.38 us
+Die Temp (C): 44.35 C
+
+Starting inference iteration 106
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 106 / 150 ---
+DS2 Dataset Index: 28183
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.81 C
+
+Starting inference iteration 107
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 107 / 150 ---
+DS2 Dataset Index: 18740
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.51 C
+
+Starting inference iteration 108
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 108 / 150 ---
+DS2 Dataset Index: 46158
+NORMAL
+H/W Latency : 4511.38 us
+Die Temp (C): 44.41 C
+
+Starting inference iteration 109
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 109 / 150 ---
+DS2 Dataset Index: 47289
+Ground Truth: ANOMALY
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.47 C
+
+Starting inference iteration 110
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 110 / 150 ---
+DS2 Dataset Index: 50410
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.71 C
+
+Starting inference iteration 111
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 111 / 150 ---
+DS2 Dataset Index: 9338
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.40 C
+
+Starting inference iteration 112
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 112 / 150 ---
+DS2 Dataset Index: 6800
+NORMAL
+H/W Latency : 4511.38 us
+Die Temp (C): 44.31 C
+
+Starting inference iteration 113
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 113 / 150 ---
+DS2 Dataset Index: 39791
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.45 us
+Die Temp (C): 44.51 C
+
+Starting inference iteration 114
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 114 / 150 ---
+DS2 Dataset Index: 32106
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.52 C
+
+Starting inference iteration 115
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 115 / 150 ---
+DS2 Dataset Index: 17441
+NORMAL
+H/W Latency : 4511.50 us
+Die Temp (C): 44.66 C
+
+Starting inference iteration 116
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 116 / 150 ---
+DS2 Dataset Index: 50548
+NORMAL
+H/W Latency : 4511.38 us
+Die Temp (C): 44.85 C
+
+Starting inference iteration 117
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 117 / 150 ---
+DS2 Dataset Index: 45292
+NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 44.41 C
+
+Starting inference iteration 118
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 118 / 150 ---
+DS2 Dataset Index: 11317
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.45 C
+
+Starting inference iteration 119
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 119 / 150 ---
+DS2 Dataset Index: 20768
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.32 C
+
+Starting inference iteration 120
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 120 / 150 ---
+DS2 Dataset Index: 46212
+NORMAL
+H/W Latency : 4511.34 us
+Die Temp (C): 44.31 C
+
+Starting inference iteration 121
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 121 / 150 ---
+DS2 Dataset Index: 22745
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.65 C
+
+Starting inference iteration 122
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 122 / 150 ---
+DS2 Dataset Index: 48025
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.78 C
+
+Starting inference iteration 123
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 123 / 150 ---
+DS2 Dataset Index: 5183
+NORMAL
+H/W Latency : 4511.38 us
+Die Temp (C): 44.83 C
+
+Starting inference iteration 124
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 124 / 150 ---
+DS2 Dataset Index: 36070
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.50 us
+Die Temp (C): 44.73 C
+
+Starting inference iteration 125
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 125 / 150 ---
+DS2 Dataset Index: 46572
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.45 C
+
+Starting inference iteration 126
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 126 / 150 ---
+DS2 Dataset Index: 27579
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.38 C
+
+Starting inference iteration 127
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 127 / 150 ---
+DS2 Dataset Index: 18436
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.86 C
+
+Starting inference iteration 128
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 128 / 150 ---
+DS2 Dataset Index: 37029
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.68 C
+
+Starting inference iteration 129
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 129 / 150 ---
+DS2 Dataset Index: 42372
+Ground Truth: ANOMALY
+NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 44.44 C
+
+Starting inference iteration 130
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 130 / 150 ---
+DS2 Dataset Index: 39779
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 44.48 C
+
+Starting inference iteration 131
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 131 / 150 ---
+DS2 Dataset Index: 34636
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.51 C
+
+Starting inference iteration 132
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 132 / 150 ---
+DS2 Dataset Index: 47148
+ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 44.38 C
+
+Starting inference iteration 133
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 133 / 150 ---
+DS2 Dataset Index: 38313
+Ground Truth: ANOMALY
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.23 C
+
+Starting inference iteration 134
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 134 / 150 ---
+DS2 Dataset Index: 46557
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.47 C
+
+Starting inference iteration 135
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 135 / 150 ---
+DS2 Dataset Index: 27539
+NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 44.77 C
+
+Starting inference iteration 136
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 136 / 150 ---
+DS2 Dataset Index: 31641
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.41 C
+
+Starting inference iteration 137
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 137 / 150 ---
+DS2 Dataset Index: 6854
+NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.89 C
+
+Starting inference iteration 138
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 138 / 150 ---
+DS2 Dataset Index: 46378
+NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 45.00 C
+
+Starting inference iteration 139
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 139 / 150 ---
+DS2 Dataset Index: 36679
+ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 44.91 C
+
+Starting inference iteration 140
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 140 / 150 ---
+DS2 Dataset Index: 33387
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 44.86 C
+
+Starting inference iteration 141
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 141 / 150 ---
+DS2 Dataset Index: 50083
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.80 C
+
+Starting inference iteration 142
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 142 / 150 ---
+DS2 Dataset Index: 37389
+Ground Truth: ANOMALY
+ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 45.03 C
+
+Starting inference iteration 143
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 143 / 150 ---
+DS2 Dataset Index: 30600
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 45.02 C
+
+Starting inference iteration 144
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 144 / 150 ---
+DS2 Dataset Index: 212
+NORMAL
+H/W Latency : 4511.33 us
+Die Temp (C): 44.72 C
+
+Starting inference iteration 145
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 145 / 150 ---
+DS2 Dataset Index: 5355
+NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 44.60 C
+
+Starting inference iteration 146
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 146 / 150 ---
+DS2 Dataset Index: 19049
+NORMAL
+H/W Latency : 4511.49 us
+Die Temp (C): 44.24 C
+
+Starting inference iteration 147
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 147 / 150 ---
+DS2 Dataset Index: 38284
+NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.73 C
+
+Starting inference iteration 148
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 148 / 150 ---
+DS2 Dataset Index: 12983
+NORMAL
+H/W Latency : 4511.38 us
+Die Temp (C): 44.75 C
+
+Starting inference iteration 149
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 149 / 150 ---
+DS2 Dataset Index: 11656
+NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 44.75 C
+
+Starting inference iteration 150
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 150 / 150 ---
+DS2 Dataset Index: 29916
+NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 44.96 C
+
+======================================================
+   FINAL EVALUATION METRICS (150 RANDOM DS2 BEATS)
+======================================================
+Total True Positives (TP) : 16
+Total True Negatives (TN) : 122
+Total False Positives (FP): 6
+Total False Negatives (FN): 5
+
+Accuracy  : 92.00 %
+Precision : 72.72 %
+Recall    : 76.19 %
+F1-Score  : 74.41 %
+======================================================

@@ -1,0 +1,3224 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.09.24 20:55:52 =~=~=~=~=~=~=~=~=~=~=~=
+
+======================================================
+   Wearable ECG Edge-AI Hardware Accelerator (Zynq)   
+======================================================
+
+DS2 Dataset Loaded
+Total DS2 Beats: 51170
+
+Randomly Selected 200 DS2 Beats:
+Beat 1 -> Dataset Index: 50381
+Beat 2 -> Dataset Index: 5358
+Beat 3 -> Dataset Index: 39729
+Beat 4 -> Dataset Index: 1762
+Beat 5 -> Dataset Index: 20728
+Beat 6 -> Dataset Index: 48146
+Beat 7 -> Dataset Index: 32660
+Beat 8 -> Dataset Index: 11855
+Beat 9 -> Dataset Index: 2900
+Beat 10 -> Dataset Index: 2059
+Beat 11 -> Dataset Index: 27372
+Beat 12 -> Dataset Index: 39281
+Beat 13 -> Dataset Index: 31478
+Beat 14 -> Dataset Index: 19165
+Beat 15 -> Dataset Index: 49341
+Beat 16 -> Dataset Index: 46399
+Beat 17 -> Dataset Index: 8475
+Beat 18 -> Dataset Index: 30688
+Beat 19 -> Dataset Index: 26872
+Beat 20 -> Dataset Index: 6269
+Beat 21 -> Dataset Index: 23420
+Beat 22 -> Dataset Index: 43805
+Beat 23 -> Dataset Index: 47370
+Beat 24 -> Dataset Index: 21932
+Beat 25 -> Dataset Index: 35402
+Beat 26 -> Dataset Index: 22423
+Beat 27 -> Dataset Index: 25237
+Beat 28 -> Dataset Index: 11271
+Beat 29 -> Dataset Index: 4131
+Beat 30 -> Dataset Index: 12090
+Beat 31 -> Dataset Index: 39745
+Beat 32 -> Dataset Index: 39684
+Beat 33 -> Dataset Index: 37803
+Beat 34 -> Dataset Index: 48835
+Beat 35 -> Dataset Index: 14334
+Beat 36 -> Dataset Index: 13315
+Beat 37 -> Dataset Index: 18720
+Beat 38 -> Dataset Index: 44922
+Beat 39 -> Dataset Index: 38717
+Beat 40 -> Dataset Index: 12341
+Beat 41 -> Dataset Index: 34195
+Beat 42 -> Dataset Index: 12628
+Beat 43 -> Dataset Index: 7607
+Beat 44 -> Dataset Index: 28041
+Beat 45 -> Dataset Index: 1718
+Beat 46 -> Dataset Index: 7537
+Beat 47 -> Dataset Index: 37130
+Beat 48 -> Dataset Index: 43137
+Beat 49 -> Dataset Index: 37760
+Beat 50 -> Dataset Index: 19695
+Beat 51 -> Dataset Index: 13462
+Beat 52 -> Dataset Index: 25567
+Beat 53 -> Dataset Index: 27614
+Beat 54 -> Dataset Index: 25716
+Beat 55 -> Dataset Index: 34931
+Beat 56 -> Dataset Index: 29449
+Beat 57 -> Dataset Index: 25941
+Beat 58 -> Dataset Index: 47494
+Beat 59 -> Dataset Index: 13523
+Beat 60 -> Dataset Index: 3853
+Beat 61 -> Dataset Index: 20165
+Beat 62 -> Dataset Index: 41440
+Beat 63 -> Dataset Index: 35980
+Beat 64 -> Dataset Index: 50140
+Beat 65 -> Dataset Index: 14612
+Beat 66 -> Dataset Index: 4679
+Beat 67 -> Dataset Index: 19691
+Beat 68 -> Dataset Index: 45635
+Beat 69 -> Dataset Index: 15415
+Beat 70 -> Dataset Index: 38621
+Beat 71 -> Dataset Index: 32233
+Beat 72 -> Dataset Index: 27361
+Beat 73 -> Dataset Index: 45555
+Beat 74 -> Dataset Index: 39908
+Beat 75 -> Dataset Index: 43654
+Beat 76 -> Dataset Index: 47444
+Beat 77 -> Dataset Index: 13839
+Beat 78 -> Dataset Index: 30049
+Beat 79 -> Dataset Index: 41244
+Beat 80 -> Dataset Index: 24944
+Beat 81 -> Dataset Index: 13361
+Beat 82 -> Dataset Index: 12258
+Beat 83 -> Dataset Index: 21927
+Beat 84 -> Dataset Index: 44383
+Beat 85 -> Dataset Index: 11753
+Beat 86 -> Dataset Index: 26220
+Beat 87 -> Dataset Index: 36186
+Beat 88 -> Dataset Index: 32938
+Beat 89 -> Dataset Index: 16953
+Beat 90 -> Dataset Index: 8563
+Beat 91 -> Dataset Index: 38408
+Beat 92 -> Dataset Index: 48992
+Beat 93 -> Dataset Index: 8859
+Beat 94 -> Dataset Index: 11701
+Beat 95 -> Dataset Index: 22075
+Beat 96 -> Dataset Index: 40785
+Beat 97 -> Dataset Index: 17812
+Beat 98 -> Dataset Index: 34684
+Beat 99 -> Dataset Index: 21509
+Beat 100 -> Dataset Index: 31096
+Beat 101 -> Dataset Index: 21462
+Beat 102 -> Dataset Index: 17349
+Beat 103 -> Dataset Index: 35338
+Beat 104 -> Dataset Index: 17550
+Beat 105 -> Dataset Index: 8240
+Beat 106 -> Dataset Index: 1858
+Beat 107 -> Dataset Index: 10011
+Beat 108 -> Dataset Index: 12764
+Beat 109 -> Dataset Index: 3282
+Beat 110 -> Dataset Index: 47805
+Beat 111 -> Dataset Index: 4303
+Beat 112 -> Dataset Index: 5098
+Beat 113 -> Dataset Index: 11110
+Beat 114 -> Dataset Index: 25762
+Beat 115 -> Dataset Index: 2404
+Beat 116 -> Dataset Index: 8336
+Beat 117 -> Dataset Index: 29776
+Beat 118 -> Dataset Index: 50578
+Beat 119 -> Dataset Index: 28935
+Beat 120 -> Dataset Index: 20703
+Beat 121 -> Dataset Index: 39615
+Beat 122 -> Dataset Index: 30615
+Beat 123 -> Dataset Index: 35497
+Beat 124 -> Dataset Index: 46260
+Beat 125 -> Dataset Index: 15694
+Beat 126 -> Dataset Index: 34709
+Beat 127 -> Dataset Index: 18783
+Beat 128 -> Dataset Index: 30420
+Beat 129 -> Dataset Index: 33780
+Beat 130 -> Dataset Index: 22082
+Beat 131 -> Dataset Index: 36596
+Beat 132 -> Dataset Index: 5334
+Beat 133 -> Dataset Index: 49163
+Beat 134 -> Dataset Index: 38113
+Beat 135 -> Dataset Index: 43390
+Beat 136 -> Dataset Index: 40143
+Beat 137 -> Dataset Index: 10926
+Beat 138 -> Dataset Index: 15237
+Beat 139 -> Dataset Index: 13601
+Beat 140 -> Dataset Index: 715
+Beat 141 -> Dataset Index: 25939
+Beat 142 -> Dataset Index: 44693
+Beat 143 -> Dataset Index: 45788
+Beat 144 -> Dataset Index: 48706
+Beat 145 -> Dataset Index: 35721
+Beat 146 -> Dataset Index: 35129
+Beat 147 -> Dataset Index: 23905
+Beat 148 -> Dataset Index: 15819
+Beat 149 -> Dataset Index: 8610
+Beat 150 -> Dataset Index: 2975
+Beat 151 -> Dataset Index: 25243
+Beat 152 -> Dataset Index: 41113
+Beat 153 -> Dataset Index: 43752
+Beat 154 -> Dataset Index: 41100
+Beat 155 -> Dataset Index: 9449
+Beat 156 -> Dataset Index: 41706
+Beat 157 -> Dataset Index: 20977
+Beat 158 -> Dataset Index: 21496
+Beat 159 -> Dataset Index: 4043
+Beat 160 -> Dataset Index: 8600
+Beat 161 -> Dataset Index: 51074
+Beat 162 -> Dataset Index: 42518
+Beat 163 -> Dataset Index: 8976
+Beat 164 -> Dataset Index: 42537
+Beat 165 -> Dataset Index: 26355
+Beat 166 -> Dataset Index: 2843
+Beat 167 -> Dataset Index: 10019
+Beat 168 -> Dataset Index: 38065
+Beat 169 -> Dataset Index: 5380
+Beat 170 -> Dataset Index: 44059
+Beat 171 -> Dataset Index: 8776
+Beat 172 -> Dataset Index: 16579
+Beat 173 -> Dataset Index: 5671
+Beat 174 -> Dataset Index: 30658
+Beat 175 -> Dataset Index: 24348
+Beat 176 -> Dataset Index: 19758
+Beat 177 -> Dataset Index: 25479
+Beat 178 -> Dataset Index: 49142
+Beat 179 -> Dataset Index: 13067
+Beat 180 -> Dataset Index: 47904
+Beat 181 -> Dataset Index: 11228
+Beat 182 -> Dataset Index: 4623
+Beat 183 -> Dataset Index: 6608
+Beat 184 -> Dataset Index: 24874
+Beat 185 -> Dataset Index: 36230
+Beat 186 -> Dataset Index: 9840
+Beat 187 -> Dataset Index: 27859
+Beat 188 -> Dataset Index: 8676
+Beat 189 -> Dataset Index: 29774
+Beat 190 -> Dataset Index: 17859
+Beat 191 -> Dataset Index: 32501
+Beat 192 -> Dataset Index: 25045
+Beat 193 -> Dataset Index: 45107
+Beat 194 -> Dataset Index: 43227
+Beat 195 -> Dataset Index: 29738
+Beat 196 -> Dataset Index: 44852
+Beat 197 -> Dataset Index: 3999
+Beat 198 -> Dataset Index: 50506
+Beat 199 -> Dataset Index: 12722
+Beat 200 -> Dataset Index: 4522
+
+Starting inference iteration 1
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 1 / 200 ---
+DS2 Dataset Index: 50381
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.14 us
+Die Temp (C): 41.59 C
+
+Starting inference iteration 2
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 2 / 200 ---
+DS2 Dataset Index: 5358
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 41.94 C
+
+Starting inference iteration 3
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 3 / 200 ---
+DS2 Dataset Index: 39729
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 41.92 C
+
+Starting inference iteration 4
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 4 / 200 ---
+DS2 Dataset Index: 1762
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 41.71 C
+
+Starting inference iteration 5
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 5 / 200 ---
+DS2 Dataset Index: 20728
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 41.78 C
+
+Starting inference iteration 6
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 6 / 200 ---
+DS2 Dataset Index: 48146
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 42.18 C
+
+Starting inference iteration 7
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 7 / 200 ---
+DS2 Dataset Index: 32660
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 41.97 C
+
+Starting inference iteration 8
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 8 / 200 ---
+DS2 Dataset Index: 11855
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.42 us
+Die Temp (C): 42.20 C
+
+Starting inference iteration 9
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 9 / 200 ---
+DS2 Dataset Index: 2900
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 41.80 C
+
+Starting inference iteration 10
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 10 / 200 ---
+DS2 Dataset Index: 2059
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 42.22 C
+
+Starting inference iteration 11
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 11 / 200 ---
+DS2 Dataset Index: 27372
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 42.08 C
+
+Starting inference iteration 12
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 12 / 200 ---
+DS2 Dataset Index: 39281
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 41.90 C
+
+Starting inference iteration 13
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 13 / 200 ---
+DS2 Dataset Index: 31478
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.47 us
+Die Temp (C): 42.02 C
+
+Starting inference iteration 14
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 14 / 200 ---
+DS2 Dataset Index: 19165
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 42.36 C
+
+Starting inference iteration 15
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 15 / 200 ---
+DS2 Dataset Index: 49341
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 42.36 C
+
+Starting inference iteration 16
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 16 / 200 ---
+DS2 Dataset Index: 46399
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 42.40 C
+
+Starting inference iteration 17
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 17 / 200 ---
+DS2 Dataset Index: 8475
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 42.31 C
+
+Starting inference iteration 18
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 18 / 200 ---
+DS2 Dataset Index: 30688
+Ground Truth: NORMAL
+Hardware Pred: ANOMALY
+H/W Latency : 4511.54 us
+Die Temp (C): 42.52 C
+
+Starting inference iteration 19
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 19 / 200 ---
+DS2 Dataset Index: 26872
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 42.45 C
+
+Starting inference iteration 20
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 20 / 200 ---
+DS2 Dataset Index: 6269
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 42.38 C
+
+Starting inference iteration 21
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 21 / 200 ---
+DS2 Dataset Index: 23420
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 42.51 C
+
+Starting inference iteration 22
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 22 / 200 ---
+DS2 Dataset Index: 43805
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 42.81 C
+
+Starting inference iteration 23
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 23 / 200 ---
+DS2 Dataset Index: 47370
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 42.42 C
+
+Starting inference iteration 24
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 24 / 200 ---
+DS2 Dataset Index: 21932
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 42.50 C
+
+Starting inference iteration 25
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 25 / 200 ---
+DS2 Dataset Index: 35402
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 42.45 C
+
+Starting inference iteration 26
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 26 / 200 ---
+DS2 Dataset Index: 22423
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 42.92 C
+
+Starting inference iteration 27
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 27 / 200 ---
+DS2 Dataset Index: 25237
+Ground Truth: NORMAL
+Hardware Pred: ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 42.86 C
+
+Starting inference iteration 28
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 28 / 200 ---
+DS2 Dataset Index: 11271
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.15 C
+
+Starting inference iteration 29
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 29 / 200 ---
+DS2 Dataset Index: 4131
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 42.98 C
+
+Starting inference iteration 30
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 30 / 200 ---
+DS2 Dataset Index: 12090
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.22 C
+
+Starting inference iteration 31
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 31 / 200 ---
+DS2 Dataset Index: 39745
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.35 us
+Die Temp (C): 43.10 C
+
+Starting inference iteration 32
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 32 / 200 ---
+DS2 Dataset Index: 39684
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 42.92 C
+
+Starting inference iteration 33
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 33 / 200 ---
+DS2 Dataset Index: 37803
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 42.76 C
+
+Starting inference iteration 34
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 34 / 200 ---
+DS2 Dataset Index: 48835
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.04 C
+
+Starting inference iteration 35
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 35 / 200 ---
+DS2 Dataset Index: 14334
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.25 C
+
+Starting inference iteration 36
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 36 / 200 ---
+DS2 Dataset Index: 13315
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.48 C
+
+Starting inference iteration 37
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 37 / 200 ---
+DS2 Dataset Index: 18720
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.34 us
+Die Temp (C): 43.28 C
+
+Starting inference iteration 38
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 38 / 200 ---
+DS2 Dataset Index: 44922
+Ground Truth: ANOMALY
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.28 C
+
+Starting inference iteration 39
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 39 / 200 ---
+DS2 Dataset Index: 38717
+Ground Truth: ANOMALY
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.19 C
+
+Starting inference iteration 40
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 40 / 200 ---
+DS2 Dataset Index: 12341
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 43.38 C
+
+Starting inference iteration 41
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 41 / 200 ---
+DS2 Dataset Index: 34195
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.42 us
+Die Temp (C): 43.50 C
+
+Starting inference iteration 42
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 42 / 200 ---
+DS2 Dataset Index: 12628
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.05 C
+
+Starting inference iteration 43
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 43 / 200 ---
+DS2 Dataset Index: 7607
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.12 C
+
+Starting inference iteration 44
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 44 / 200 ---
+DS2 Dataset Index: 28041
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.34 C
+
+Starting inference iteration 45
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 45 / 200 ---
+DS2 Dataset Index: 1718
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 42.94 C
+
+Starting inference iteration 46
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 46 / 200 ---
+DS2 Dataset Index: 7537
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.38 C
+
+Starting inference iteration 47
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 47 / 200 ---
+DS2 Dataset Index: 37130
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 43.48 C
+
+Starting inference iteration 48
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 48 / 200 ---
+DS2 Dataset Index: 43137
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.41 C
+
+Starting inference iteration 49
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 49 / 200 ---
+DS2 Dataset Index: 37760
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 43.33 C
+
+Starting inference iteration 50
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 50 / 200 ---
+DS2 Dataset Index: 19695
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.18 C
+
+Starting inference iteration 51
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 51 / 200 ---
+DS2 Dataset Index: 13462
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.30 C
+
+Starting inference iteration 52
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 52 / 200 ---
+DS2 Dataset Index: 25567
+Ground Truth: NORMAL
+Hardware Pred: ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 43.15 C
+
+Starting inference iteration 53
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 53 / 200 ---
+DS2 Dataset Index: 27614
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.45 us
+Die Temp (C): 43.22 C
+
+Starting inference iteration 54
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 54 / 200 ---
+DS2 Dataset Index: 25716
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.47 us
+Die Temp (C): 43.36 C
+
+Starting inference iteration 55
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 55 / 200 ---
+DS2 Dataset Index: 34931
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.43 C
+
+Starting inference iteration 56
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 56 / 200 ---
+DS2 Dataset Index: 29449
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 43.48 C
+
+Starting inference iteration 57
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 57 / 200 ---
+DS2 Dataset Index: 25941
+Ground Truth: NORMAL
+Hardware Pred: ANOMALY
+H/W Latency : 4511.36 us
+Die Temp (C): 43.23 C
+
+Starting inference iteration 58
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 58 / 200 ---
+DS2 Dataset Index: 47494
+Ground Truth: NORMAL
+Hardware Pred: ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 43.36 C
+
+Starting inference iteration 59
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 59 / 200 ---
+DS2 Dataset Index: 13523
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.61 C
+
+Starting inference iteration 60
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 60 / 200 ---
+DS2 Dataset Index: 3853
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.55 C
+
+Starting inference iteration 61
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 61 / 200 ---
+DS2 Dataset Index: 20165
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.68 C
+
+Starting inference iteration 62
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 62 / 200 ---
+DS2 Dataset Index: 41440
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.62 C
+
+Starting inference iteration 63
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 63 / 200 ---
+DS2 Dataset Index: 35980
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.58 C
+
+Starting inference iteration 64
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 64 / 200 ---
+DS2 Dataset Index: 50140
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.22 C
+
+Starting inference iteration 65
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 65 / 200 ---
+DS2 Dataset Index: 14612
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 43.38 C
+
+Starting inference iteration 66
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 66 / 200 ---
+DS2 Dataset Index: 4679
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.61 C
+
+Starting inference iteration 67
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 67 / 200 ---
+DS2 Dataset Index: 19691
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.59 C
+
+Starting inference iteration 68
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 68 / 200 ---
+DS2 Dataset Index: 45635
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.43 us
+Die Temp (C): 43.76 C
+
+Starting inference iteration 69
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 69 / 200 ---
+DS2 Dataset Index: 15415
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.61 C
+
+Starting inference iteration 70
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 70 / 200 ---
+DS2 Dataset Index: 38621
+Ground Truth: ANOMALY
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 43.60 C
+
+Starting inference iteration 71
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 71 / 200 ---
+DS2 Dataset Index: 32233
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 43.66 C
+
+Starting inference iteration 72
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 72 / 200 ---
+DS2 Dataset Index: 27361
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.56 us
+Die Temp (C): 43.57 C
+
+Starting inference iteration 73
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 73 / 200 ---
+DS2 Dataset Index: 45555
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.31 C
+
+Starting inference iteration 74
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 74 / 200 ---
+DS2 Dataset Index: 39908
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.44 us
+Die Temp (C): 43.61 C
+
+Starting inference iteration 75
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 75 / 200 ---
+DS2 Dataset Index: 43654
+Ground Truth: ANOMALY
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 43.44 C
+
+Starting inference iteration 76
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 76 / 200 ---
+DS2 Dataset Index: 47444
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.51 C
+
+Starting inference iteration 77
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 77 / 200 ---
+DS2 Dataset Index: 13839
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.63 C
+
+Starting inference iteration 78
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 78 / 200 ---
+DS2 Dataset Index: 30049
+Ground Truth: ANOMALY
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.88 C
+
+Starting inference iteration 79
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 79 / 200 ---
+DS2 Dataset Index: 41244
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.45 us
+Die Temp (C): 43.81 C
+
+Starting inference iteration 80
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 80 / 200 ---
+DS2 Dataset Index: 24944
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.34 us
+Die Temp (C): 43.61 C
+
+Starting inference iteration 81
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 81 / 200 ---
+DS2 Dataset Index: 13361
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.58 C
+
+Starting inference iteration 82
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 82 / 200 ---
+DS2 Dataset Index: 12258
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 43.81 C
+
+Starting inference iteration 83
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 83 / 200 ---
+DS2 Dataset Index: 21927
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.59 C
+
+Starting inference iteration 84
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 84 / 200 ---
+DS2 Dataset Index: 44383
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.71 C
+
+Starting inference iteration 85
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 85 / 200 ---
+DS2 Dataset Index: 11753
+Ground Truth: NORMAL
+Hardware Pred: ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 43.87 C
+
+Starting inference iteration 86
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 86 / 200 ---
+DS2 Dataset Index: 26220
+Ground Truth: NORMAL
+Hardware Pred: ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 43.50 C
+
+Starting inference iteration 87
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 87 / 200 ---
+DS2 Dataset Index: 36186
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.57 us
+Die Temp (C): 43.58 C
+
+Starting inference iteration 88
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 88 / 200 ---
+DS2 Dataset Index: 32938
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.05 C
+
+Starting inference iteration 89
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 89 / 200 ---
+DS2 Dataset Index: 16953
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.78 C
+
+Starting inference iteration 90
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 90 / 200 ---
+DS2 Dataset Index: 8563
+Ground Truth: NORMAL
+Hardware Pred: ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 44.05 C
+
+Starting inference iteration 91
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 91 / 200 ---
+DS2 Dataset Index: 38408
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.07 C
+
+Starting inference iteration 92
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 92 / 200 ---
+DS2 Dataset Index: 48992
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 43.60 C
+
+Starting inference iteration 93
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 93 / 200 ---
+DS2 Dataset Index: 8859
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.34 us
+Die Temp (C): 44.02 C
+
+Starting inference iteration 94
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 94 / 200 ---
+DS2 Dataset Index: 11701
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.66 C
+
+Starting inference iteration 95
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 95 / 200 ---
+DS2 Dataset Index: 22075
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.09 C
+
+Starting inference iteration 96
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 96 / 200 ---
+DS2 Dataset Index: 40785
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.07 C
+
+Starting inference iteration 97
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 97 / 200 ---
+DS2 Dataset Index: 17812
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.69 C
+
+Starting inference iteration 98
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 98 / 200 ---
+DS2 Dataset Index: 34684
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.88 C
+
+Starting inference iteration 99
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 99 / 200 ---
+DS2 Dataset Index: 21509
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.45 us
+Die Temp (C): 43.85 C
+
+Starting inference iteration 100
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 100 / 200 ---
+DS2 Dataset Index: 31096
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.24 C
+
+Starting inference iteration 101
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 101 / 200 ---
+DS2 Dataset Index: 21462
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.43 us
+Die Temp (C): 43.86 C
+
+Starting inference iteration 102
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 102 / 200 ---
+DS2 Dataset Index: 17349
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.78 C
+
+Starting inference iteration 103
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 103 / 200 ---
+DS2 Dataset Index: 35338
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 43.78 C
+
+Starting inference iteration 104
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 104 / 200 ---
+DS2 Dataset Index: 17550
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 44.06 C
+
+Starting inference iteration 105
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 105 / 200 ---
+DS2 Dataset Index: 8240
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 43.72 C
+
+Starting inference iteration 106
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 106 / 200 ---
+DS2 Dataset Index: 1858
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.81 C
+
+Starting inference iteration 107
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 107 / 200 ---
+DS2 Dataset Index: 10011
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.51 C
+
+Starting inference iteration 108
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 108 / 200 ---
+DS2 Dataset Index: 12764
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.44 us
+Die Temp (C): 44.06 C
+
+Starting inference iteration 109
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 109 / 200 ---
+DS2 Dataset Index: 3282
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.81 C
+
+Starting inference iteration 110
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 110 / 200 ---
+DS2 Dataset Index: 47805
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 43.98 C
+
+Starting inference iteration 111
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 111 / 200 ---
+DS2 Dataset Index: 4303
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.21 C
+
+Starting inference iteration 112
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 112 / 200 ---
+DS2 Dataset Index: 5098
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.07 C
+
+Starting inference iteration 113
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 113 / 200 ---
+DS2 Dataset Index: 11110
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.08 C
+
+Starting inference iteration 114
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 114 / 200 ---
+DS2 Dataset Index: 25762
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.13 C
+
+Starting inference iteration 115
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 115 / 200 ---
+DS2 Dataset Index: 2404
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.56 C
+
+Starting inference iteration 116
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 116 / 200 ---
+DS2 Dataset Index: 8336
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.09 C
+
+Starting inference iteration 117
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 117 / 200 ---
+DS2 Dataset Index: 29776
+Ground Truth: NORMAL
+Hardware Pred: ANOMALY
+H/W Latency : 4511.44 us
+Die Temp (C): 43.88 C
+
+Starting inference iteration 118
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 118 / 200 ---
+DS2 Dataset Index: 50578
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.85 C
+
+Starting inference iteration 119
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 119 / 200 ---
+DS2 Dataset Index: 28935
+Ground Truth: ANOMALY
+Hardware Pred: NORMAL
+H/W Latency : 4511.47 us
+Die Temp (C): 44.08 C
+
+Starting inference iteration 120
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 120 / 200 ---
+DS2 Dataset Index: 20703
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.71 C
+
+Starting inference iteration 121
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 121 / 200 ---
+DS2 Dataset Index: 39615
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.68 C
+
+Starting inference iteration 122
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 122 / 200 ---
+DS2 Dataset Index: 30615
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.75 C
+
+Starting inference iteration 123
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 123 / 200 ---
+DS2 Dataset Index: 35497
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.57 us
+Die Temp (C): 44.29 C
+
+Starting inference iteration 124
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 124 / 200 ---
+DS2 Dataset Index: 46260
+Ground Truth: NORMAL
+Hardware Pred: ANOMALY
+H/W Latency : 4511.48 us
+Die Temp (C): 44.11 C
+
+Starting inference iteration 125
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 125 / 200 ---
+DS2 Dataset Index: 15694
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.94 C
+
+Starting inference iteration 126
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 126 / 200 ---
+DS2 Dataset Index: 34709
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.45 us
+Die Temp (C): 44.12 C
+
+Starting inference iteration 127
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 127 / 200 ---
+DS2 Dataset Index: 18783
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.66 C
+
+Starting inference iteration 128
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 128 / 200 ---
+DS2 Dataset Index: 30420
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.95 C
+
+Starting inference iteration 129
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 129 / 200 ---
+DS2 Dataset Index: 33780
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.99 C
+
+Starting inference iteration 130
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 130 / 200 ---
+DS2 Dataset Index: 22082
+Ground Truth: ANOMALY
+Hardware Pred: NORMAL
+H/W Latency : 4511.57 us
+Die Temp (C): 44.17 C
+
+Starting inference iteration 131
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 131 / 200 ---
+DS2 Dataset Index: 36596
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.28 C
+
+Starting inference iteration 132
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 132 / 200 ---
+DS2 Dataset Index: 5334
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.11 C
+
+Starting inference iteration 133
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 133 / 200 ---
+DS2 Dataset Index: 49163
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.98 C
+
+Starting inference iteration 134
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 134 / 200 ---
+DS2 Dataset Index: 38113
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.72 C
+
+Starting inference iteration 135
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 135 / 200 ---
+DS2 Dataset Index: 43390
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 43.81 C
+
+Starting inference iteration 136
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 136 / 200 ---
+DS2 Dataset Index: 40143
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.57 us
+Die Temp (C): 43.76 C
+
+Starting inference iteration 137
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 137 / 200 ---
+DS2 Dataset Index: 10926
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 44.22 C
+
+Starting inference iteration 138
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 138 / 200 ---
+DS2 Dataset Index: 15237
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.55 us
+Die Temp (C): 44.05 C
+
+Starting inference iteration 139
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 139 / 200 ---
+DS2 Dataset Index: 13601
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 43.85 C
+
+Starting inference iteration 140
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 140 / 200 ---
+DS2 Dataset Index: 715
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.45 us
+Die Temp (C): 44.22 C
+
+Starting inference iteration 141
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 141 / 200 ---
+DS2 Dataset Index: 25939
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 43.96 C
+
+Starting inference iteration 142
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 142 / 200 ---
+DS2 Dataset Index: 44693
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.47 us
+Die Temp (C): 44.01 C
+
+Starting inference iteration 143
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 143 / 200 ---
+DS2 Dataset Index: 45788
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.66 C
+
+Starting inference iteration 144
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 144 / 200 ---
+DS2 Dataset Index: 48706
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.39 C
+
+Starting inference iteration 145
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 145 / 200 ---
+DS2 Dataset Index: 35721
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.64 C
+
+Starting inference iteration 146
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 146 / 200 ---
+DS2 Dataset Index: 35129
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 44.19 C
+
+Starting inference iteration 147
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 147 / 200 ---
+DS2 Dataset Index: 23905
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 43.96 C
+
+Starting inference iteration 148
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 148 / 200 ---
+DS2 Dataset Index: 15819
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 43.82 C
+
+Starting inference iteration 149
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 149 / 200 ---
+DS2 Dataset Index: 8610
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.10 C
+
+Starting inference iteration 150
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 150 / 200 ---
+DS2 Dataset Index: 2975
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.80 C
+
+Starting inference iteration 151
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 151 / 200 ---
+DS2 Dataset Index: 25243
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.47 us
+Die Temp (C): 43.99 C
+
+Starting inference iteration 152
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 152 / 200 ---
+DS2 Dataset Index: 41113
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 44.06 C
+
+Starting inference iteration 153
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 153 / 200 ---
+DS2 Dataset Index: 43752
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.36 us
+Die Temp (C): 44.18 C
+
+Starting inference iteration 154
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 154 / 200 ---
+DS2 Dataset Index: 41100
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.03 C
+
+Starting inference iteration 155
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 155 / 200 ---
+DS2 Dataset Index: 9449
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 43.91 C
+
+Starting inference iteration 156
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 156 / 200 ---
+DS2 Dataset Index: 41706
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 43.81 C
+
+Starting inference iteration 157
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 157 / 200 ---
+DS2 Dataset Index: 20977
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.08 C
+
+Starting inference iteration 158
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 158 / 200 ---
+DS2 Dataset Index: 21496
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 44.06 C
+
+Starting inference iteration 159
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 159 / 200 ---
+DS2 Dataset Index: 4043
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 44.05 C
+
+Starting inference iteration 160
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 160 / 200 ---
+DS2 Dataset Index: 8600
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.47 us
+Die Temp (C): 44.24 C
+
+Starting inference iteration 161
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 161 / 200 ---
+DS2 Dataset Index: 51074
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.30 C
+
+Starting inference iteration 162
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 162 / 200 ---
+DS2 Dataset Index: 42518
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 44.12 C
+
+Starting inference iteration 163
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 163 / 200 ---
+DS2 Dataset Index: 8976
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 43.96 C
+
+Starting inference iteration 164
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 164 / 200 ---
+DS2 Dataset Index: 42537
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 43.98 C
+
+Starting inference iteration 165
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 165 / 200 ---
+DS2 Dataset Index: 26355
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.55 us
+Die Temp (C): 44.04 C
+
+Starting inference iteration 166
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 166 / 200 ---
+DS2 Dataset Index: 2843
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.14 C
+
+Starting inference iteration 167
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 167 / 200 ---
+DS2 Dataset Index: 10019
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 44.45 C
+
+Starting inference iteration 168
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 168 / 200 ---
+DS2 Dataset Index: 38065
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 43.94 C
+
+Starting inference iteration 169
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 169 / 200 ---
+DS2 Dataset Index: 5380
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.19 C
+
+Starting inference iteration 170
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 170 / 200 ---
+DS2 Dataset Index: 44059
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.34 C
+
+Starting inference iteration 171
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 171 / 200 ---
+DS2 Dataset Index: 8776
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 44.11 C
+
+Starting inference iteration 172
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 172 / 200 ---
+DS2 Dataset Index: 16579
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 44.21 C
+
+Starting inference iteration 173
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 173 / 200 ---
+DS2 Dataset Index: 5671
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 44.62 C
+
+Starting inference iteration 174
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 174 / 200 ---
+DS2 Dataset Index: 30658
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.35 us
+Die Temp (C): 44.46 C
+
+Starting inference iteration 175
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 175 / 200 ---
+DS2 Dataset Index: 24348
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.15 C
+
+Starting inference iteration 176
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 176 / 200 ---
+DS2 Dataset Index: 19758
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.15 C
+
+Starting inference iteration 177
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 177 / 200 ---
+DS2 Dataset Index: 25479
+Ground Truth: NORMAL
+Hardware Pred: ANOMALY
+H/W Latency : 4511.47 us
+Die Temp (C): 44.30 C
+
+Starting inference iteration 178
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 178 / 200 ---
+DS2 Dataset Index: 49142
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 44.32 C
+
+Starting inference iteration 179
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 179 / 200 ---
+DS2 Dataset Index: 13067
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.71 C
+
+Starting inference iteration 180
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 180 / 200 ---
+DS2 Dataset Index: 47904
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.19 C
+
+Starting inference iteration 181
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 181 / 200 ---
+DS2 Dataset Index: 11228
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 44.49 C
+
+Starting inference iteration 182
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 182 / 200 ---
+DS2 Dataset Index: 4623
+Ground Truth: ANOMALY
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.41 C
+
+Starting inference iteration 183
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 183 / 200 ---
+DS2 Dataset Index: 6608
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.74 C
+
+Starting inference iteration 184
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 184 / 200 ---
+DS2 Dataset Index: 24874
+Ground Truth: NORMAL
+Hardware Pred: ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 44.54 C
+
+Starting inference iteration 185
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 185 / 200 ---
+DS2 Dataset Index: 36230
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.64 C
+
+Starting inference iteration 186
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 186 / 200 ---
+DS2 Dataset Index: 9840
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.55 us
+Die Temp (C): 44.48 C
+
+Starting inference iteration 187
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 187 / 200 ---
+DS2 Dataset Index: 27859
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.25 C
+
+Starting inference iteration 188
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 188 / 200 ---
+DS2 Dataset Index: 8676
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.44 us
+Die Temp (C): 44.47 C
+
+Starting inference iteration 189
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 189 / 200 ---
+DS2 Dataset Index: 29774
+Ground Truth: NORMAL
+Hardware Pred: ANOMALY
+H/W Latency : 4511.45 us
+Die Temp (C): 44.54 C
+
+Starting inference iteration 190
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 190 / 200 ---
+DS2 Dataset Index: 17859
+Ground Truth: ANOMALY
+Hardware Pred: ANOMALY
+H/W Latency : 4511.46 us
+Die Temp (C): 44.97 C
+
+Starting inference iteration 191
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 191 / 200 ---
+DS2 Dataset Index: 32501
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.65 C
+
+Starting inference iteration 192
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 192 / 200 ---
+DS2 Dataset Index: 25045
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.47 C
+
+Starting inference iteration 193
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 193 / 200 ---
+DS2 Dataset Index: 45107
+Ground Truth: ANOMALY
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.07 C
+
+Starting inference iteration 194
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 194 / 200 ---
+DS2 Dataset Index: 43227
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.36 us
+Die Temp (C): 44.62 C
+
+Starting inference iteration 195
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 195 / 200 ---
+DS2 Dataset Index: 29738
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.45 us
+Die Temp (C): 44.45 C
+
+Starting inference iteration 196
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 196 / 200 ---
+DS2 Dataset Index: 44852
+Ground Truth: ANOMALY
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.65 C
+
+Starting inference iteration 197
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 197 / 200 ---
+DS2 Dataset Index: 3999
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.45 C
+
+Starting inference iteration 198
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 198 / 200 ---
+DS2 Dataset Index: 50506
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.53 C
+
+Starting inference iteration 199
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 199 / 200 ---
+DS2 Dataset Index: 12722
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.46 us
+Die Temp (C): 44.60 C
+
+Starting inference iteration 200
+Loading DS2 beat...
+Input loaded.
+Setting accelerator input...
+Starting accelerator...
+Waiting for accelerator...
+Accelerator completed.
+
+--- ITERATION 200 / 200 ---
+DS2 Dataset Index: 4522
+Ground Truth: NORMAL
+Hardware Pred: NORMAL
+H/W Latency : 4511.48 us
+Die Temp (C): 44.80 C
+
+======================================================
+   FINAL EVALUATION METRICS (200 RANDOM DS2 BEATS)
+======================================================
+Total True Positives (TP) : 16
+Total True Negatives (TN) : 161
+Total False Positives (FP): 13
+Total False Negatives (FN): 10
+
+Accuracy  : 88.50 %
+Precision : 55.17 %
+Recall    : 61.53 %
+F1-Score  : 58.18 %
+======================================================

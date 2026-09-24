@@ -1,0 +1,323 @@
+======================================================
+--- QAT SAMPLE COMPARISON EVAL (Dynamic Beats) ---
+======================================================
+--- Per-Beat Results ---
+Beat 01 | Idx:     24 | Truth: Normal  | Pred: Normal  | Normal [OK] 
+Beat 02 | Idx:  31579 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 03 | Idx:  38786 | Truth: Normal  | Pred: Anomaly | False Alarm [X] (Predicted Anomaly on Normal Beat)
+Beat 04 | Idx:  42811 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 05 | Idx:   3697 | Truth: Normal  | Pred: Normal  | Normal [OK] 
+Beat 06 | Idx:  37629 | Truth: Anomaly | Pred: Normal  | MISSED ANOMALY [X] (Predicted Normal on Arrhythmia!)
+Beat 07 | Idx:   6118 | Truth: Normal  | Pred: Anomaly | False Alarm [X] (Predicted Anomaly on Normal Beat)
+Beat 08 | Idx:  18759 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 09 | Idx:   3273 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 10 | Idx:  21048 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 11 | Idx:   4907 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 12 | Idx:  50554 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 13 | Idx:   5992 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 14 | Idx:   8534 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 15 | Idx:  29190 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 16 | Idx:  32236 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 17 | Idx:   8971 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 18 | Idx:   1283 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 19 | Idx:  30773 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 20 | Idx:  25908 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 21 | Idx:  25720 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 22 | Idx:  27578 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 23 | Idx:  18836 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 24 | Idx:  19180 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 25 | Idx:  13724 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 26 | Idx:    797 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 27 | Idx:  15826 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 28 | Idx:  37340 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 29 | Idx:  15245 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 30 | Idx:  23283 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 31 | Idx:  39672 | Truth: Normal  | Pred: Normal  | Normal [OK] 
+Beat 32 | Idx:  33147 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 33 | Idx:  38853 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 34 | Idx:  31852 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 35 | Idx:    576 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 36 | Idx:  32312 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 37 | Idx:  49411 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 38 | Idx:  47298 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 39 | Idx:   5263 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 40 | Idx:   5246 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 41 | Idx:  36905 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 42 | Idx:  10615 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 43 | Idx:  34982 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 44 | Idx:   1204 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 45 | Idx:   8201 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 46 | Idx:   3934 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 47 | Idx:   1113 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 48 | Idx:  22016 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 49 | Idx:    821 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 50 | Idx:  16473 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 51 | Idx:   9971 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 52 | Idx:  40059 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 53 | Idx:  13273 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 54 | Idx:  46488 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 55 | Idx:  11001 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 56 | Idx:  32490 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 57 | Idx:  46690 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 58 | Idx:  28617 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 59 | Idx:  23985 | Truth: Normal  | Pred: Normal  | Normal [OK] 
+Beat 60 | Idx:  44784 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 61 | Idx:  39509 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 62 | Idx:  40668 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 63 | Idx:   5908 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 64 | Idx:  36055 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 65 | Idx:  10278 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 66 | Idx:  25503 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 67 | Idx:  26022 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 68 | Idx:  10243 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 69 | Idx:   7737 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 70 | Idx:  13192 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 71 | Idx:  21232 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 72 | Idx:  38140 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 73 | Idx:  31273 | Truth: Normal  | Pred: Anomaly | False Alarm [X] (Predicted Anomaly on Normal Beat)
+Beat 74 | Idx:  43822 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 75 | Idx:   8946 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 76 | Idx:  41133 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 77 | Idx:   8606 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 78 | Idx:  46267 | Truth: Anomaly | Pred: Normal  | MISSED ANOMALY [X] (Predicted Normal on Arrhythmia!)
+Beat 79 | Idx:  32477 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 80 | Idx:  21309 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 81 | Idx:  20701 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 82 | Idx:  20341 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 83 | Idx:  13896 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 84 | Idx:  30396 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 85 | Idx:  17460 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 86 | Idx:  42668 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 87 | Idx:  29858 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 88 | Idx:  16525 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 89 | Idx:  47103 | Truth: Normal  | Pred: Normal  | Normal [OK] 
+Beat 90 | Idx:  37244 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 91 | Idx:  16227 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 92 | Idx:  40614 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 93 | Idx:  36763 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 94 | Idx:  11385 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 95 | Idx:  38730 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 96 | Idx:  24939 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 97 | Idx:   1890 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 98 | Idx:  38518 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 99 | Idx:  42352 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 100 | Idx:  23664 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 101 | Idx:  30233 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 102 | Idx:  10800 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 103 | Idx:  40982 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 104 | Idx:  12340 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 105 | Idx:  28383 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 106 | Idx:  28183 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 107 | Idx:  18740 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 108 | Idx:  46158 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 109 | Idx:  47289 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 110 | Idx:  50410 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 111 | Idx:   9338 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 112 | Idx:   6800 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 113 | Idx:  39791 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 114 | Idx:  32106 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 115 | Idx:  17441 | Truth: Normal  | Pred: Normal  | Normal [OK] 
+Beat 116 | Idx:  50548 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 117 | Idx:  45292 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 118 | Idx:  11317 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 119 | Idx:  20768 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 120 | Idx:  46212 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 121 | Idx:  22745 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 122 | Idx:  48025 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 123 | Idx:   5183 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 124 | Idx:  36070 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 125 | Idx:  46572 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 126 | Idx:  27579 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 127 | Idx:  18436 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 128 | Idx:  37029 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 129 | Idx:  42372 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 130 | Idx:  39779 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 131 | Idx:  34636 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 132 | Idx:  47148 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 133 | Idx:  38313 | Truth: Anomaly | Pred: Normal  | MISSED ANOMALY [X] (Predicted Normal on Arrhythmia!)
+Beat 134 | Idx:  46557 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 135 | Idx:  27539 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 136 | Idx:  31641 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 137 | Idx:   6854 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 138 | Idx:  46378 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 139 | Idx:  36679 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 140 | Idx:  33387 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 141 | Idx:  50083 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 142 | Idx:  37389 | Truth: Anomaly | Pred: Anomaly | Anomaly Caught [!]
+Beat 143 | Idx:  30600 | Truth: Normal  | Pred: Normal  | Normal [OK] 
+Beat 144 | Idx:    212 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 145 | Idx:   5355 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 146 | Idx:  19049 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 147 | Idx:  38284 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 148 | Idx:  12983 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 149 | Idx:  11656 | Truth: Normal  | Pred: Normal  | Normal [OK]
+Beat 150 | Idx:  29916 | Truth: Normal  | Pred: Normal  | Normal [OK]
+
+======================================================
+--- FIXED-SAMPLE COMPARISON REPORT (150 Beats) ---
+======================================================
+Overall Accuracy: 96.00% (144/150 beats)
+------------------------------------------------------
+[OK] True Normals (TN): 125
+[!] True Anomalies (TP): 19
+------------------------------------------------------
+[X] False Alarms (FP): 3
+[X] Missed Anomalies(FN): 3
+======================================================
+[*] Sensitivity (Recall): 86.36%
+[*] Specificity: 97.66%
+[*] Precision: 86.36%
+[*] F1-Score: 86.36%
+======================================================
+
+--- CSV Summary (Beat,DatasetIdx,Truth,Pred,Correct) ---
+1,24,Normal,Normal,True
+2,31579,Normal,Normal,True
+3,38786,Normal,Anomaly,False
+4,42811,Anomaly,Anomaly,True
+5,3697,Normal,Normal,True
+6,37629,Anomaly,Normal,False
+7,6118,Normal,Anomaly,False
+8,18759,Normal,Normal,True
+9,3273,Normal,Normal,True
+10,21048,Anomaly,Anomaly,True
+11,4907,Normal,Normal,True
+12,50554,Normal,Normal,True
+13,5992,Normal,Normal,True
+14,8534,Normal,Normal,True
+15,29190,Normal,Normal,True
+16,32236,Normal,Normal,True
+17,8971,Normal,Normal,True
+18,1283,Normal,Normal,True
+19,30773,Normal,Normal,True
+20,25908,Normal,Normal,True
+21,25720,Normal,Normal,True
+22,27578,Normal,Normal,True
+23,18836,Normal,Normal,True
+24,19180,Normal,Normal,True
+25,13724,Normal,Normal,True
+26,797,Normal,Normal,True
+27,15826,Normal,Normal,True
+28,37340,Normal,Normal,True
+29,15245,Normal,Normal,True
+30,23283,Anomaly,Anomaly,True
+31,39672,Normal,Normal,True
+32,33147,Normal,Normal,True
+33,38853,Normal,Normal,True
+34,31852,Normal,Normal,True
+35,576,Normal,Normal,True
+36,32312,Normal,Normal,True
+37,49411,Normal,Normal,True
+38,47298,Normal,Normal,True
+39,5263,Normal,Normal,True
+40,5246,Normal,Normal,True
+41,36905,Normal,Normal,True
+42,10615,Normal,Normal,True
+43,34982,Normal,Normal,True
+44,1204,Normal,Normal,True
+45,8201,Normal,Normal,True
+46,3934,Normal,Normal,True
+47,1113,Normal,Normal,True
+48,22016,Normal,Normal,True
+49,821,Normal,Normal,True
+50,16473,Anomaly,Anomaly,True
+51,9971,Normal,Normal,True
+52,40059,Normal,Normal,True
+53,13273,Normal,Normal,True
+54,46488,Anomaly,Anomaly,True
+55,11001,Normal,Normal,True
+56,32490,Normal,Normal,True
+57,46690,Normal,Normal,True
+58,28617,Normal,Normal,True
+59,23985,Normal,Normal,True
+60,44784,Anomaly,Anomaly,True
+61,39509,Normal,Normal,True
+62,40668,Anomaly,Anomaly,True
+63,5908,Normal,Normal,True
+64,36055,Normal,Normal,True
+65,10278,Normal,Normal,True
+66,25503,Normal,Normal,True
+67,26022,Normal,Normal,True
+68,10243,Normal,Normal,True
+69,7737,Normal,Normal,True
+70,13192,Normal,Normal,True
+71,21232,Normal,Normal,True
+72,38140,Normal,Normal,True
+73,31273,Normal,Anomaly,False
+74,43822,Anomaly,Anomaly,True
+75,8946,Normal,Normal,True
+76,41133,Normal,Normal,True
+77,8606,Normal,Normal,True
+78,46267,Anomaly,Normal,False
+79,32477,Normal,Normal,True
+80,21309,Normal,Normal,True
+81,20701,Normal,Normal,True
+82,20341,Normal,Normal,True
+83,13896,Normal,Normal,True
+84,30396,Anomaly,Anomaly,True
+85,17460,Normal,Normal,True
+86,42668,Normal,Normal,True
+87,29858,Normal,Normal,True
+88,16525,Anomaly,Anomaly,True
+89,47103,Normal,Normal,True
+90,37244,Normal,Normal,True
+91,16227,Normal,Normal,True
+92,40614,Normal,Normal,True
+93,36763,Normal,Normal,True
+94,11385,Normal,Normal,True
+95,38730,Normal,Normal,True
+96,24939,Normal,Normal,True
+97,1890,Normal,Normal,True
+98,38518,Normal,Normal,True
+99,42352,Anomaly,Anomaly,True
+100,23664,Normal,Normal,True
+101,30233,Normal,Normal,True
+102,10800,Normal,Normal,True
+103,40982,Normal,Normal,True
+104,12340,Normal,Normal,True
+105,28383,Anomaly,Anomaly,True
+106,28183,Normal,Normal,True
+107,18740,Normal,Normal,True
+108,46158,Normal,Normal,True
+109,47289,Anomaly,Anomaly,True
+110,50410,Normal,Normal,True
+111,9338,Normal,Normal,True
+112,6800,Normal,Normal,True
+113,39791,Anomaly,Anomaly,True
+114,32106,Normal,Normal,True
+115,17441,Normal,Normal,True
+116,50548,Normal,Normal,True
+117,45292,Normal,Normal,True
+118,11317,Normal,Normal,True
+119,20768,Normal,Normal,True
+120,46212,Normal,Normal,True
+121,22745,Normal,Normal,True
+122,48025,Normal,Normal,True
+123,5183,Normal,Normal,True
+124,36070,Anomaly,Anomaly,True
+125,46572,Normal,Normal,True
+126,27579,Normal,Normal,True
+127,18436,Normal,Normal,True
+128,37029,Normal,Normal,True
+129,42372,Anomaly,Anomaly,True
+130,39779,Anomaly,Anomaly,True
+131,34636,Normal,Normal,True
+132,47148,Normal,Normal,True
+133,38313,Anomaly,Normal,False
+134,46557,Normal,Normal,True
+135,27539,Normal,Normal,True
+136,31641,Normal,Normal,True
+137,6854,Normal,Normal,True
+138,46378,Normal,Normal,True
+139,36679,Normal,Normal,True
+140,33387,Anomaly,Anomaly,True
+141,50083,Normal,Normal,True
+142,37389,Anomaly,Anomaly,True
+143,30600,Normal,Normal,True
+144,212,Normal,Normal,True
+145,5355,Normal,Normal,True
+146,19049,Normal,Normal,True
+147,38284,Normal,Normal,True
+148,12983,Normal,Normal,True
+149,11656,Normal,Normal,True
+150,29916,Normal,Normal,True

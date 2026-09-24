@@ -88,7 +88,7 @@ XAdcPs XAdcInst;
 __attribute__((aligned(32))) uint8_t input_ecg[96];
 __attribute__((aligned(32))) uint8_t output_logits[8];
 
-#define NUM_TEST_BEATS 80
+#define NUM_TEST_BEATS 150
 
 int selected_indices[NUM_TEST_BEATS];
 
@@ -180,7 +180,7 @@ int main() {
 
     select_random_ds2_beats();
 
-    print_str("\nRandomly Selected 20 DS2 Beats:\n");
+    print_str("\nRandomly Selected 150 DS2 Beats:\n");
 
     for (int i = 0; i < NUM_TEST_BEATS; i++) {
 
@@ -445,7 +445,7 @@ int main() {
     );
 
     print_str(
-        "   FINAL EVALUATION METRICS (20 RANDOM DS2 BEATS)\n"
+        "   FINAL EVALUATION METRICS (150 RANDOM DS2 BEATS)\n"
     );
 
     print_str(

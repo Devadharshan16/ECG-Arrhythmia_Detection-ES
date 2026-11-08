@@ -1,0 +1,12 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.09.27 12:39:40 =~=~=~=~=~=~=~=~=~=~=~=
+
+======================================================
+   Wearable ECG Edge-AI Hardware Accelerator (Zynq)   
+======================================================
+
+DS2 Dataset Loaded
+Total DS2 Beats: 51170
+
+Running FULL DS2 Sequential Evaluation...
+(No per-beat printing - progress every 1000 beats)
+

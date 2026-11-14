@@ -102,38 +102,50 @@
 - **Vitis App:** `ecg_app/src/helloworld.c` — bare-metal Cortex-A9 application
 - **Peripherals Working:** OLED display (SSD1306, bit-banged SPI), Buzzer (PMOD Y11), UART, XADC
 
-### 2.3 Results Already Obtained
+### 2.3 Full DS2 Benchmark Results (51,170 Beats) ✅ COMPLETED
 
-| Run | Beats | Accuracy | Notes |
-|:----|:-----:|:--------:|:------|
-| Subset | 80 | 91.25% | Random subset |
-| Subset | 150 | 92.00% | Fixed indices for video demo |
-| Subset | 1000 | 91.40% | Larger validation |
+> Benchmark date: November 12, 2026 | Total wall time: 0.57 s
 
-- **Per-beat HW Latency:** ~4,511 µs (measured via `XTime` ARM performance counter)
-- **Die Temperature:** ~42–45 °C during inference (XADC)
+#### Confusion Matrix
 
-### 2.4 Remaining Benchmarks
+|  | **Predicted Normal** | **Predicted Anomaly** |
+|:--|:--:|:--:|
+| **Actual Normal** | TN = 42,186 | FP = 2,063 |
+| **Actual Anomaly** | FN = 1,820 | TP = 5,101 |
 
-> [!IMPORTANT]
-> The full 51,170-beat run **crashed** previously (likely stack/memory issue with large arrays + float accumulators). This needs debugging before the paper.
+#### Classification Metrics
+
+| Metric | Value |
+|:-------|------:|
+| **Accuracy** | 92.41 % |
+| **Precision** | 71.20 % |
+| **Recall (Sensitivity)** | 73.70 % |
+| **Specificity** | 95.33 % |
+| **F1-Score** | 72.43 % |
+
+#### Latency & Throughput
+
+| Metric | Value |
+|:-------|------:|
+| **HW Inference Latency** | 30 µs per beat |
+| **Min / Max Latency** | 30 / 30 µs |
+| **HW Throughput** | 33,333 beats/s |
+| **Total Wall Time (51,170 beats)** | 0.57 s |
+
+#### XADC Power & Temperature
+
+| Rail / Sensor | Mean | Min | Max |
+|:--------------|-----:|----:|----:|
+| **Die Temperature** | 41.40 °C | 40.92 °C | 41.82 °C |
+| **VCCINT** | 1.01 V | — | — |
+| **VCCAUX** | 1.79 V | — | — |
+| **VCCBRAM** | 1.01 V | — | — |
+
+### 2.4 Remaining Items
 
 **TODO:**
-1. **Full DS2 Benchmark (51,170 beats):** Debug the crash — possible fixes:
-   - Increase stack size in linker script (`lscript.ld`)
-   - Use integer-only accumulators (avoid float overflow)
-   - Disable OLED init during large batch runs
-   - Process in chunks if memory is tight
-2. **Power Measurement:** Use XADC to read VCCINT, VCCAUX, VCCBRAM during inference:
-   ```
-   VCCINT ≈ 1.0V (core logic)
-   VCCAUX ≈ 1.8V (auxiliary)
-   VCCBRAM ≈ 1.0V (block RAM)
-   ```
-   Record current via external multimeter on J21 power header or compute from XADC voltage rails
-3. **FPGA Resource Utilization:** Extract from Vivado → Implementation → Utilization Report:
+1. **FPGA Resource Utilization:** Extract from Vivado → Implementation → Utilization Report:
    - LUTs, FFs, BRAMs, DSPs used by HLS IP
-4. **Latency Histogram:** Collect per-beat latency for all 51,170 beats → plot histogram
 
 ### 2.5 Tools Already Installed
 
@@ -169,28 +181,61 @@
 | **Power Modes** | 5W (2-core) / 10W (4-core) |
 | **Status** | 🔲 NOT STARTED |
 
-### 3.2 Software Downloads & Setup
+### 3.2 100% Headless Hardware Boot & Setup (No Display / No HDMI Required)
 
-#### Step 1: Flash JetPack OS Image
+> [!TIP]
+> **Pre-loaded SD Card Ready:** Since the OS and JetPack are already flashed onto the SD card, **you do NOT need to download or re-flash any OS image**.
 
-| Item | Download Link |
-|:-----|:-------------|
-| **JetPack SD Card Image** | https://developer.nvidia.com/embedded/jetpack → Select Jetson Nano → Download SD Card Image |
-| **balenaEtcher** | https://etcher.balena.io/ (to flash the SD card) |
-| **microSD Card** | 64 GB or larger, UHS-1 speed class recommended |
+#### Step 1: Powering the Jetson Nano
 
-**Steps:**
-1. Download the JetPack SD card image (latest version, e.g., JetPack 4.6.x)
-2. Flash to microSD using balenaEtcher
-3. Insert into Jetson Nano, connect HDMI + keyboard + power
-4. Complete Ubuntu setup (username, password, etc.)
-5. Connect to WiFi or Ethernet
+* **DC Barrel Jack (5V / 4A):** Bridge the **J48 jumper pins** (located next to the barrel jack) with a jumper cap.
+* **Micro-USB (5V / 2A):** Leave the **J48 jumper open** (unbridged). For 2A supply, run in 5W mode (`sudo nvpmodel -m 1`) to avoid brownouts.
 
-#### Step 2: Install Python Environment
+#### Step 2: Headless Connection from Laptop
+
+Since no external display or HDMI monitor is used, connect directly through your laptop using either of the following methods:
+
+##### Option A: Micro-USB Cable (Virtual Network / Serial — Recommended)
+
+1. Connect a Micro-USB cable from your laptop USB port to the Jetson Nano's Micro-USB port.
+2. Power the board. Jetson OS automatically creates a virtual network interface and virtual serial port.
+3. **Via SSH (PowerShell or Terminal):**
+   ```bash
+   ssh jetson@192.168.55.1
+   # (or ssh nvidia@192.168.55.1)
+   ```
+4. **Via PuTTY Serial Console (Zero-network fallback):**
+   - Open Device Manager → find `USB Serial Port (COMx)`.
+   - Open PuTTY → Select **Serial** → Port: `COMx` → Baud: `115200` → Open.
+
+##### Option B: Ethernet Cable (Direct to Laptop or Router)
+
+1. Connect an RJ45 Ethernet cable between Jetson Nano and your laptop or local network.
+2. Find the IP address from your network device list and SSH in:
+   ```bash
+   ssh jetson@<assigned_ip>
+   ```
+
+#### Step 3: Check Environment & JetPack Version (Over SSH)
 
 ```bash
-# Update system
-sudo apt update && sudo apt upgrade -y
+# Check L4T / JetPack version
+cat /etc/nv_tegra_release
+
+# Check Python and CUDA
+python3 --version
+nvcc --version
+
+# Check if PyTorch or TensorRT are pre-installed
+python3 -c "import torch; print('PyTorch:', torch.__version__)" 2>/dev/null || echo "PyTorch not installed"
+python3 -c "import tensorrt; print('TensorRT:', tensorrt.__version__)" 2>/dev/null || echo "TensorRT not installed"
+```
+
+#### Step 4: Install Dependencies & Headless Telemetry
+
+```bash
+# Update system package list
+sudo apt update
 
 # Install pip and essentials
 sudo apt install -y python3-pip python3-dev libopenblas-dev liblapack-dev
@@ -198,42 +243,13 @@ sudo apt install -y python3-pip python3-dev libopenblas-dev liblapack-dev
 # Install numpy
 pip3 install numpy
 
-# Install PyTorch (pre-built for Jetson - IMPORTANT: use NVIDIA's wheel, not PyPI)
-# Check https://forums.developer.nvidia.com/t/pytorch-for-jetson/ for latest URL
-wget https://nvidia.box.com/shared/static/<hash>.whl -O torch-1.10.0-cp36-cp36m-linux_aarch64.whl
-pip3 install torch-1.10.0-cp36-cp36m-linux_aarch64.whl
-
-# Install torchvision (optional, not needed for inference)
-# pip3 install torchvision
+# Install jtop (terminal-based monitoring tool, runs directly over SSH)
+sudo pip3 install jetson-stats
+sudo systemctl restart jtop.service
 ```
 
 > [!NOTE]
-> The exact PyTorch wheel URL changes with JetPack version. Always check the **NVIDIA Developer Forums** for the correct wheel: https://forums.developer.nvidia.com/t/pytorch-for-jetson/
-
-#### Step 3: Install TensorRT (Optional — for GPU Inference)
-
-```bash
-# TensorRT is pre-installed with JetPack. Verify:
-python3 -c "import tensorrt; print(tensorrt.__version__)"
-
-# Install torch2trt for easy PyTorch → TensorRT conversion
-git clone https://github.com/NVIDIA-AI-IOT/torch2trt
-cd torch2trt
-python3 setup.py install
-```
-
-#### Step 4: Install Monitoring Tools
-
-```bash
-# jtop — real-time CPU/GPU/power monitoring for Jetson
-sudo pip3 install jetson-stats
-sudo systemctl restart jtop.service
-
-# Usage:
-jtop
-# Or for logging:
-tegrastats --interval 100 > tegrastats_log.txt &
-```
+> If PyTorch is not yet installed, download the compatible NVIDIA pre-built ARM wheel matching the L4T version found in `cat /etc/nv_tegra_release` from the [NVIDIA Jetson PyTorch forum](https://forums.developer.nvidia.com/t/pytorch-for-jetson/).
 
 ### 3.3 Inference Approaches (Choose One or Both)
 
@@ -898,17 +914,19 @@ Use this table format for the paper:
 | **Processor** | Cortex-A9 + FPGA HLS | Cortex-A57 (CPU) | Cortex-A57 (CPU) | Xtensa LX6 |
 | **Clock (MHz)** | 667 (CPU) / 50 (PL) | 1,430 | 1,430 | 240 |
 | **RAM** | 512 MB DDR3 | 4 GB LPDDR4 | 4 GB LPDDR4 | 520 KB SRAM |
-| **Accuracy (%)** | | | | |
-| **Precision (%)** | | | | |
-| **Recall (%)** | | | | |
-| **Specificity (%)** | | | | |
-| **F1-Score (%)** | | | | |
-| **Mean Latency (µs)** | | | | |
-| **Min Latency (µs)** | | | | |
-| **Max Latency (µs)** | | | | |
-| **Throughput (beats/s)** | | | | |
-| **Power (mW)** | | | | |
-| **Energy/Inference (µJ)** | | | | |
+| **Accuracy (%)** | 92.41 | | | |
+| **Precision (%)** | 71.20 | | | |
+| **Recall (%)** | 73.70 | | | |
+| **Specificity (%)** | 95.33 | | | |
+| **F1-Score (%)** | 72.43 | | | |
+| **Mean Latency (µs)** | 30 | | | |
+| **Min Latency (µs)** | 30 | | | |
+| **Max Latency (µs)** | 30 | | | |
+| **Throughput (beats/s)** | 33,333 | | | |
+| **Die Temp (°C)** | 41.40 | | | |
+| **VCCINT (V)** | 1.01 | — | — | — |
+| **VCCAUX (V)** | 1.79 | — | — | — |
+| **VCCBRAM (V)** | 1.01 | — | — | — |
 | **Model Size (KB)** | 2.9 | 2.9 | 2.9 | 2.9 |
 
 ---

@@ -1,4 +1,4 @@
-# 2026-10-16T14:02:17.128602900
+# 2026-11-14T11:07:20.668253400
 import vitis
 
 client = vitis.create_client()
@@ -8,4 +8,16 @@ comp = client.get_component(name="ecg_app")
 status = comp.clean()
 
 comp.build()
+
+status = comp.clean()
+
+comp.build()
+
+status = comp.clean()
+
+comp.build()
+
+comp.build()
+
+vitis.dispose()
 
